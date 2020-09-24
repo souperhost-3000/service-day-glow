@@ -1,17 +1,28 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
+  "name": "service-day-glow",
+  "description": "Front-End Capstone",
   "author": "",
-  "license": "",
+  "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
+    "test": "jest"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
-  }
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
+    "jest": "^26.4.2"
+  },
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souperhost-3000/service-day-glow.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/souperhost-3000/service-day-glow/issues"
+  },
+  "homepage": "https://github.com/souperhost-3000/service-day-glow#readme"
 }
