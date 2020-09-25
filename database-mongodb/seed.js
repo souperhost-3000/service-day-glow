@@ -6,3 +6,10 @@ const { Listing } = require('./index');
 // once an individual document has all values, invoke .create
 // use a promise .then, .catch
 // repeat with loop until 100 documents have been created
+
+for (let i = 1; i <= 100; i += 1) {
+  const listing = {
+    listing_id: i,
+
+  }
+}
