@@ -9,6 +9,15 @@ const db = mongoose.connect(mongoURI, { useNewUrlParser: true })
 
 mongoose.Promise = global.Promise;
 
+// subdocument child schema for availaility dates (by month)
+const monthSchema = new mongoose.Schema({
+  name: String,
+  days: Array,
+  // start_first: Number,
+});
+
+const Month = mongoose.model('Month', monthSchema);
+
 // parent schema
 const listingSchema = new mongoose.Schema({
   listing_id: Number,
@@ -21,17 +30,9 @@ const listingSchema = new mongoose.Schema({
   cleaning_fee: Number,
   service_fee: Number,
   taxes: Number,
-  availability: Array,
-});
-
-// subdocument child schema for availaility dates (by month)
-const monthSchema = new mongoose.Schema({
-  name: String,
-  days: Array,
-  // start_first: Number,
+  availability: [Month],
 });
 
 const Listing = mongoose.model('Listing', listingSchema);
-const Month = mongoose.model('Month', monthSchema);
 
 module.exports = { db, Listing, Month };
