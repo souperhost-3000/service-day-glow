@@ -21,6 +21,7 @@ const months = {
 
 // helper function for random seed data (inclusive)
 const randomInt = (min, max) =>
+  // eslint-disable-next-line implicit-arrow-linebreak
   Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1) + Math.ceil(min));
 
 // container for 100 listing objects
@@ -34,10 +35,18 @@ const seedMonths = () => {
   monthsArr.forEach((month) => {
     const listingIsAvailable = [];
     // fill days with boolean, number of days in that month
-    for (let i = 0; i < month[1]; i += 1) {
-      // need to add logic for blocks of trues & falses (4-10)
-      randomInt(1, 2) === 1 ? listingIsAvailable.push(true) : listingIsAvailable.push(false);
+    // for (let i = 0; i < month[1]; i += 1) {
+    //   // need to add logic for blocks of trues & falses (4-10)
+    //   randomInt(1, 2) === 1 ? listingIsAvailable.push(true) : listingIsAvailable.push(false);
+    // }
+    while (listingIsAvailable.length < month[1]) {
+      const nightsInARow = randomInt(4, 10);
+      const value = randomInt(1, 2) === 1 ? 1 : 0;
+      while (nightsInARow > 0) {
+        listingIsAvailable.push(value);
+      }
     }
+
     monthsResult.push({
       name: month[0],
       days: listingIsAvailable,
