@@ -27,8 +27,8 @@ const listingSchema = new mongoose.Schema({
 // subdocument child schema for availaility dates (by month)
 const monthSchema = new mongoose.Schema({
   name: String,
-  start_first: Number,
   days: Array,
+  // start_first: Number,
 });
 
 const Listing = mongoose.model('Listing', listingSchema);
