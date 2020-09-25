@@ -1,9 +1,9 @@
 /* eslint-disable no-console */
 const mongoose = require('mongoose');
 
-const mongoURI = 'mongodb://localhost/27017';
+const mongoURI = 'mongodb://localhost/Souperhost';
 
-const db = mongoose.connect(mongoURI, { useNewUrlParser: true })
+const db = mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to mongoDB and mongoose'))
   .catch((err) => console.log(err));
 
@@ -30,7 +30,7 @@ const listingSchema = new mongoose.Schema({
   cleaning_fee: Number,
   service_fee: Number,
   taxes: Number,
-  availability: [Month],
+  availability: Array,
 });
 
 const Listing = mongoose.model('Listing', listingSchema);
