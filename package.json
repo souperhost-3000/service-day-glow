@@ -18,9 +18,12 @@
       "^.+\\.[t|j]sx?$": "babel-jest"
     },
     "verbose": true,
-    "setupFilesAfterEnv": ["./src/setupTests.js"]
+    "setupFilesAfterEnv": [
+      "./src/setupTests.js"
+    ]
   },
   "dependencies": {
+    "@types/jest": "^26.0.14",
     "axios": "^0.20.0",
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
