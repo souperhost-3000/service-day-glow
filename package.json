@@ -10,8 +10,13 @@
     "start": "nodemon server/index.js",
     "build": "webpack",
     "watch": "webpack --mode development -w",
-    "test": "jest",
+    "test": "jest --coverage",
     "seed": "node database-mongodb/seed.js"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
   },
   "dependencies": {
     "axios": "^0.20.0",
@@ -28,6 +33,7 @@
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
+    "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
     "eslint": "^7.9.0",
     "eslint-config-airbnb": "^18.2.0",
