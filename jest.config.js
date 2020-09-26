@@ -1,10 +1,7 @@
 module.exports = {
   roots: [
-    '<rootDir>/src',
+    '<rootDir>',
   ],
-  transform: {
-    '.*\.tsx?$': 'ts-jest',
-  },
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
   moduleFileExtensions: [
     'ts',
@@ -12,16 +9,10 @@ module.exports = {
     'js',
     'jsx',
     'json',
-    'node'
+    'node',
   ],
-  moduleDirectories: ['node_modules', 'src'],
-  moduleNameMapper: {
-    '\.(css|jpg|png)$': '<rootDir>/empty-module.js',
-  },
-  collectCoverageFrom: [
-    'src/**/*.{ts,tsx}',
-    '!src/index.tsx',
+  testURL: 'http://localhost/3001',
+  setupFilesAfterEnv: [
+    '<rootDir>/setupTests.ts',
   ],
-  testURL: 'http://localhost/',
-  setupTestFrameworkScriptFile: '<rootDir>/setupTests.ts'
 };
