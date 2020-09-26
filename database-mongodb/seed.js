@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 const mongoose = require('mongoose');
-const { db, Listing } = require('./index');
+const { db, Listing, Month } = require('./index');
 
 // create seeding logic to create new documents in db collection
 // create math.random func to use for random number selector
@@ -12,6 +12,13 @@ const { db, Listing } = require('./index');
 // repeat with loop until 100 documents have been created
 // for reviews decimal, use random(25, 50) divide by 10
 
+// leading 3 months, #days in month, scable if needed
+const months = {
+  October: 31,
+  November: 30,
+  December: 31,
+};
+
 // helper function for random seed data (inclusive)
 const randomInt = (min, max) =>
   // eslint-disable-next-line implicit-arrow-linebreak
@@ -19,10 +26,40 @@ const randomInt = (min, max) =>
 
 // container for 100 listing objects
 const listings = [];
+let monthsResult = [];
+
+// child seeding logic to create subdocuments for each month (3)
+const seedMonths = () => {
+  monthsResult = [];
+  const monthsArr = Object.entries(months);
+  const listingIsAvailable = [];
+
+  monthsArr.forEach(([month, numDays]) => {
+    while (listingIsAvailable.length < numDays) {
+      let nightsInARow = randomInt(4, 10);
+      const value = randomInt(1, 2) === 1 ? 1 : 0;
+      while (nightsInARow > 0) {
+        listingIsAvailable.push(value);
+        nightsInARow -= 1;
+        if (listingIsAvailable.length === numDays) {
+          break;
+        }
+      }
+    }
+
+    monthsResult.push({
+      name: month,
+      days: listingIsAvailable,
+    });
+  });
+
+  monthsResult = monthsResult.map((month) => new Month(month));
+};
 
 // main seeding logic to create new documents in Listing collection
 const seedListingDocument = () => {
-  for (let i = 1; i <= 2; i += 1) {
+  for (let i = 1; i <= 100; i += 1) {
+    seedMonths();
     listings.push({
       listing_id: i,
       price: randomInt(100, 900),
@@ -34,7 +71,7 @@ const seedListingDocument = () => {
       cleaning_fee: randomInt(10, 35) * 10,
       service_fee: randomInt(20, 40),
       taxes: randomInt(15, 30),
-      availability: [],
+      availability: monthsResult,
     });
   }
 };

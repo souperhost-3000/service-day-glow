@@ -30,3 +30,6 @@ node_modules/
 .npm
 # dotenv environment variables file
 .env
+
+# bundle.js doc here for merging
+.gitignore

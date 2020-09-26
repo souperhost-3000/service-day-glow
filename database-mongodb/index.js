@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 const mongoose = require('mongoose');
 
-const mongoURI = 'mongodb://localhost/Souperhost';
+const mongoURI = 'mongodb://localhost/Availaility';
 
 const db = mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to mongoDB and mongoose'))
