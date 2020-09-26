@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 const mongoose = require('mongoose');
 
+// database is misspelled "Availaility" !== "Availability"
 const mongoURI = 'mongodb://localhost/Availaility';
 
 const db = mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })

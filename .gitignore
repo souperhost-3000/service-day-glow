@@ -32,4 +32,4 @@ node_modules/
 .env
 
 # bundle.js doc here for merging
-.gitignore
+bundle.js

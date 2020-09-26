@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 const mongoose = require('mongoose');
+// eslint-disable-next-line no-unused-vars
 const { db, Listing, Month } = require('./index');
 
 // create seeding logic to create new documents in db collection
