@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
 
-import App from './App';
+import App from '../components/App';
 
 describe('Testing with enzyme and jest', () => {
   it('renders welcome message', () => {

@@ -1,6 +1,6 @@
 const path = require('path');
 
-const SRC_FILE = path.resolve(__dirname, 'client', 'src', 'index.js');
+const SRC_FILE = path.resolve(__dirname, './client', 'src', 'index.jsx');
 const OUT_DIR = path.resolve(__dirname, 'public');
 
 module.exports = {
@@ -8,6 +8,10 @@ module.exports = {
   output: {
     path: OUT_DIR,
     filename: 'bundle.js',
+  },
+  mode: 'development',
+  resolve: {
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
