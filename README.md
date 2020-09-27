@@ -1,5 +1,5 @@
 # service-day-glow
-[![Souperhost:3000/](https://circleci.com/gh/souperhost-3000/service-day-glow.svg?style=shield)](https://github.com/souperhost-3000/service-day-glow/tree/circleCI_integration)
+[!Souperhost:3000/(https://circleci.com/gh/souperhost-3000/service-day-glow.svg?style=shield)](https://github.com/souperhost-3000/service-day-glow/)
 
 # Project / Sprint
 Front-End Capstone
