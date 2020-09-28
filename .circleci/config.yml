@@ -11,7 +11,7 @@
 
    two: # second job
      docker: # it runs inside a docker image, the same as above.
-       - image: circleci/node:10.15.3
+
      steps:
        - checkout
        - run: npm install
