@@ -9,12 +9,35 @@ body {
   font-weight: lighter;
 }
 
-div {
+/* div {
   border-color:#b31f50;
   border: 1px solid #bd164e;
   border-radius: 5px;
   width: 200px;
   padding:10px;
+} */
+
+/*
+===============================
+App Main Container
+===============================
+
+This container adjusts with page size, height & width currently set at max
+372x300 (container)
+322x249 (text + buttons + margins)
+price margin-top:
+*/
+
+.app-container {
+  width: 372px;
+  height: 300px;
+  border-width: 2;
+  border-radius: 4px;
+  border-color: #cacccd;
+  box-shadow: 5px 5px 10px 10px #cacccd;
+  opacity: 0.6;
+  margin: 30px;
+  padding: 2px;
 }
 
 /*
@@ -29,13 +52,14 @@ h2 {
   text-transform: uppercase;
 }
 
-div {
-  border-color:#b31f50;
-  border: 1px solid #bd164e;
+.header {
+  border-color:#bb0d2c;
+  border: 1px solid #bb0d2c;
   border-radius: 5px;
   width: 200px;
   padding:10px;
 }
+
 
 /*
 ===============================
