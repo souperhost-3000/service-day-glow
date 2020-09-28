@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/app.css';
 
+// top level service component (displayed before user interacts with anything)
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -11,8 +12,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>Airbnb Check Availability Service</h2>
+      <div className="app-container">
+        <div className="header">
+          <h2>Airbnb Check Availability Service</h2>
+        </div>
       </div>
     );
   }
