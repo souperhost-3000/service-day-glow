@@ -33,7 +33,8 @@ describe('<Price /> and <Reviews /> component mounted to App', () => {
     //expect(price.contains('/night')).toBe(true);
   });
 
-  // it('renders static message', () => {
+  // it('renders child component', () => {
+  //   const component = mount
   //   expect(render(<App />).text()).toEqual('Airbnb Check Availability Service');
   // });
 
