@@ -1,16 +1,20 @@
-# service-day-glow
+# Readme: Front-End Capstone Project
 [![Souperhost:3000](https://circleci.com/gh/souperhost-3000/service-day-glow.svg?style=shield)](https://github.com/souperhost-3000/service-day-glow/)
 
-# Project / Sprint
-Front-End Capstone
+Build an app that simulates a single page experience in a service oriented style where each service is responsible for delivering the content+data for one module on the page.
 
+# service-day-glow
+This service focuses on the "Check Availability Calendar". It operates with it's own server and database that powers the module's UI.
+
+## Getting Started
+
+<!-- Graphic? GIF -->
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/souperhost-3000/service-eric
+  - https://github.com/souperhost-3000/service-chris
+  - https://github.com/souperhost-3000/service-dannyhannyford
 
 ## Table of Contents
 
@@ -21,6 +25,9 @@ Front-End Capstone
 ## Usage
 
 > Some usage instructions
+<!-- all the code required to get started
+nothing flashy, just basics
+images of what if should look like -->
 
 ## Requirements
 
