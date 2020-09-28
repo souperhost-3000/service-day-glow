@@ -22,9 +22,17 @@ render each nested functional component (use hooks if needed)
 // top level service component (displayed before user interacts with anything)
 function App() {
   return (
-    <div className="app-container">
-      <div className="header">
-        <h2>Airbnb Check Availability Service</h2>
+    <div>
+      <div className="header optional">
+        <h2>
+          Airbnb
+          <br />
+          Check Availability
+          <br />
+          Service
+        </h2>
+      </div>
+      <div className="app-container">
         <div className="upper-app">
           <Price />
           <Reviews />
