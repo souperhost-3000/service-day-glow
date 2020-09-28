@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import '../styles/app.css';
 
 // dynamic price goes here
 function Price() {
   return (
-    <span>$190/night</span>
+    <div className="price-app">
+      <span id="price-app-header">$190</span>
+      <span id="suffix">/night</span>
+    </div>
   );
 }
 
