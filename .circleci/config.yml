@@ -1,16 +1,8 @@
- version: 2
- orbs:
-  node: circleci/node@4.0.1
+ version: 2.1
  jobs: # we have TWO jobs
-   one: # first job
-     docker: # it uses the docker executor
-     # Steps are a list of commands to run inside the docker container above.
-     steps:
-       - checkout # this pulls code down from GitHub
-       - run: echo "A first hello" # This prints "A first hello" to stdout.
-
-   two: # second job
+   test: # second job
      docker: # it runs inside a docker image, the same as above.
+       - image: circleci/node:12.18.3
 
      steps:
        - checkout
@@ -19,8 +11,8 @@
 
  # Under the workflows: map, we can coordinate our two jobs, defined above.
  workflows:
-   version: 2
-   one_and_two: # this is the name of our workflow
+   version: 2.1
+   test: # this is the name of our workflow
      jobs: # and here we list the jobs we are going to run.
        - one
        - two
