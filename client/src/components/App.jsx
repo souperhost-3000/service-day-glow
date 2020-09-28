@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/app.css';
 
 /* App -> contains:
-price (upper left)
+price (upper left) - if calendar pricing differs (can add logic to add 5% for weekends)
 rating (upper right)
 date picker (mid-upper)
 guestsDetails(mid-lower)
