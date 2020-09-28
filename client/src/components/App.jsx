@@ -1,4 +1,5 @@
 import React from 'react';
+import "../styles/app.css";
 
 class App extends React.Component {
   constructor(props) {
@@ -10,7 +11,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <h2>Welcome to React</h2>
+      <div>
+        <h2>Airbnb Check Availability Service</h2>
+      </div>
     );
   }
 }
