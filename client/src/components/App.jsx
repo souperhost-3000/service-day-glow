@@ -12,7 +12,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h2>Welcome to React</h2>
+        <h2>Airbnb Check Availability Service</h2>
       </div>
     );
   }

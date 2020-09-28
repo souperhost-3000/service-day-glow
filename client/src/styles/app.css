@@ -1,7 +1,59 @@
+/*
+===============================
+Body
+===============================
+*/
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+}
+
 div {
   border-color:#b31f50;
   border: 1px solid #bd164e;
   border-radius: 5px;
-  width: 100px;
+  width: 200px;
   padding:10px;
 }
+
+/*
+===============================
+Header
+===============================
+*/
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+div {
+  border-color:#b31f50;
+  border: 1px solid #bd164e;
+  border-radius: 5px;
+  width: 200px;
+  padding:10px;
+}
+
+/*
+===============================
+Components
+===============================
+*/
+
+
+/*
+===============================
+Calendar Day Buttons
+===============================
+*/
+
+
+/*
+===============================
+Large Buttons
+===============================
+*/
+
