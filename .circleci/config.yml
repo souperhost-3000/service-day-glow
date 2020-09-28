@@ -1,18 +1,21 @@
  version: 2
- jobs: # we now have TWO jobs
-   one: # This is our first job.
+ orbs:
+  node: circleci/node@4.0.1
+ jobs: # we have TWO jobs
+   one: # first job
      docker: # it uses the docker executor
      # Steps are a list of commands to run inside the docker container above.
      steps:
        - checkout # this pulls code down from GitHub
        - run: echo "A first hello" # This prints "A first hello" to stdout.
 
-   two: # This is our second job.
+   two: # second job
      docker: # it runs inside a docker image, the same as above.
-       - image: circleci/ruby:2.4.1
+       - image: circleci/node:10.15.3
      steps:
        - checkout
-       - run: echo "A more familiar hi" # We run a similar echo command to above.
+       - run: npm install
+       - run: npm test
 
  # Under the workflows: map, we can coordinate our two jobs, defined above.
  workflows:
