@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/app.css';
 import Price from './Price';
+import Reviews from './Reviews';
 
 /* App -> contains:
 price (upper left) - if calendar pricing differs (can add logic to add 5% for weekends)
@@ -24,7 +25,10 @@ function App() {
     <div className="app-container">
       <div className="header">
         <h2>Airbnb Check Availability Service</h2>
-        <Price />
+        <div className="upper-app">
+          <Price />
+          <Reviews />
+        </div>
       </div>
     </div>
   );
