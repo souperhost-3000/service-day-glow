@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import '../styles/app.css';
 import Price from './Price';
 import Reviews from './Reviews';
 import DatePicker from './DatePicker';
 import CA from './CA';
 import Guests from './Guests';
+import exampleData from '../tests/exampleData';
 
 /* App -> contains:
 price (upper left) - if calendar pricing differs (can add logic to add 5% for weekends)
@@ -24,6 +26,16 @@ render each nested functional component (use hooks if needed)
 
 // top level service component (displayed before user interacts with anything)
 function App() {
+  const [listingData, setListingData] = useState(exampleData);
+  const listingID = 20;
+
+  // const getListingData =
+  useEffect(() => {
+    axios.get(`/availability/${listingID}`)
+      .then((response) => setListingData(response.data))
+      .catch((err) => console.log(err));
+  }, [listingID]);
+
   return (
     <div>
       <div className="header optional">
@@ -37,11 +49,16 @@ function App() {
       </div>
       <div className="app-container">
         <div className="upper-app">
-          <Price />
-          <Reviews />
+          <Price price={listingData.price} />
+          <Reviews
+            rating={listingData.rating}
+            reviews_count={listingData.reviews_count}
+          />
         </div>
         <div className="middle-app">
-          <DatePicker />
+          <DatePicker
+            availability={listingData.availability}
+          />
           <Guests />
         </div>
         <div className="lower-app">

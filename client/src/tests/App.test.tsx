@@ -29,11 +29,11 @@ describe('Testing with enzyme and jest', () => {
 // button rendered
 
 describe('<Price /> and <Reviews /> component mounted to App', () => {
-  it('renders price component in upper left corner of app-container', () => {
-    const price = shallow(<Price />);
-    expect(price.contains(<span id="price-app-header">$190</span>)).toBe(true);
-    //expect(price.contains('/night')).toBe(true);
-  });
+  // it('renders price component in upper left corner of app-container', () => {
+  //   const price = shallow(<Price />);
+  //   expect(price.contains(<span id="price-app-header">$190</span>)).toBe(true);
+  //   //expect(price.contains('/night')).toBe(true);
+  // });
 
   // it('renders child component', () => {
   //   const component = mount

@@ -1,14 +1,20 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable camelcase */
 // reviews goes here
 
-import React, { useState } from 'react';
+import React from 'react';
 
 // dynamic reviews goes here
-function Reviews() {
+function Reviews({ rating, reviews_count }) {
   return (
     <div className="reviews">
-      <span id="star-sym">* </span>
-      <span id="stars">4.87</span>
-      <span id="numReviews"> (86)</span>
+      <img id="star-sym" src="https://ghrsea12-fec.s3-us-west-2.amazonaws.com/sample/star.png" alt="star" />
+      <span id="stars">
+        {`  ${rating}`}
+      </span>
+      <span id="numReviews">
+        {`  (${reviews_count})`}
+      </span>
     </div>
   );
 }

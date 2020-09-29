@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 // date selectors (check-in, check-out)
-function DatePicker() {
+function DatePicker({ availability }) {
+  console.log(availability);
   return (
     <div className="datePicker">
       <span className="check-in-app">Check-in </span>
