@@ -8,9 +8,11 @@ function CalModal({ show, setCalModal }) {
   }
   return (
     <div className="bob">
-      <div className="selectDates">Select Dates</div>
-      <br />
-      <span className="listing_rooms">Entire house . 2 bds . 1 bath</span>
+      <div className="selectDates">
+        Select Dates
+        <br />
+        <span className="listing_rooms">Entire house . 2 bds . 1 bath</span>
+      </div>
       <div className="cal">
         <Calendar />
       </div>
