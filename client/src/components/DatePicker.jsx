@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import CalModal from './Modals/CalModal';
 
@@ -23,7 +24,10 @@ function DatePicker({ availability }) {
           <input id="check-out-input" type="text" placeholder="Add date" onClick={() => setCalModal(true)} />
         </form>
       </span>
-      <CalModal show={showCalModal} />
+      <CalModal
+        show={showCalModal}
+        setCalModal={setCalModal}
+      />
     </div>
   );
 }
