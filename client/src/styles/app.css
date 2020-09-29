@@ -222,14 +222,13 @@ darker Airbnb color: #b91432
   margin: 10px 20px 20px 20px;
   border-width: 0;
   border-radius: 7px;
+  background: -webkit-linear-gradient(90deg, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+  background: -moz-linear-gradient(90deg, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+  background: linear-gradient(90deg, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+
+  background: radial-gradient(circle at 70%, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100% );
+
   background-color: #FF385C;
-  --dls19-brand-gradient: -webkit-linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%) !important;
-  --dls19-brand-gradient: -moz-linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%) !important;
-  --dls19-brand-gradient: linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%) !important;
-  --dls19-brand-gradient-radial: -webkit-radial-gradient(circle at center, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100% ) !important;
-  --dls19-brand-gradient-radial: -moz-radial-gradient(circle at center, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100% ) !important;
-  --dls19-brand-gradient-radial: radial-gradient(circle at center, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100% ) !important;
-  --dls19-brand-gradient-accent: #FF385C !important;
 }
 
 /*
@@ -251,7 +250,7 @@ Cal Modal - pop up
 
   .modal {
     display: flexbox;
-    visibility: visible;
+    visibility: hidden;
 
     width: 600px;
     max-width: 100%;
