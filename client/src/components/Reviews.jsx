@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-// dynamic price goes here
+// dynamic reviews goes here
 function Reviews() {
   return (
     <div className="reviews">
