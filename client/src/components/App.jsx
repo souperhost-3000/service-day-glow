@@ -27,17 +27,14 @@ render each nested functional component (use hooks if needed)
 // top level service component (displayed before user interacts with anything)
 function App() {
   const [listingData, setListingData] = useState(exampleData);
-  const listingID = 11;
+  const listingID = 13;
 
   // const getListingData =
   useEffect(() => {
     axios.get(`/availability/${listingID}`)
-      .then((response) => {
-        console.log(response.data)
-        setListingData(response.data)
-      })
+      .then((response) => setListingData(response.data))
       .catch((err) => console.log(err));
-  }, []);
+  }, [listingID]);
 
   return (
     <div>
@@ -53,7 +50,9 @@ function App() {
       <div className="app-container">
         <div className="upper-app">
           <Price price={listingData.price} />
-          <Reviews />
+          <Reviews
+            reviews={listingData.reviews}
+          />
         </div>
         <div className="middle-app">
           <DatePicker />
