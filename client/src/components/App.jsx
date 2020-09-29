@@ -41,6 +41,9 @@ function App() {
         </div>
         <div className="middle-app">
           <DatePicker />
+          {/* <Guests /> */}
+        </div>
+        <div className="lower-app">
           <CA />
         </div>
       </div>

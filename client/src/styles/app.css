@@ -7,7 +7,7 @@ Body
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: lighter;
-  font-size: 18px;
+  /* font-size: 18px; */
 }
 
 /* div {
@@ -17,6 +17,25 @@ body {
   width: 200px;
   padding:10px;
 } */
+
+/*
+===============================
+Header
+===============================
+*/
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.header {
+  border: 1px solid #bb0d2c;
+  border-radius: 5px;
+  width: 400px;
+  padding:10px;
+}
 
 /*
 ===============================
@@ -30,22 +49,29 @@ price margin-top:
 */
 
 .app-container {
+  display: block;
   width: 372px;
   height: 300px;
   border-width: 2;
   border-radius: 4px;
-  border-color: #cacccd;
-  box-shadow: 5px 5px 10px 10px #cacccd;
-  opacity: 0.6;
+  border-color: #cacccdd8;
+  box-shadow: 5px 5px 10px 10px #cacccdcb;
+  opacity: 1;
   margin: 30px;
   padding: 2px;
 }
 
+/*
+===============================
+Upper - App
+===============================
+*/
+
 .upper-app {
-  vertical-align: middle;
+  display: block;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 40px 20px 0px 20px;
 }
 
 .price-app {
@@ -69,29 +95,71 @@ price margin-top:
 
 #stars {
   font-weight: 400;
+  font-size: 18px;
 }
-
 
 /*
 ===============================
-Header
+Middle - App
 ===============================
 */
 
-h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: lighter;
+.middle-app {
   text-transform: uppercase;
-}
-
-.header {
-  border-color:#bb0d2c;
-  border: 1px solid #bb0d2c;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  align-items: center;
+  margin: 30px 0 0 20px;
+  border: .5px solid #82888a;
   border-radius: 5px;
-  width: 400px;
-  padding:10px;
+  width: 326px;
+  height: 100px;
+  font: 10px;
+  /* color: #222222; */
 }
 
+.check-in-app {
+  float: left;
+}
+
+.check-out-app {
+  float: right;
+}
+
+.check-in-app,
+.check-out-app {
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  border-color:#82888a;
+  border: .5px solid #82888a;
+  border-radius: 3px;
+  width: 161px;
+  height: 50px;
+}
+
+/*
+===============================
+Lower - App
+===============================
+*/
+
+.CA-app button {
+  font-size: 16px;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  position: relative;
+  display: inline-block;
+  width: 330px;
+  height: 50px;
+  background-color: #b91432;
+  color: #f2f2f2;
+  margin: 10px 20px 20px 20px;
+  border-width: 0;
+  border-radius: 7px;
+}
 
 /*
 ===============================
