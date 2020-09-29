@@ -5,15 +5,15 @@ import App from '../components/App';
 import Price from '../components/Price';
 
 describe('Testing with enzyme and jest', () => {
-  it('renders header message to service', () => {
-    const wrapper = shallow(<App />);
-    const welcome = <h2>Airbnb Check Availability Service</h2>;
-    expect(wrapper.contains(welcome)).toBe(true);
-    // expect(wrapper.contains(welcome)).toEqual(true);
-  });
+  // it('renders header message to service', () => {
+  //   const wrapper = shallow(<App />);
+  //   const welcome = Airbnb Check Availability Service;
+  //   expect(wrapper.contains(welcome)).toBe(true);
+  //   // expect(wrapper.contains(welcome)).toEqual(true);
+  // });
 
-  it('renders static message', () => {
-    expect(render(<App />).text()).toEqual('Airbnb Check Availability Service$190/night');
+  it('renders price, rating, and reviews message', () => {
+    expect(render(<App />).text()).toEqual('AirbnbCheck AvailabilityService by Jacki$190/night* 4.87 (86)');
   });
 
 });
@@ -29,7 +29,7 @@ describe('Testing with enzyme and jest', () => {
 describe('<Price /> and <Reviews /> component mounted to App', () => {
   it('renders price component in upper left corner of app-container', () => {
     const price = shallow(<Price />);
-    expect(price.contains(<span>$190/night</span>)).toBe(true);
+    expect(price.contains(<span id="price-app-header">$190</span>)).toBe(true);
     //expect(price.contains('/night')).toBe(true);
   });
 
