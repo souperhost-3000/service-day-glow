@@ -260,7 +260,7 @@ Cal Modal - pop up
   } */
 
   .bob {
-    display: flexbox;
+    display: flex;
     /* visibility: visible; */
 
     width: 600px;
@@ -269,8 +269,8 @@ Cal Modal - pop up
     /* max-height: 100%; */
     position: sticky;
     z-index: 100;
-    left: 50%;
-    top: 50%;
+    /* left: 50%; */
+    /* top: 50%; */
 
     /* Use this for centering if unknown width/height */
     transform: translate(-40%, -5%);
@@ -289,15 +289,21 @@ Cal Modal - pop up
   }
 
   .selectDates {
+
+    font-weight: 500;
+    font-size: 22px;
     border-bottom: 1px solid #ccc;
-    padding: 1rem;
-    margin: 0;
+    padding-left: 30px;
+    align-items: flex-start;
+  }
+
+  .listing_rooms {
+    padding-left: 30px;
   }
 
   .actions {
-    border-top: 1px solid #ccc;
-    background: #eee;
-    padding: 0.5rem 1rem;
+
+
   }
 
 
