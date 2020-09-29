@@ -8,12 +8,12 @@ function CalModal({ show, setCalModal }) {
     return null;
   }
   return (
-    <div>
-      {console.log('modal has appeared')}
-      <div>
+    <div className="calMod">
+      <span className="selectDates">Select Dates</span>
+      <div className="cal">
         <Calendar />
       </div>
-      <button type="button" onClick={() => setCalModal(false)}>
+      <button className="close-btn" type="button" onClick={() => setCalModal(false)}>
         Close
       </button>
     </div>
