@@ -61,6 +61,36 @@ price margin-top:
   padding: 2px;
 }
 
+.upper-app {
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.price-app {
+  float: left;
+}
+
+#price-app-header {
+  font-weight: bold;
+}
+
+#suffix {
+  font-size: 14px;
+}
+
+.reviews {
+  padding-top: 2px;
+  float: right;
+  font-size: 12px;
+}
+
+#stars {
+  font-weight: bold;
+}
+
+
 /*
 ===============================
 Upper - App
