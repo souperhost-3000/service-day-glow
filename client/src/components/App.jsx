@@ -27,7 +27,7 @@ render each nested functional component (use hooks if needed)
 // top level service component (displayed before user interacts with anything)
 function App() {
   const [listingData, setListingData] = useState(exampleData);
-  const listingID = 13;
+  const listingID = 15;
 
   // const getListingData =
   useEffect(() => {
@@ -49,14 +49,13 @@ function App() {
       </div>
       <div className="app-container">
         <div className="upper-app">
-          <Price price={listingData.price} />
-          <Reviews
-            rating={listingData.rating}
-            reviews_count={listingData.reviews_count}
-          />
+          <Price {...listingData} />
+          <Reviews {...listingData} />
         </div>
         <div className="middle-app">
-          <DatePicker />
+          <DatePicker
+            availability={listingData.availability}
+          />
           <Guests />
         </div>
         <div className="lower-app">

@@ -1,15 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 // dynamic price goes here
-function Price({ price }) {
+function Price(props) {
+  const [listingData, setListingData] = useState(props);
+
+  useEffect(() => {
+    setListingData(props);
+  }, [props]);
+
   return (
     <div className="price-app">
       <span id="price-app-header">
-        $
-        { price }
+        {` $${listingData.price} `}
       </span>
-      <span id="suffix">/night</span>
+      <span id="suffix">/ night</span>
     </div>
   );
 }
