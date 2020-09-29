@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import '../styles/app.css';
 import Price from './Price';
 import Reviews from './Reviews';
@@ -26,6 +27,17 @@ render each nested functional component (use hooks if needed)
 // top level service component (displayed before user interacts with anything)
 function App() {
   const [listingData, setListingData] = useState(exampleData);
+  const listingID = 11;
+
+  // const getListingData =
+  useEffect(() => {
+    axios.get(`/availability/${listingID}`)
+      .then((response) => {
+        console.log(response.data)
+        setListingData(response.data)
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <div>
