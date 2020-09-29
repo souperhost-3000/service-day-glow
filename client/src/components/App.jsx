@@ -4,6 +4,7 @@ import Price from './Price';
 import Reviews from './Reviews';
 import DatePicker from './DatePicker';
 import CA from './CA';
+import Guests from './Guests';
 
 /* App -> contains:
 price (upper left) - if calendar pricing differs (can add logic to add 5% for weekends)
@@ -41,7 +42,7 @@ function App() {
         </div>
         <div className="middle-app">
           <DatePicker />
-          {/* <Guests /> */}
+          <Guests />
         </div>
         <div className="lower-app">
           <CA />

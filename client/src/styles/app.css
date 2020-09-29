@@ -51,7 +51,7 @@ price margin-top:
 .app-container {
   display: block;
   width: 372px;
-  height: 300px;
+  height: 260px;
   border-width: 2;
   border-radius: 4px;
   border-color: #cacccdd8;
@@ -71,7 +71,7 @@ Upper - App
   display: block;
   justify-content: center;
   align-items: center;
-  margin: 40px 20px 0px 20px;
+  margin: 30px 20px 0px 20px;
 }
 
 .price-app {
@@ -100,17 +100,16 @@ Upper - App
 
 /*
 ===============================
-Middle - App
+Middle/Upper - App
 ===============================
 */
 
 .middle-app {
-  text-transform: uppercase;
   position: relative;
   display: inline-block;
   vertical-align: middle;
   align-items: center;
-  margin: 30px 0 0 20px;
+  margin: 20px 0 0 20px;
   border: .5px solid #82888a;
   border-radius: 5px;
   width: 326px;
@@ -129,6 +128,7 @@ Middle - App
 
 .check-in-app,
 .check-out-app {
+  text-transform: uppercase;
   text-align: center;
   vertical-align: middle;
   justify-content: center;
@@ -138,6 +138,29 @@ Middle - App
   border-radius: 3px;
   width: 161px;
   height: 50px;
+}
+
+/*
+===============================
+Middle/Lower - App
+===============================
+*/
+
+.guestPicker {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+#guest-title {
+  text-transform: uppercase;
+}
+
+#guest-expand-mod {
+  float: right;
+  background-color: transparent;
+  border: transparent;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
 /*
