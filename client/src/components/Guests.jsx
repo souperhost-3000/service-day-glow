@@ -6,8 +6,8 @@ function Guests() {
     <div className="guestPicker">
       <span id="guest-title">Guests</span>
       <br />
-      <span id="guestCount"># guests</span>
-      <button id="guest-expand-mod"> ╲╱ </button>
+      <span id="guestCount">1 guest</span>
+      <button id="guest-expand-mod" type="button"> ╲╱ </button>
       {/* <button id="guest-collapse-mod"> ╱╲</button> */}
     </div>
   );
