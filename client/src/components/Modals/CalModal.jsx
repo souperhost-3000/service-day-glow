@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import Calendar from './Calendar';
 
@@ -13,9 +12,12 @@ function CalModal({ show, setCalModal }) {
       <div className="cal">
         <Calendar />
       </div>
-      <button className="close-btn" type="button" onClick={() => setCalModal(false)}>
-        Close
-      </button>
+      <div className="actions">
+        <button className="clear-btn" type="button">clear date</button>
+        <button className="close-btn" type="button" onClick={() => setCalModal(false)}>
+          Close
+        </button>
+      </div>
     </div>
     // reusable calendar func imported
   );
