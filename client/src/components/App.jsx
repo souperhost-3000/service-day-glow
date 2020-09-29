@@ -5,6 +5,7 @@ import Reviews from './Reviews';
 import DatePicker from './DatePicker';
 import CA from './CA';
 import Guests from './Guests';
+import exampleData from '../tests/exampleData';
 
 /* App -> contains:
 price (upper left) - if calendar pricing differs (can add logic to add 5% for weekends)
@@ -24,6 +25,8 @@ render each nested functional component (use hooks if needed)
 
 // top level service component (displayed before user interacts with anything)
 function App() {
+  const [listingData, setListingData] = useState(exampleData);
+
   return (
     <div>
       <div className="header optional">
@@ -37,7 +40,7 @@ function App() {
       </div>
       <div className="app-container">
         <div className="upper-app">
-          <Price />
+          <Price price={listingData.price} />
           <Reviews />
         </div>
         <div className="middle-app">
