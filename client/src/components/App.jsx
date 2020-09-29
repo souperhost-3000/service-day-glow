@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import '../styles/app.css';
 import Price from './Price';
 import Reviews from './Reviews';
+import DatePicker from './DatePicker';
+import CA from './CA';
+import Guests from './Guests';
 
 /* App -> contains:
 price (upper left) - if calendar pricing differs (can add logic to add 5% for weekends)
@@ -29,13 +32,20 @@ function App() {
           <br />
           Check Availability
           <br />
-          Service
+          Service by Jacki
         </h2>
       </div>
       <div className="app-container">
         <div className="upper-app">
           <Price />
           <Reviews />
+        </div>
+        <div className="middle-app">
+          <DatePicker />
+          <Guests />
+        </div>
+        <div className="lower-app">
+          <CA />
         </div>
       </div>
     </div>

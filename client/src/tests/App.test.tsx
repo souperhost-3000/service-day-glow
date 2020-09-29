@@ -3,6 +3,7 @@ import { shallow, mount, render } from 'enzyme';
 
 import App from '../components/App';
 import Price from '../components/Price';
+import Guests from '../components/Guests';
 
 describe('Testing with enzyme and jest', () => {
   // it('renders header message to service', () => {
@@ -12,9 +13,10 @@ describe('Testing with enzyme and jest', () => {
   //   // expect(wrapper.contains(welcome)).toEqual(true);
   // });
 
-  it('renders price, rating, and reviews message', () => {
-    expect(render(<App />).text()).toEqual('AirbnbCheck AvailabilityService by Jacki$190/night* 4.87 (86)');
-  });
+  // it('renders price, rating, and reviews message', () => {
+  //   const guestComponent = mount(<Guests />);
+  //   expect(guestComponent).toBePresent();
+  // });
 
 });
 
