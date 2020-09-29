@@ -3,12 +3,16 @@
 import React, { useState } from 'react';
 
 // dynamic reviews goes here
-function Reviews({ reviews }) {
+function Reviews({ rating, reviews_count }) {
   return (
     <div className="reviews">
       <img id="star-sym" src="https://ghrsea12-fec.s3-us-west-2.amazonaws.com/sample/star.png" />
-      <span id="stars"> 4.87</span>
-      <span id="numReviews"> (86)</span>
+      <span id="stars">
+        {`  ${rating}`}
+      </span>
+      <span id="numReviews">
+        {`  (${reviews_count})`}
+      </span>
     </div>
   );
 }

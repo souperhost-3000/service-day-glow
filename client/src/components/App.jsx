@@ -51,7 +51,8 @@ function App() {
         <div className="upper-app">
           <Price price={listingData.price} />
           <Reviews
-            reviews={listingData.reviews}
+            rating={listingData.rating}
+            reviews_count={listingData.reviews_count}
           />
         </div>
         <div className="middle-app">
