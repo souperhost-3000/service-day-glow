@@ -22,6 +22,9 @@ state:
   manage property details in props
 
 render each nested functional component (use hooks if needed)
+
+// Axios GET req
+// add price and reviews to app level
 */
 
 // top level service component (displayed before user interacts with anything)
@@ -33,6 +36,7 @@ function App() {
   useEffect(() => {
     axios.get(`/availability/${listingID}`)
       .then((response) => setListingData(response.data))
+      // eslint-disable-next-line no-console
       .catch((err) => console.log(err));
   }, [listingID]);
 
@@ -70,6 +74,3 @@ function App() {
 }
 
 export default App;
-// Axios GET req
-
-// add price and reviews to app level
