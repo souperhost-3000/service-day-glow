@@ -53,22 +53,21 @@ price margin-top:
 }
 
 #price-app-header {
-  font-weight: 500;
-  font-size: 22px;
+  font-weight: bold;
 }
 
 #suffix {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .reviews {
-  padding-top: 3px;
+  padding-top: 2px;
   float: right;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 #stars {
-  font-weight: 400;
+  font-weight: bold;
 }
 
 

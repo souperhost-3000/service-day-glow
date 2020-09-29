@@ -29,7 +29,7 @@ function App() {
           <br />
           Check Availability
           <br />
-          Service by Jacki
+          Service
         </h2>
       </div>
       <div className="app-container">
