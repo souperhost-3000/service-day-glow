@@ -259,9 +259,9 @@ Cal Modal - pop up
   visibility: visible;
   } */
 
-  .modal {
+  .bob {
     display: flexbox;
-    visibility: visible;
+    /* visibility: visible; */
 
     width: 600px;
     /* max-width: 100%; */
@@ -283,7 +283,7 @@ Cal Modal - pop up
     box-shadow: 3px 2px 25px 5px #cacccdcb;
   }
 
-  .closed {
+  .closed-modal {
     display: none;
     visibility: hidden;
   }
