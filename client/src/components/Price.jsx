@@ -7,14 +7,14 @@ function Price({ price }) {
     <div className="price-app">
       <span id="price-app-header">
         $
-        {price}
+        { price }
       </span>
       <span id="suffix">/night</span>
     </div>
   );
 }
 
-Price.proptypes = {
+const proptypes = {
   price: PropTypes.any.isRequired,
 };
 
