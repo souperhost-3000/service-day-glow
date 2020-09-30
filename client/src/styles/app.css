@@ -293,21 +293,30 @@ Cal Modal - pop up
     box-shadow: 3px 2px 25px 5px #cacccdcb;
   }
 
-  .closed-modal {
-    display: none;
-    visibility: hidden;
+  .modal-dateBoxes {
+    float: right;
+    align-items: top;
+    padding: 20px 20px 0 10px;
   }
 
+  /* .closed-modal {
+    display: none;
+    visibility: hidden;
+  } */
+
+  .modal-header-left {
+    float: left;
+  }
   .listing_rooms {
     font-size: 12px;
     font-weight: 300;
+    padding-left: 30px;
+    align-items: flex-start;
   }
 
   .selectDates {
     font-weight: 500;
-    font-size: 22px;
-    border-bottom: 1px solid #ccc;
-    padding-left: 30px;
+    font-size: 22px;    padding-left: 30px;
     padding-top: 20px;
     align-items: flex-start;
   }
@@ -321,7 +330,7 @@ Cal Modal - pop up
     float: left;
     font-size: 8px;
     color: #82888a;
-    margin: 10px;
+    margin: 10px 10px 10px 30px;
   }
 
   .clear-btn {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Calendar from './Calendar';
+import DateBoxes from '../DateBoxes';
 
 // Calendar modal (conditional pop up logic)
 function CalModal({ show, setCalModal }) {
@@ -8,10 +9,16 @@ function CalModal({ show, setCalModal }) {
   }
   return (
     <div className="bob">
-      <div className="selectDates">
-        Select Dates
-        <br />
-        <span className="listing_rooms">Entire house . 2 bds . 1 bath</span>
+      <div className="modal-header">
+        <div className="modal-header-left">
+          <div className="selectDates">
+            Select Dates
+          </div>
+          <span className="listing_rooms">Entire house . 2 bds . 1 bath</span>
+        </div>
+        <div className="modal-dateBoxes">
+          <DateBoxes />
+        </div>
       </div>
       <div className="cal-dbl-container">
         <div className="cal-left">
