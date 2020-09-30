@@ -3,28 +3,100 @@ import { shallow, mount, render } from 'enzyme';
 
 import App from '../components/App';
 import Price from '../components/Price';
+import Reviews from '../components/Reviews';
+import DatePicker from '../components/DatePicker';
 import Guests from '../components/Guests';
+import CA from '../components/CA';
+import Calendar from '../components/Modals/Calendar';
 
-describe('Testing with enzyme and jest', () => {
-  // it('renders header message to service', () => {
-  //   const wrapper = shallow(<App />);
-  //   const welcome = Airbnb Check Availability Service;
-  //   expect(wrapper.contains(welcome)).toBe(true);
-  //   // expect(wrapper.contains(welcome)).toEqual(true);
-  // });
+/*
+=======================================
+Unit Testing App Level - Overall Page
+=======================================
+*/
 
-  // it('renders price, rating, and reviews message', () => {
-  //   const guestComponent = mount(<Guests />);
-  //   expect(guestComponent).toBePresent();
-  // });
-  it('renders app service without breaking', () => {
-    const wrapper = mount(<App />);
-    expect(wrapper).toMatchSnapshot();
+describe('Page basics at Main App level', () => {
+  it('page renders App to service without breaking', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.exists()).toBe(true);
+  });
+
+  it('App page contains Header to intro the service', () => {
+    const wrapper = shallow(<App />);
+    const header = wrapper.find("h2");
+    const result = header.text();
+
+    expect(result).toBe("AirbnbCheck AvailabilityService by Jacki");
+  });
+
+  it('Minor - calendar has header', () => {
+    const wrapper = shallow(<App />);
+    const calHeader = wrapper.find("div.selectDates").text();
+
+    expect(calHeader).toBe("Select Dates");
   })
 
-  it('dynamically renders price', () => {
-    const wrapper = mount(<Price />);
-    expect(wrapper).toMatchSnapshot();
+});
+
+/*
+=======================================
+Unit Testing App Level - Major
+=======================================
+*/
+
+describe('Components nested in Major render', () => {
+
+  it('should render Price and Reviews', () => {
+    const wrapper = shallow(<App />);
+    const price = wrapper.find(Price);
+    const reviews = wrapper.find(Reviews);
+
+    expect(price.exists()).toBe(true);
+    expect(reviews.exists()).toBe(true);
+  })
+
+  it('should render DatePicker and GuestsPicker', () => {
+    const wrapper = shallow(<App />);
+    const datePicker = wrapper.find(DatePicker);
+    const guests = wrapper.find(Guests);
+
+    expect(datePicker.exists()).toBe(true);
+    expect(guests.exists()).toBe(true);
+  })
+
+  it('should render CA button', () => {
+    const wrapper = shallow(<App />);
+    const caButton = wrapper.find(CA);
+
+    expect(caButton.exists()).toBe(true);
+  })
+
+});
+
+/*
+=======================================
+Unit Testing App Level - Minor
+=======================================
+*/
+
+describe('Components nested in Minor render', () => {
+
+  it('should render Calendar', () => {
+    const wrapper = shallow(<App />);
+    const calLeft = wrapper.find("div.cal-left").find(Calendar);
+    const calRight = wrapper.find("div.cal-right").find(Calendar);
+
+    expect(calLeft.exists()).toBe(true);
+    expect(calRight.exists()).toBe(true);
+  })
+
+  it('should render clear button', () => {
+    const wrapper = shallow(<App />);
+    const clearBtn = wrapper.find("button.clear-btn");
+    const clearBtntxt = clearBtn.text();
+
+    expect(clearBtn.exists()).toBe(true);
+    expect(clearBtntxt).toBe("Clear date");
   })
 
 });
@@ -36,17 +108,3 @@ describe('Testing with enzyme and jest', () => {
 // calendar expands modal
 // guest input expands modal
 // button rendered
-
-describe('<Price /> and <Reviews /> component mounted to App', () => {
-  // it('renders price component in upper left corner of app-container', () => {
-  //   const price = shallow(<Price />);
-  //   expect(price.contains(<span id="price-app-header">$190</span>)).toBe(true);
-  //   //expect(price.contains('/night')).toBe(true);
-  // });
-
-  // it('renders child component', () => {
-  //   const component = mount
-  //   expect(render(<App />).text()).toEqual('Airbnb Check Availability Service');
-  // });
-
-});
