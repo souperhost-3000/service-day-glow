@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CalModal from './Modals/CalModal';
+import DateBoxes from './DateBoxes';
 
 // date selectors (check-in, check-out)
 function DatePicker({ availability }) {
@@ -11,19 +12,8 @@ function DatePicker({ availability }) {
 
   return (
     <div>
-      <div className="datePicker">
-        <span className="check-in-app">
-          Check-in
-          <form className="date-form">
-            <input className="date-input" id="check-in-input" type="text" placeholder="Add date" onClick={() => setCalModal(true)} />
-          </form>
-        </span>
-        <span className="check-out-app">
-          Checkout
-          <form className="date-form">
-            <input className="date-input" id="check-out-input" type="text" placeholder="Add date" onClick={() => setCalModal(true)} />
-          </form>
-        </span>
+      <div className="datePicker" onClick={() => setCalModal(true)}>
+        <DateBoxes />
       </div>
       <div className="modal">
         <span>
