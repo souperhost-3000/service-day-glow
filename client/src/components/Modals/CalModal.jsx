@@ -13,14 +13,22 @@ function CalModal({ show, setCalModal }) {
         <br />
         <span className="listing_rooms">Entire house . 2 bds . 1 bath</span>
       </div>
-      <div className="cal">
-        <Calendar />
+      <div className="cal-dbl-container">
+        <div className="cal-left">
+          <Calendar />
+        </div>
+        <div className="cal-right">
+          <Calendar />
+        </div>
       </div>
       <div className="actions">
-        <button className="clear-btn" type="button">clear date</button>
+        <div className="taxesWarning">
+          Prices on calendar do not include taxes and fees
+        </div>
         <button className="close-btn" type="button" onClick={() => setCalModal(false)}>
           Close
         </button>
+        <button className="clear-btn" type="button">Clear date</button>
       </div>
     </div>
     // reusable calendar func imported
