@@ -7,8 +7,12 @@ function CalModal({ show, setCalModal }) {
     return null;
   }
   return (
-    <div className="calMod">
-      <span className="selectDates">Select Dates</span>
+    <div className="bob">
+      <div className="selectDates">
+        Select Dates
+        <br />
+        <span className="listing_rooms">Entire house . 2 bds . 1 bath</span>
+      </div>
       <div className="cal">
         <Calendar />
       </div>

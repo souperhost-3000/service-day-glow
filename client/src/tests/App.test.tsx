@@ -17,6 +17,15 @@ describe('Testing with enzyme and jest', () => {
   //   const guestComponent = mount(<Guests />);
   //   expect(guestComponent).toBePresent();
   // });
+  it('renders app service without breaking', () => {
+    const wrapper = mount(<App />);
+    expect(wrapper).toMatchSnapshot();
+  })
+
+  it('dynamically renders price', () => {
+    const wrapper = mount(<Price />);
+    expect(wrapper).toMatchSnapshot();
+  })
 
 });
 
