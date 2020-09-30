@@ -305,9 +305,44 @@ Cal Modal - pop up
   }
 
   .actions {
-    align-content: bottom right;
+    /* align-content: bottom right; */
     padding: 10px;
+  }
 
+  .clear-btn {
+    align-items: baseline;
+    float: right;
+    height: 30px;
+    width: 80px;
+    border: none;
+    background-color: transparent;
+    color:  rgba(0, 0, 0, 0.9);
+    font: 8px;
+    text-decoration: underline;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    margin: 3px;
+  }
+
+  .clear-btn:hover {
+    background-color: #ebedeea4;
+    border-radius: 7px;
+    margin: 3px;
+  }
+
+  .close-btn {
+    align-items: baseline;
+    float: right;
+    height: 30px;
+    width: 70px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #f2f2f2;
+    font: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    border-radius: 7px;
+    margin: 3px;
   }
 
 /*
@@ -316,6 +351,18 @@ Calendar
 ===============================
 */
 
+.cal-dbl-container {
+  width: 550px;
+}
+
+.cal-left {
+  float: left;
+}
+
+.cal-right {
+  float: right;
+}
+
 .cal-container {
   padding-left: 10px;
   width: 250px;
@@ -323,12 +370,24 @@ Calendar
 
 }
 
-.month {
+.month-bar {
   padding: 15px 15px 15px 77px;
   vertical-align: middle;
   justify-content: center;
   align-items: center;
 }
+
+#leftArrow {
+  height: 30px;
+  width: 35px;
+  background-color: transparent;
+  border: none;
+  font: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
+
+
 
 /*
 ===============================
@@ -362,6 +421,8 @@ Calendar Day Buttons
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
 }
+
+
 
 /*
 ===============================

@@ -11,8 +11,13 @@ function Calendar() {
 
   return (
     <div className="cal-container">
-      <div className="month">
-        Month Name
+      <div className="month-bar">
+        {/* <button id="leftArrow" type="button">
+          {'<'}
+        </button> */}
+        <div className="month">
+          Month Name
+        </div>
       </div>
       <div className="cal-container">
         <div className="weekdays">
