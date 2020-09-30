@@ -310,16 +310,58 @@ Cal Modal - pop up
 
   }
 
+/*
+===============================
+Calendar
+===============================
+*/
 
-/* #centered-toggle-button {
-  position: absolute;
-} */
+.cal-container {
+  padding-left: 10px;
+  width: 250px;
+  align-items: center;
+
+}
+
+.month {
+  padding: 15px 15px 15px 77px;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+}
 
 /*
 ===============================
 Calendar Day Buttons
 ===============================
 */
+
+
+.weekdays {
+}
+
+.cal-day {
+  height: 30px;
+  width: 35px;
+  background-color: transparent;
+  border: none;
+  font: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+.days-container {
+}
+
+.day {
+  height: 30px;
+  width: 35px;
+  background-color: transparent;
+  border: none;
+  font: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+}
 
 /*
 ===============================
