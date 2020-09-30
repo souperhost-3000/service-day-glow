@@ -377,7 +377,7 @@ Calendar
 
 .cal-dbl-container {
   width: 550px;
-  margin: 5px 5px 5px 10px;
+  margin: 5px 5px 5px 12px;
 }
 
 .cal-left {
@@ -426,25 +426,33 @@ Calendar Day Buttons
 
 .cal-day {
   height: 30px;
-  width: 35px;
+  width: 30px;
   background-color: transparent;
   border: none;
   font-size: 12px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
+  margin: 0 3px 0 2px;
 }
 
 .days-container {
 }
 
 .day {
+
   height: 30px;
-  width: 35px;
+  width: 30px;
   background-color: transparent;
   border: none;
   font-size: 12px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
+  margin: 0 3px 0 2px;
+}
+
+.day:hover {
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  border-radius: 100%;
 }
 
 
