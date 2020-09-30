@@ -38,7 +38,6 @@ function CalModal({ show, setCalModal }) {
         <button className="clear-btn" type="button">Clear date</button>
       </div>
     </div>
-    // reusable calendar func imported
   );
 }
 
