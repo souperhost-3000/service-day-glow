@@ -22,6 +22,9 @@ function CalModal({ show, setCalModal }) {
         </div>
       </div>
       <div className="actions">
+        <div className="taxesWarning">
+          Prices on calendar do not include taxes and fees
+        </div>
         <button className="close-btn" type="button" onClick={() => setCalModal(false)}>
           Close
         </button>

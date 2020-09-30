@@ -7,7 +7,6 @@ function Calendar() {
   for (let i = 0; i < nums.length; i += 1) {
     nums[i] = <button className="day" type="button" key={i}>{i}</button>;
   }
-  console.log(nums);
 
   return (
     <div className="cal-container">
