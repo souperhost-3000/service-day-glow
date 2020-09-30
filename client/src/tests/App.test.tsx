@@ -3,6 +3,7 @@ import { shallow, mount, render } from 'enzyme';
 
 import App from '../components/App';
 import Price from '../components/Price';
+import Reviews from '../components/Reviews';
 import Guests from '../components/Guests';
 
 /*
@@ -12,16 +13,28 @@ Unit Testing App Level - Overall Page
 */
 
 // overall components called in App return (shallow)
-describe('Testing over page at Main App level', () => {
+describe('Page basics at Main App level', () => {
   it('page renders App to service without breaking', () => {
     const wrapper = shallow(<App />);
     // expect(wrapper.find('#price-app-header')).toBe({});
-    expect(wrapper.getElements()).toMatchSnapshot();
+    // expect(wrapper.getElements()).toMatchSnapshot();
     // expect(wrapper.find(Price).render().find('#price-app-header')).toBe(true);
-
   })
 
+  it('App page contains Header to intro the service', () => {
+    const wrapper = shallow(<App />);
+    const header = wrapper.find("h2");
+    const result = header.text();
 
+    expect(result).toBe("AirbnbCheck AvailabilityService by Jacki");
+  });
+
+  it('Minor - calendar has header', () => {
+    const wrapper = shallow(<App />);
+    const calHeader = wrapper.find("div.selectDates").text();
+
+    expect(calHeader).toBe("Select Dates");
+  })
 
 });
 
@@ -31,7 +44,20 @@ Unit Testing App Level - Major
 =======================================
 */
 
-// test UI render for major
+describe('Components nested in Major render', () => {
+
+  it('should render Price and Reviews', () => {
+    const wrapper = shallow(<App />);
+    const price = wrapper.find(Price);
+    const reviews = wrapper.find(Reviews);
+
+    expect(price.exists()).toBe(true);
+    expect(reviews.exists()).toBe(true);
+
+  })
+
+});
+
 
 /*
 =======================================
