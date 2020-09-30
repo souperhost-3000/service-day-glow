@@ -7,6 +7,7 @@ import DatePicker from './DatePicker';
 import CA from './CA';
 import Guests from './Guests';
 import exampleData from '../tests/exampleData';
+import Calendar from './Modals/Calendar';
 
 /* App -> contains:
 price (upper left) - if calendar pricing differs (can add logic to add 5% for weekends)
@@ -41,33 +42,65 @@ function App() {
   }, [listingID]);
 
   return (
-    <div>
-      <div className="header optional">
-        <h2>
-          Airbnb
-          <br />
-          Check Availability
-          <br />
-          Service by Jacki
-        </h2>
-      </div>
-      <div className="app-container">
-        <div className="upper-app">
-          <Price price={listingData.price} />
-          <Reviews
-            rating={listingData.rating}
-            reviews_count={listingData.reviews_count}
-          />
+    <div className="entire-App">
+      <div className="scroll-wrapper">
+        <div className="header optional">
+          <h2>
+            Airbnb
+            <br />
+            Check Availability
+            <br />
+            Service by Jacki
+          </h2>
         </div>
-        <div className="middle-app">
-          <DatePicker
-            availability={listingData.availability}
-          />
-          <Guests />
-        </div>
-        <div className="lower-app">
-          <CA />
-        </div>
+        <section className="major">
+          <div className="major-container">
+            <div className="app-container">
+              <div className="upper-app">
+                <Price price={listingData.price} />
+                <Reviews
+                  rating={listingData.rating}
+                  reviews_count={listingData.reviews_count}
+                />
+              </div>
+              <div className="middle-app">
+                <DatePicker
+                  availability={listingData.availability}
+                />
+                <Guests />
+              </div>
+              <div className="lower-app">
+                <CA />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="minor">
+          <div className="minor-container">
+            <div className="minor-header">
+              <div className="modal-header-left">
+                <div className="selectDates">
+                  Select Dates
+                </div>
+                <span className="listing_rooms">Entire house . 2 bds . 1 bath</span>
+              </div>
+            </div>
+            <div className="cal-dbl-container">
+              <div className="cal-left">
+                <Calendar />
+              </div>
+              <div className="cal-right">
+                <Calendar />
+              </div>
+            </div>
+            <div className="actions">
+              <div className="taxesWarning">
+                Prices on calendar do not include taxes and fees
+              </div>
+              <button className="clear-btn" type="button">Clear date</button>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );

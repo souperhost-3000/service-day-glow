@@ -8,26 +8,24 @@ html, body {
   height: 100%;
 }
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   font-family: 'Montserrat', sans-serif;
   font-weight: lighter;
 }
 
+.entire-App {
+  height: 2000px;
+  width: 90%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
 
-/* div {
-  border-color:#b31f50;
-  border: 1px solid #bd164e;
-  border-radius: 5px;
-  width: 200px;
-  padding:10px;
-} */
+.scroll-wrapper {
+  height: 1500px;
+}
 
 /*
 ===============================
-Header
+App Header
 ===============================
 */
 
@@ -41,12 +39,13 @@ h2 {
   border: 1px solid #bb0d2c;
   border-radius: 5px;
   width: 400px;
-  padding:10px;
+  padding: 10px;
+  margin: 100px;
 }
 
 /*
 ===============================
-App Main Container
+App Major Container
 ===============================
 
 This container adjusts with page size, height & width currently set at max
@@ -65,8 +64,12 @@ price margin-top:
   border-color: #cacccdd8;
   box-shadow: 3px 2px 25px 5px #cacccdcb;
   opacity: 1;
+  position: sticky;
+  position: -webkit-sticky;
+
   margin: 30px;
   padding: 2px;
+
 }
 
 .upper-app {
@@ -102,10 +105,9 @@ price margin-top:
   font-weight: bold;
 }
 
-
 /*
 ===============================
-Upper - App
+Upper - Major Container
 ===============================
 */
 
@@ -142,7 +144,7 @@ Upper - App
 
 /*
 ===============================
-Middle/Upper - App
+Middle/Upper - Major Container
 ===============================
 */
 
@@ -195,7 +197,7 @@ Middle/Upper - App
 
 /*
 ===============================
-Middle/Lower - App
+Middle/Lower - Major Container
 ===============================
 */
 
@@ -224,7 +226,7 @@ Middle/Lower - App
 
 /*
 ===============================
-Lower - App
+Lower - Major Container
 ===============================
 darker Airbnb color: #b91432
 */
@@ -255,17 +257,6 @@ darker Airbnb color: #b91432
 Cal Modal - pop up
 ===============================
 */
-
-/* .modal {
-  width: 500px;
-  background: teal;
-  border: 1px solid #ccc;
-  transition: 1.1s ease-out;
-  filter: blur(0);
-  transform: scale(1);
-  opacity: 1;
-  visibility: visible;
-  } */
 
   .bob {
     display: flex;
@@ -298,11 +289,6 @@ Cal Modal - pop up
     align-items: top;
     padding: 20px 20px 0 10px;
   }
-
-  /* .closed-modal {
-    display: none;
-    visibility: hidden;
-  } */
 
   .modal-header-left {
     float: left;
@@ -463,3 +449,46 @@ Large Buttons
 ===============================
 */
 
+
+/*
+===============================
+Major Container
+===============================
+*/
+.major {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: right;
+  align-items: center;
+  margin: 50px;
+  position: sticky;
+}
+
+/*
+===============================
+Minor Container
+===============================
+*/
+
+.minor-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  float: left;
+  width: 600px;
+  height: 400px;
+  position: sticky;
+}
+
+.minor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  border-top: 1px solid #cacccdcb;
+  border-bottom: 1px solid #cacccdcb;
+  filter: blur();
+  margin-left: 50px;
+  position: sticky;
+}
