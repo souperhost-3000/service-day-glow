@@ -5,7 +5,43 @@ import App from '../components/App';
 import Price from '../components/Price';
 import Guests from '../components/Guests';
 
-describe('Testing with enzyme and jest', () => {
+/*
+=======================================
+Unit Testing App Level - Overall Page
+=======================================
+*/
+
+// overall components called in App return (shallow)
+describe('Testing over page at Main App level', () => {
+  it('page renders App to service without breaking', () => {
+    const wrapper = shallow(<App />);
+    // expect(wrapper.find('#price-app-header')).toBe({});
+    expect(wrapper.getElements()).toMatchSnapshot();
+    // expect(wrapper.find(Price).render().find('#price-app-header')).toBe(true);
+
+  })
+
+
+
+});
+
+/*
+=======================================
+Unit Testing App Level - Major
+=======================================
+*/
+
+// test UI render for major
+
+/*
+=======================================
+Unit Testing App Level - Minor
+=======================================
+*/
+
+// test UI render for minor
+
+xdescribe('Testing with enzyme and jest', () => {
   // it('renders header message to service', () => {
   //   const wrapper = shallow(<App />);
   //   const welcome = Airbnb Check Availability Service;
@@ -17,12 +53,12 @@ describe('Testing with enzyme and jest', () => {
   //   const guestComponent = mount(<Guests />);
   //   expect(guestComponent).toBePresent();
   // });
-  it('renders app service without breaking', () => {
+  xit('renders app service without breaking', () => {
     const wrapper = mount(<App />);
     expect(wrapper).toMatchSnapshot();
   })
 
-  it('dynamically renders price', () => {
+  xit('dynamically renders price', () => {
     const wrapper = mount(<Price />);
     expect(wrapper).toMatchSnapshot();
   })
@@ -37,7 +73,7 @@ describe('Testing with enzyme and jest', () => {
 // guest input expands modal
 // button rendered
 
-describe('<Price /> and <Reviews /> component mounted to App', () => {
+xdescribe('<Price /> and <Reviews /> component mounted to App', () => {
   // it('renders price component in upper left corner of app-container', () => {
   //   const price = shallow(<Price />);
   //   expect(price.contains(<span id="price-app-header">$190</span>)).toBe(true);

@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 function Reviews({ rating, reviews_count }) {
   return (
     <div className="reviews">
-      <img id="star-sym" src="https://ghrsea12-fec.s3-us-west-2.amazonaws.com/sample/star.png" alt="star" />
+      <img id="star-sym" src="https://ghrsea12-fec.s3-us-west-2.amazonaws.com/sample/star.png" alt="" />
       <span id="stars">
         {`  ${rating}`}
       </span>

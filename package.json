@@ -11,6 +11,7 @@
     "build": "webpack",
     "watch": "webpack -w",
     "test": "jest --coverage",
+    "test -w": "jest --coverage --watchAll",
     "seed": "node database-mongodb/seed.js"
   },
   "jest": {
@@ -18,6 +19,7 @@
       "^.+\\.[t|j]sx?$": "babel-jest"
     },
     "verbose": true,
+    "snapshotSerializers": ["enzyme-to-json/serializer"],
     "setupFilesAfterEnv": [
       "./src/setupTests.js"
     ]

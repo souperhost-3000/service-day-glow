@@ -42,3 +42,19 @@ function CalModal({ show, setCalModal }) {
 }
 
 export default CalModal;
+
+// listing_rooms class (show be renamed sub-info for calendar/dates)
+/* includes:
+
+listing_details: "Entire cabin2 - beds1 - bath"
+Minimum checkout date: "Minimum stay: 3 nights", "Minimum stay: 2 nights"
+Dates Picked: "Jan 24, 2021 - Jan 27, 2021"
+Closest date avail in displayed month range: "The closest available check-in date is Jan 11."
+& when clicking on bad date option, click highlights picked day with grey
+
+// date picker (first "day" clicked auto-fills check-in)
+// hover effect and dates selected background for all days inbetween
+
+// Select Dates Title changes in Minor:
+Select Dates -> Select Check-in Dates -> Select Check-out Dates
+*/
