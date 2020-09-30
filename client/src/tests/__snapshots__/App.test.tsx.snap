@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing with enzyme and jest dynamically renders price 1`] = `ReactWrapper {}`;
+
+exports[`Testing with enzyme and jest renders app service without breaking 1`] = `ReactWrapper {}`;
