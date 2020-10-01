@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 
+
 // Calendar (reuseable) - formats one individual month
-function Calendar({ monthName, index, monthDays, side }) {
+function Calendar({ monthName, index, monthDays, side, setLeftCal, setRightCal }) {
+
   const nums = Array(42).fill(null);
 
   let startOfMonthIdx = 0;
@@ -51,7 +53,7 @@ function Calendar({ monthName, index, monthDays, side }) {
       <div className="month-bar">
         <div>
           {side === 'cal-left' ? (
-            <button className="leftButton" type="button" aria-label="left" />
+            <button className="leftButton" type="button" aria-label="left" onClick={() => setLeftCal(index + 1)} />
           ) : (
             <button className="rightButton" type="button" aria-label="right" />
           )}

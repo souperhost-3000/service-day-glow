@@ -3,7 +3,10 @@ import React, { useState } from 'react';
 import Calendar from './Modals/Calendar';
 
 // Calendar Container (reuseable) - formats each month of availability for listing
-function CalContainer({ availability, leftCalIdx, rightCalIdx }) {
+function CalContainer({ availability }) {
+  const [leftCalIdx, setLeftCal] = useState(0);
+  const [rightCalIdx, setRightCal] = useState(leftCalIdx + 1);
+  // leftCalIdx, rightCalIdx
   return (
     <div className="months-container">
       {availability.map((monthObj, index) => {
@@ -17,6 +20,8 @@ function CalContainer({ availability, leftCalIdx, rightCalIdx }) {
                 index={index}
                 monthDays={monthObj.days}
                 side={index === leftCalIdx ? 'cal-left' : 'cal-right'}
+                setLeftCal={setLeftCal}
+                setRightCal={setRightCal}
               />
             </div>
           );

@@ -7,7 +7,7 @@ import DatePicker from './DatePicker';
 import CA from './CA';
 import Guests from './Guests';
 import exampleData from '../tests/exampleData';
-import Calendar from './Modals/Calendar';
+// import Calendar from './Modals/Calendar';
 import CalContainer from './CalContainer';
 
 /* App -> contains:
@@ -33,9 +33,6 @@ render each nested functional component (use hooks if needed)
 function App() {
   const [listingData, setListingData] = useState(exampleData);
   const listingID = 20;
-
-  const [leftCalIdx, setLeftCal] = useState(0);
-  const [rightCalIdx, setRightCal] = useState(leftCalIdx + 1);
 
   // const getListingData =
   useEffect(() => {
@@ -93,8 +90,6 @@ function App() {
               <div className="dbl-all">
                 <CalContainer
                   availability={listingData.availability}
-                  leftCalIdx={leftCalIdx}
-                  rightCalIdx={rightCalIdx}
                 />
               </div>
               {/* <div className="cal-left">
