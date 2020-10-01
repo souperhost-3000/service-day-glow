@@ -18,9 +18,15 @@ function Calendar({ monthName, index, monthDays }) {
     // dayNum will be displayed on the button days (date)
     let dayNum;
     let style;
-    if (i < startOfMonthIdx) { dayNum = ' '; }
+    if (i < startOfMonthIdx) {
+      dayNum = ' ';
+      style = {
+        border: 'none',
+      };
+    }
     if (i >= startOfMonthIdx) {
       dayNum = i - startOfMonthIdx + 1;
+      // style of date number displayed will change if unavailable
       if (monthDays[dayNum - 1] === 0) {
         style = {
           color: 'blue',
@@ -28,7 +34,12 @@ function Calendar({ monthName, index, monthDays }) {
         };
       }
     }
-    if (i > 31 + startOfMonthIdx - 1) { dayNum = ' '; }
+    if (i > 31 + startOfMonthIdx - 1) {
+      dayNum = ' ';
+      style = {
+        border: 'none',
+      };
+    }
 
     nums[i] = (
       <button className="day" style={style} type="button" key={i}>
