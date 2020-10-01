@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Calendar from './Modals/Calendar';
 
 // Calendar Container (reuseable) - formats each month of availability for listing
@@ -7,6 +7,11 @@ function CalContainer({ availability }) {
   const [leftCalIdx, setLeftCal] = useState(0);
   const [rightCalIdx, setRightCal] = useState(leftCalIdx + 1);
   // leftCalIdx, rightCalIdx
+
+  useEffect(() => {
+    setRightCal(leftCalIdx + 1);
+  }, [leftCalIdx]);
+
   return (
     <div className="months-container">
       {availability.map((monthObj, index) => {
