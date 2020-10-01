@@ -7,14 +7,11 @@ function Calendar({ monthName, index, monthDays }) {
   let startOfMonthIdx = 0;
   for (let i = 0; i < nums.length; i += 1) {
     // month start otherwise value = null
-    if (monthName === 'October') {
-      startOfMonthIdx = 4;
-    }
-    // button value = 1-31 (i)
-    // className=monthDays[i] (t/f)
-    // monthDays[i] = 1 or 0
+    if (monthName === 'October') { startOfMonthIdx = 4; }
+    if (monthName === 'November') { startOfMonthIdx = 0; }
+    if (monthName === 'December') { startOfMonthIdx = 2; }
+    if (monthName === 'January') { startOfMonthIdx = 5; }
 
-    // key will be the identifier of the button itself (position)
     // dayNum will be displayed on the button days (date)
     let dayNum;
     let style;
@@ -41,6 +38,7 @@ function Calendar({ monthName, index, monthDays }) {
       };
     }
 
+    // key will be the identifier of the button itself (position)
     nums[i] = (
       <button className="day" style={style} type="button" key={i}>
         {dayNum}
