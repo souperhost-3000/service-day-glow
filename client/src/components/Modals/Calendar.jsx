@@ -1,8 +1,7 @@
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 
 // Calendar (reuseable)
-function Calendar() {
+function Calendar({ monthName, index, monthDays}) {
   const nums = Array(42).fill(null);
   for (let i = 0; i < nums.length; i += 1) {
     nums[i] = <button className="day" type="button" key={i}>{i}</button>;
@@ -37,3 +36,11 @@ function Calendar() {
 }
 
 export default Calendar;
+
+/* availability = [
+  {days: [0, 1, 0...], name: Oct},
+  {days: [0, 1, 0...], name: Nov},
+  {days: [0, 1, 0...], name: Dec},
+  {days: [0, 1, 0...], name: Jan},
+]
+*/
