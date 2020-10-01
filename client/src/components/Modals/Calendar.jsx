@@ -49,9 +49,7 @@ function Calendar({ monthName, index, monthDays }) {
   return (
     <div className="cal-container">
       <div className="month-bar">
-        {/* <button id="leftArrow" type="button">
-          {'<'}
-        </button> */}
+        <button className="leftButton" type="button" aria-label="left" />
         <div className="month">
           {monthName}
         </div>

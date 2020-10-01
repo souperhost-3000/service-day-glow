@@ -448,7 +448,55 @@ Calendar Day Buttons
 Large Buttons
 ===============================
 */
+.leftButton {
+  display: inline-block;
+  width: 2.5em;
+  height: 2.5em;
+  border: rgba(0, 0, 0, 0.9);
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 10%;
+  background-color: transparent;
+  outline: none;
+}
+.leftButton:after {
+  content: '';
+  display: inline-block;
+  margin-top: 0.2em;
+  margin-left: 0.3em;
+  width: .5em;
+  height: .5em;
+  border-top: 0.1em solid rgba(0, 0, 0, 0.9);
+  border-right: 0.1em solid rgba(0, 0, 0, 0.9);
+  transform: rotate(-135deg);
+}
+.leftButton:hover {
+  background-color: #ebedeea4;
+}
 
+.rightButton {
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  border: 0.2em solid #ccc;
+  border-radius: 50%;
+  margin-left: 95%;
+  position: absolute;
+  margin-top: 40%;
+  background-color: white;
+}
+.rightButton:after {
+  content: '';
+  display: inline-block;
+  margin-top: 0.2em;
+  margin-left: -0.6em;
+  width: .7em;
+  height: .7em;
+  border-top: 0.2em solid #ccc;
+  border-right: 0.2em solid #ccc;
+  transform: rotate(45deg);
+}
 
 /*
 ===============================
