@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Calendar from './Modals/Calendar';
 
-// Calendar (reuseable)
+// Calendar Container (reuseable) - formats each month of availability for listing
 function CalContainer({ availability }) {
   return (
     <div className="months-container">

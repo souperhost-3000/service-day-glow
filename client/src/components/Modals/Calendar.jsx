@@ -1,10 +1,39 @@
 import React, { useState } from 'react';
 
-// Calendar (reuseable)
-function Calendar({ monthName, index, monthDays}) {
+// Calendar (reuseable) - formats one individual month
+function Calendar({ monthName, index, monthDays }) {
   const nums = Array(42).fill(null);
+
+  let startOfMonthIdx = 0;
   for (let i = 0; i < nums.length; i += 1) {
-    nums[i] = <button className="day" type="button" key={i}>{i}</button>;
+    // month start otherwise value = null
+    if (monthName === 'October') {
+      startOfMonthIdx = 4;
+    }
+    // button value = 1-31 (i)
+    // className=monthDays[i] (t/f)
+    // monthDays[i] = 1 or 0
+
+    // key will be the identifier of the button itself (position)
+    // dayNum will be displayed on the button days (date)
+    let dayNum;
+    if (i < startOfMonthIdx) { dayNum = ' '; }
+    if (i >= startOfMonthIdx) { dayNum = i - startOfMonthIdx + 1; }
+    if (i > 31 + startOfMonthIdx - 1) { dayNum = ' '; }
+
+    let style;
+    if (dayNum < 10) {
+      style = {
+        color: 'blue',
+        'text-decoration': 'line-through',
+      };
+    }
+
+    nums[i] = (
+      <button className="day" style={style} type="button" key={i}>
+        {dayNum}
+      </button>
+    );
   }
 
   return (
@@ -14,7 +43,7 @@ function Calendar({ monthName, index, monthDays}) {
           {'<'}
         </button> */}
         <div className="month">
-          Month Name
+          {monthName}
         </div>
       </div>
       <div className="cal-container">
