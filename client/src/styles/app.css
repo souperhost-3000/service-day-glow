@@ -364,6 +364,7 @@ Calendar
 .cal-dbl-container {
   width: 550px;
   margin: 5px 5px 5px 12px;
+  background-color: white;
 }
 
 .cal-left {
@@ -378,17 +379,23 @@ Calendar
   padding-left: 10px;
   width: 250px;
   align-items: center;
-
 }
 
-.month-bar {
-  padding: 15px 15px 15px 77px;
+/* .month-bar {
+  display: inline-block;
+
   vertical-align: middle;
   justify-content: center;
-  align-items: center;
+
+  align-items: baseline;
+} */
+
+.month {
+
+  margin-left: 37%;
 }
 
-#leftArrow {
+/* #leftArrow {
   height: 30px;
   width: 35px;
   background-color: transparent;
@@ -396,13 +403,13 @@ Calendar
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
-}
+} */
 
 
 
 /*
 ===============================
-Calendar Day Buttons
+Calendar - Day Buttons
 ===============================
 */
 
@@ -445,26 +452,25 @@ Calendar Day Buttons
 
 /*
 ===============================
-Large Buttons
+Calendar - Arrow Buttons
 ===============================
 */
+
 .leftButton {
   display: inline-block;
-  width: 2.5em;
-  height: 2.5em;
+  width: 2em;
+  height: 2em;
   border: rgba(0, 0, 0, 0.9);
-  border: none;
   border-radius: 50%;
   position: absolute;
-  margin-top: 10%;
+  margin-left: 3%;
+  margin-top: -5px;
   background-color: transparent;
   outline: none;
 }
 .leftButton:after {
   content: '';
   display: inline-block;
-  margin-top: 0.2em;
-  margin-left: 0.3em;
   width: .5em;
   height: .5em;
   border-top: 0.1em solid rgba(0, 0, 0, 0.9);
@@ -476,26 +482,29 @@ Large Buttons
 }
 
 .rightButton {
-  display: inline-block;
-  width: 4em;
-  height: 4em;
-  border: 0.2em solid #ccc;
+  width: 2em;
+  height: 2em;
+  border: rgba(0, 0, 0, 0.9);
   border-radius: 50%;
-  margin-left: 95%;
+  margin-left: 37%;
   position: absolute;
-  margin-top: 40%;
-  background-color: white;
+  margin-top: -5px;
+  background-color: transparent;
+  outline: none;
 }
 .rightButton:after {
   content: '';
   display: inline-block;
-  margin-top: 0.2em;
-  margin-left: -0.6em;
-  width: .7em;
-  height: .7em;
-  border-top: 0.2em solid #ccc;
-  border-right: 0.2em solid #ccc;
+  /* margin-top: 0.2em;
+  margin-left: -0.3em; */
+  width: .5em;
+  height: .5em;
+  border-top: 0.1em solid rgba(0, 0, 0, 0.9);
+  border-right: 0.1em solid rgba(0, 0, 0, 0.9);
   transform: rotate(45deg);
+}
+.rightButton:hover {
+  background-color: #ebedeea4;
 }
 
 /*

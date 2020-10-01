@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // Calendar (reuseable) - formats one individual month
-function Calendar({ monthName, index, monthDays }) {
+function Calendar({ monthName, index, monthDays, side }) {
   const nums = Array(42).fill(null);
 
   let startOfMonthIdx = 0;
@@ -49,10 +49,17 @@ function Calendar({ monthName, index, monthDays }) {
   return (
     <div className="cal-container">
       <div className="month-bar">
-        <button className="leftButton" type="button" aria-label="left" />
+        <div>
+          {side === 'cal-left' ? (
+            <button className="leftButton" type="button" aria-label="left" />
+          ) : (
+            <button className="rightButton" type="button" aria-label="right" />
+          )}
+        </div>
         <div className="month">
           {monthName}
         </div>
+
       </div>
       <div className="cal-container">
         <div className="weekdays">

@@ -10,12 +10,15 @@ function CalContainer({ availability, leftCalIdx, rightCalIdx }) {
         // only 2 selected months for the display (not every month in container)
         if (index === leftCalIdx || index === rightCalIdx) {
           return (
-            <Calendar
-              monthName={monthObj.name}
-              key={monthObj.name}
-              index={index}
-              monthDays={monthObj.days}
-            />
+            <div className={index === leftCalIdx ? 'cal-left' : 'cal-right'}>
+              <Calendar
+                monthName={monthObj.name}
+                key={monthObj.name}
+                index={index}
+                monthDays={monthObj.days}
+                side={index === leftCalIdx ? 'cal-left' : 'cal-right'}
+              />
+            </div>
           );
         }
       })}
