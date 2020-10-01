@@ -6,7 +6,7 @@ function Calendar({ monthName, index, monthDays }) {
 
   let startOfMonthIdx = 0;
   for (let i = 0; i < nums.length; i += 1) {
-    // month start otherwise value = null
+    // month starts at which index (accounts for not starting on Sunday)
     if (monthName === 'October') { startOfMonthIdx = 4; }
     if (monthName === 'November') { startOfMonthIdx = 0; }
     if (monthName === 'December') { startOfMonthIdx = 2; }

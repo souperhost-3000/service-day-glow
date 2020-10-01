@@ -34,6 +34,9 @@ function App() {
   const [listingData, setListingData] = useState(exampleData);
   const listingID = 20;
 
+  const [leftCalIdx, setLeftCal] = useState(0);
+  const [rightCalIdx, setRightCal] = useState(leftCalIdx + 1);
+
   // const getListingData =
   useEffect(() => {
     axios.get(`/availability/${listingID}`)
@@ -88,7 +91,11 @@ function App() {
             </div>
             <div className="cal-dbl-container">
               <div className="dbl-all">
-                <CalContainer availability={listingData.availability} />
+                <CalContainer
+                  availability={listingData.availability}
+                  leftCalIdx={leftCalIdx}
+                  rightCalIdx={rightCalIdx}
+                />
               </div>
               {/* <div className="cal-left">
                 <Calendar />
