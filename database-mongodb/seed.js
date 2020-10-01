@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 const mongoose = require('mongoose');
+const faker = require('faker');
 // eslint-disable-next-line no-unused-vars
 const { db, Listing, Month } = require('./index');
 
@@ -13,12 +14,32 @@ const { db, Listing, Month } = require('./index');
 // repeat with loop until 100 documents have been created
 // for reviews decimal, use random(25, 50) divide by 10
 
-// leading 3 months, #days in month, scable if needed
+// leading 4 months, #days in month, scable if needed
 const months = {
   October: 31,
   November: 30,
   December: 31,
+  January: 31,
 };
+
+// listing type helper
+const listingTypes = [
+  'Entire house',
+  'Entire apartment',
+  'Entire cabin',
+  'Entire chalet',
+  'Entire cottage',
+  'Entire treehouse',
+  'Entire condominium',
+  'Entire guest suite',
+  'Entire townhouse',
+  'Entire guesthouse',
+  'Entire house',
+  'Entire tiny house',
+  'Hotel room',
+  'Private room',
+  'Shared room',
+];
 
 // helper function for random seed data (inclusive)
 const randomInt = (min, max) =>
@@ -33,9 +54,9 @@ let monthsResult = [];
 const seedMonths = () => {
   monthsResult = [];
   const monthsArr = Object.entries(months);
-  const listingIsAvailable = [];
 
   monthsArr.forEach(([month, numDays]) => {
+    const listingIsAvailable = [];
     while (listingIsAvailable.length < numDays) {
       let nightsInARow = randomInt(4, 10);
       const value = randomInt(1, 2) === 1 ? 1 : 0;
@@ -72,6 +93,11 @@ const seedListingDocument = () => {
       cleaning_fee: randomInt(10, 35) * 10,
       service_fee: randomInt(20, 40),
       taxes: randomInt(15, 30),
+      bedrooms: randomInt(0, 5),
+      beds: randomInt(1, 5),
+      baths: randomInt(1, 5),
+      listing_type: listingTypes[randomInt(0, 14)],
+      host: faker.name.firstName(),
       availability: monthsResult,
     });
   }

@@ -19,7 +19,9 @@
       "^.+\\.[t|j]sx?$": "babel-jest"
     },
     "verbose": true,
-    "snapshotSerializers": ["enzyme-to-json/serializer"],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
     "setupFilesAfterEnv": [
       "./src/setupTests.js"
     ]
@@ -54,6 +56,7 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.21.2",
     "eslint-plugin-react-hooks": "^4.1.2",
+    "faker": "^5.1.0",
     "jest": "^26.4.2",
     "nodemon": "^2.0.4",
     "style-loader": "^1.2.1",
