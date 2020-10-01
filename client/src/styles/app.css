@@ -540,6 +540,7 @@ Minor Container
   justify-content: center;
   align-items: center;
   height: 500px;
+  width: 600px;
   border-top: 1px solid #cacccdcb;
   border-bottom: 1px solid #cacccdcb;
   filter: blur();

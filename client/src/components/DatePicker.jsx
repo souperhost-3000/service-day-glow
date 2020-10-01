@@ -3,7 +3,7 @@ import CalModal from './Modals/CalModal';
 import DateBoxes from './DateBoxes';
 
 // date selectors (check-in, check-out)
-function DatePicker() {
+function DatePicker({ availability }) {
   const [showCalModal, setCalModal] = useState(false);
 
   useEffect(() => {
@@ -20,6 +20,7 @@ function DatePicker() {
           <CalModal
             show={showCalModal}
             setCalModal={setCalModal}
+            availability={availability}
           />
         </span>
       </div>
