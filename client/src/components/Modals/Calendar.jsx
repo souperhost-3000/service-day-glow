@@ -53,9 +53,9 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal, setRightCal }
       <div className="month-bar">
         <div>
           {side === 'cal-left' ? (
-            <button className="leftButton" type="button" aria-label="left" onClick={() => setLeftCal(index - 1)} />
+            <button className="leftButton" type="button" aria-label="left" onClick={() => index > 0 ? setLeftCal(index - 1) : null} />
           ) : (
-            <button className="rightButton" type="button" aria-label="right" onClick={() => setLeftCal(index)} />
+            <button className="rightButton" type="button" aria-label="right" onClick={() => index < 3 ? setLeftCal(index): null} />
           )}
         </div>
         <div className="month">
