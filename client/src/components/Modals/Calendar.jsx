@@ -17,17 +17,18 @@ function Calendar({ monthName, index, monthDays }) {
     // key will be the identifier of the button itself (position)
     // dayNum will be displayed on the button days (date)
     let dayNum;
-    if (i < startOfMonthIdx) { dayNum = ' '; }
-    if (i >= startOfMonthIdx) { dayNum = i - startOfMonthIdx + 1; }
-    if (i > 31 + startOfMonthIdx - 1) { dayNum = ' '; }
-
     let style;
-    if (dayNum < 10) {
-      style = {
-        color: 'blue',
-        'text-decoration': 'line-through',
-      };
+    if (i < startOfMonthIdx) { dayNum = ' '; }
+    if (i >= startOfMonthIdx) {
+      dayNum = i - startOfMonthIdx + 1;
+      if (monthDays[dayNum - 1] === 0) {
+        style = {
+          color: 'blue',
+          textDecoration: 'line-through',
+        };
+      }
     }
+    if (i > 31 + startOfMonthIdx - 1) { dayNum = ' '; }
 
     nums[i] = (
       <button className="day" style={style} type="button" key={i}>

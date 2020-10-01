@@ -90,12 +90,12 @@ function App() {
               <div className="dbl-all">
                 <CalContainer availability={listingData.availability} />
               </div>
-              <div className="cal-left">
+              {/* <div className="cal-left">
                 <Calendar />
               </div>
               <div className="cal-right">
                 <Calendar />
-              </div>
+              </div> */}
             </div>
             <div className="actions">
               <div className="taxesWarning">
