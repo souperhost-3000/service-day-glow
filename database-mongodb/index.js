@@ -1,8 +1,7 @@
 /* eslint-disable no-console */
 const mongoose = require('mongoose');
 
-// database is misspelled "Availaility" !== "Availability"
-const mongoURI = 'mongodb://localhost/Availaility';
+const mongoURI = 'mongodb://localhost/Availability';
 
 const db = mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to mongoDB and mongoose'))
@@ -10,11 +9,10 @@ const db = mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopolog
 
 mongoose.Promise = global.Promise;
 
-// subdocument child schema for availaility dates (by month)
+// subdocument child schema for availability dates (by month)
 const monthSchema = new mongoose.Schema({
   name: String,
   days: Array,
-  // start_first: Number,
 });
 
 const Month = mongoose.model('Month', monthSchema);
@@ -31,6 +29,11 @@ const listingSchema = new mongoose.Schema({
   cleaning_fee: Number,
   service_fee: Number,
   taxes: Number,
+  bedrooms: Number,
+  beds: Number,
+  baths: Number,
+  listing_type: String,
+  host: String,
   availability: Array,
 });
 
