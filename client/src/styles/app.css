@@ -381,14 +381,9 @@ Calendar
   align-items: center;
 }
 
-/* .month-bar {
-  display: inline-block;
-
-  vertical-align: middle;
-  justify-content: center;
-
-  align-items: baseline;
-} */
+.month-bar {
+margin-bottom: 10px;
+}
 
 .month {
 
@@ -419,6 +414,7 @@ Calendar - Day Buttons
 
 .cal-day {
   height: 30px;
+  vertical-align: middle;
   width: 30px;
   background-color: transparent;
   border: none;
@@ -433,6 +429,7 @@ Calendar - Day Buttons
 
 .day {
   outline: none;
+  vertical-align: middle;
   height: 30px;
   width: 30px;
   background-color: transparent;
