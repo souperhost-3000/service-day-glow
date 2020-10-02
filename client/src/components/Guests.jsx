@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import GuestModal from './Modals/GuestModal';
 
 // Guest selector (num adults, children, infants)
-function Guests() {
+function Guests({ guestIncluded, guestLimit }) {
   const [showGMod, setGuestModal] = useState(false);
   const [guestTotal, setGuestTotal] = useState(1);
 
@@ -13,7 +13,6 @@ function Guests() {
   function updateGuestTotal(e) {
     setGuestTotal(guestTotal + e);
   }
-
 
   return (
     <div className="guestPicker">
@@ -34,6 +33,8 @@ function Guests() {
             showGMod={showGMod}
             setGuestModal={setGuestModal}
             updateGuestTotal={updateGuestTotal}
+            guestIncluded={guestIncluded}
+            guestLimit={guestLimit}
           />
         </span>
       </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // Guest modal (conditional pop up logic)
-function GuestModal({ showGMod, setGuestModal, updateGuestTotal }) {
+function GuestModal({ showGMod, setGuestModal, updateGuestTotal, guestLimit }) {
   const [adults, setAdults] = useState(1);
   const [children, setChildren] = useState(0);
   const [infants, setInfants] = useState(0);
@@ -11,15 +11,17 @@ function GuestModal({ showGMod, setGuestModal, updateGuestTotal }) {
   }
 
   function handleClick(group, change) {
-    if (group === 'adults') {
-      if (adults + change >= 1) {
-        setAdults(adults + change);
-        updateGuestTotal(change);
-      }
-    } else if (group === 'children') {
-      if (children + change >= 0) {
-        setChildren(children + change);
-        updateGuestTotal(change);
+    if (adults + children + change <= guestLimit && group !== 'infants') {
+      if (group === 'adults') {
+        if (adults + change >= 1) {
+          setAdults(adults + change);
+          updateGuestTotal(change);
+        }
+      } else if (group === 'children') {
+        if (children + change >= 0) {
+          setChildren(children + change);
+          updateGuestTotal(change);
+        }
       }
     } else if (group === 'infants') {
       (infants + change >= 0) ? setInfants(infants + change) : null;
@@ -82,7 +84,7 @@ function GuestModal({ showGMod, setGuestModal, updateGuestTotal }) {
       </div>
       <div className="actions">
         <div className="guestWarning">
-          DYNAMIC 4 guests maximum. Infants don’t count toward the number of guests.
+          {`${guestLimit} guests maximum. Infants don’t count toward the number of guests.`}
         </div>
         <button className="close-btn" type="button" onClick={() => setGuestModal(false)}>
           Close

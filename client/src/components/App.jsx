@@ -68,7 +68,10 @@ function App() {
                 <DatePicker
                   availability={listingData.availability}
                 />
-                <Guests />
+                <Guests
+                  guestIncluded={listingData.guest_included}
+                  guestLimit={listingData.guest_limit}
+                />
               </div>
               <div className="lower-app">
                 <CA />
