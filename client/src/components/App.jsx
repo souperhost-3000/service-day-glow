@@ -7,8 +7,8 @@ import DatePicker from './DatePicker';
 import CA from './CA';
 import Guests from './Guests';
 import exampleData from '../tests/exampleData';
-// import Calendar from './Modals/Calendar';
 import CalContainer from './CalContainer';
+import CostEstModal from './Modals/CostEstModal';
 
 /* App -> contains:
 price (upper left) - if calendar pricing differs (can add logic to add 5% for weekends)
@@ -31,6 +31,8 @@ render each nested functional component (use hooks if needed)
 
 // top level service component (displayed before user interacts with anything)
 function App() {
+  const [showCostEst, setCostEst] = useState(false);
+  const [style, setStyle] = useState({ height: '260px' });
   const [listingData, setListingData] = useState(exampleData);
   const listingID = 20;
 
@@ -41,6 +43,13 @@ function App() {
       // eslint-disable-next-line no-console
       .catch((err) => console.log(err));
   }, [listingID]);
+
+  useEffect(() => {
+    console.log('expand App Major and unhide the cost est break down');
+    if (showCostEst) {
+      setStyle({ 'height': '500px' });
+    }
+  }, [showCostEst]);
 
   return (
     <div className="entire-App">
@@ -56,7 +65,7 @@ function App() {
         </div>
         <section className="major">
           <div className="major-container">
-            <div className="app-container">
+            <div className="app-container" style={style}>
               <div className="upper-app">
                 <Price price={listingData.price} />
                 <Reviews
@@ -74,7 +83,8 @@ function App() {
                 />
               </div>
               <div className="lower-app">
-                <CA />
+                <CA setCostEst={setCostEst} />
+                <CostEstModal />
               </div>
             </div>
           </div>
