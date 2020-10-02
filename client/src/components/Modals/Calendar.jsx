@@ -6,7 +6,9 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
 
   // selected dates
   const [checkIn, setCheckIn] = useState('');
+  const [prevCI, setCI] = useState('');
   const [checkOut, setCheckOut] = useState('');
+  const [prevCO, setCO] = useState('');
   console.log('checkin set to :', checkIn);
   console.log('checkout set to :', checkOut);
   function handleClick(e) {
@@ -17,9 +19,31 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
       setCheckOut(e);
     }
   }
+  // transform selected checkIn and Out dates css
   useEffect(() => {
-    if (checkIn !== '') { document.getElementById(checkIn).style['background-color'] = 'purple'; }
-    if (checkOut !== '') { document.getElementById(checkOut).style['background-color'] = 'green'; }
+    if (checkIn !== '') {
+      if (prevCI !== '') {
+        document.getElementById(prevCI).style['background-color'] = 'transparent';
+        document.getElementById(prevCI).style.color = 'black';
+      }
+      const ci = document.getElementById(checkIn).style;
+      ci['background-color'] = 'black';
+      ci['border-radius'] = '100%';
+      ci.border = '3px double white';
+      ci.color = 'white';
+      setCI(checkIn);
+    }
+    if (checkOut !== '') {
+      if (prevCO !== '') {
+        document.getElementById(prevCO).style['background-color'] = 'transparent';
+        document.getElementById(prevCO).style.color = 'black';
+      }
+      const ci = document.getElementById(checkOut).style;
+      ci['background-color'] = 'black';
+      ci['border-radius'] = '100%';
+      ci.color = 'white';
+      setCO(checkOut);
+    }
   }, [checkIn, checkOut]);
 
   // calendar creation (loop creates buttons for cal month)
@@ -62,7 +86,7 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
 
     // key will be the identifier of the button itself (position)
     nums[i] = (
-      <button className="day dayEffect" style={style} type="button" key={i} id={`${monthNum}/${dayNum}/20`} onClick={(e) => handleClick(e.target.id)}>
+      <button className="day" style={style} type="button" key={i} id={`${monthNum}/${dayNum}/20`} onClick={(e) => handleClick(e.target.id)}>
         {dayNum}
       </button>
     );
