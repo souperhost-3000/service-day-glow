@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import CalContainer from '../CalContainer';
 import DateBoxes from '../DateBoxes';
 
