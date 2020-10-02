@@ -97,7 +97,9 @@ function App() {
               <div className="taxesWarning">
                 Prices on calendar do not include taxes and fees
               </div>
-              <button className="clear-btn" type="button">Clear date</button>
+              <button className="clear-btn" type="button">
+                Clear date
+              </button>
             </div>
           </div>
         </section>

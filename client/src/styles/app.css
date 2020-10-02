@@ -230,6 +230,7 @@ Middle/Lower - Major Container
   border: transparent;
   font-weight: bold;
   margin-right: 10px;
+  outline: none;
 }
 
 /*
@@ -256,8 +257,8 @@ darker Airbnb color: #b91432
   background: linear-gradient(90deg, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
 
   background: radial-gradient(circle at 70%, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100% );
-
   background-color: #FF385C;
+  outline: none;
 }
 
 /*
@@ -340,6 +341,7 @@ Cal Modal - pop up
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     margin: 3px;
+    outline: none;
   }
 
   .clear-btn:hover {
@@ -361,6 +363,7 @@ Cal Modal - pop up
     font-weight: 300;
     border-radius: 7px;
     margin: 3px;
+    outline: none;
   }
 
 /*

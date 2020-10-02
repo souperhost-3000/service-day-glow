@@ -70,7 +70,7 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
       // style of date number displayed will change if unavailable
       if (monthDays[dayNum - 1] === 0) {
         style = {
-          color: 'blue',
+          color: '#cacccdcb',
           textDecoration: 'line-through',
           cursor: 'not-allowed',
           pointerEvents: 'none',
