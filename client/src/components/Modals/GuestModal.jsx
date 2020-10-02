@@ -7,6 +7,15 @@ function GuestModal({ showGMod, setGuestModal, updateGuestTotal }) {
   if (!showGMod) {
     return null;
   }
+
+  function handleClick(group, change) {
+    if (group === 'adults') {
+      setAdults(adults + change);
+      console.log('change: ', change);
+      updateGuestTotal(change);
+    }
+  }
+
   return (
     <div className="guest-modal">
       <div className="g-mod-groups">
@@ -16,22 +25,20 @@ function GuestModal({ showGMod, setGuestModal, updateGuestTotal }) {
           </div>
           <div className="groups-right">
             <button
-              className="minus"
+              className="adults"
               type="button"
-              onClick={() => {
-                setAdults(adults - 1);
-                updateGuestTotal(-1);
+              onClick={(e) => {
+                handleClick(e.target.className, -1);
               }}
             >
               -
             </button>
             <span className="adult_count">{adults}</span>
             <button
-              className="plus"
+              className="adults"
               type="button"
-              onClick={() => {
-                setAdults(adults + 1);
-                updateGuestTotal(1);
+              onClick={(e) => {
+                handleClick(e.target.className, 1);
               }}
             >
               +
