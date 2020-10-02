@@ -364,6 +364,7 @@ Calendar
 .cal-dbl-container {
   width: 550px;
   margin: 5px 5px 5px 12px;
+  background-color: white;
 }
 
 .cal-left {
@@ -378,17 +379,18 @@ Calendar
   padding-left: 10px;
   width: 250px;
   align-items: center;
-
 }
 
 .month-bar {
-  padding: 15px 15px 15px 77px;
-  vertical-align: middle;
-  justify-content: center;
-  align-items: center;
+margin-bottom: 10px;
 }
 
-#leftArrow {
+.month {
+
+  margin-left: 37%;
+}
+
+/* #leftArrow {
   height: 30px;
   width: 35px;
   background-color: transparent;
@@ -396,13 +398,13 @@ Calendar
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
-}
+} */
 
 
 
 /*
 ===============================
-Calendar Day Buttons
+Calendar - Day Buttons
 ===============================
 */
 
@@ -412,6 +414,7 @@ Calendar Day Buttons
 
 .cal-day {
   height: 30px;
+  vertical-align: middle;
   width: 30px;
   background-color: transparent;
   border: none;
@@ -425,7 +428,8 @@ Calendar Day Buttons
 }
 
 .day {
-
+  outline: none;
+  vertical-align: middle;
   height: 30px;
   width: 30px;
   background-color: transparent;
@@ -445,10 +449,60 @@ Calendar Day Buttons
 
 /*
 ===============================
-Large Buttons
+Calendar - Arrow Buttons
 ===============================
 */
 
+.leftButton {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border: rgba(0, 0, 0, 0.9);
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 3%;
+  margin-top: -5px;
+  background-color: transparent;
+  outline: none;
+}
+.leftButton:after {
+  content: '';
+  display: inline-block;
+  width: .5em;
+  height: .5em;
+  border-top: 0.1em solid rgba(0, 0, 0, 0.9);
+  border-right: 0.1em solid rgba(0, 0, 0, 0.9);
+  transform: rotate(-135deg);
+}
+.leftButton:hover {
+  background-color: #ebedeea4;
+}
+
+.rightButton {
+  width: 2em;
+  height: 2em;
+  border: rgba(0, 0, 0, 0.9);
+  border-radius: 50%;
+  margin-left: 37%;
+  position: absolute;
+  margin-top: -5px;
+  background-color: transparent;
+  outline: none;
+}
+.rightButton:after {
+  content: '';
+  display: inline-block;
+  /* margin-top: 0.2em;
+  margin-left: -0.3em; */
+  width: .5em;
+  height: .5em;
+  border-top: 0.1em solid rgba(0, 0, 0, 0.9);
+  border-right: 0.1em solid rgba(0, 0, 0, 0.9);
+  transform: rotate(45deg);
+}
+.rightButton:hover {
+  background-color: #ebedeea4;
+}
 
 /*
 ===============================
@@ -486,6 +540,7 @@ Minor Container
   justify-content: center;
   align-items: center;
   height: 500px;
+  width: 600px;
   border-top: 1px solid #cacccdcb;
   border-bottom: 1px solid #cacccdcb;
   filter: blur();

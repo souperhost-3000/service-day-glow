@@ -20,6 +20,7 @@ function DatePicker({ availability }) {
           <CalModal
             show={showCalModal}
             setCalModal={setCalModal}
+            availability={availability}
           />
         </span>
       </div>

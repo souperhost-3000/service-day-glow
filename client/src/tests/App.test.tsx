@@ -7,7 +7,8 @@ import Reviews from '../components/Reviews';
 import DatePicker from '../components/DatePicker';
 import Guests from '../components/Guests';
 import CA from '../components/CA';
-import Calendar from '../components/Modals/Calendar';
+// import Calendar from '../components/Modals/Calendar';
+import CalContainer from '../components/CalContainer';
 
 /*
 =======================================
@@ -81,13 +82,11 @@ Unit Testing App Level - Minor
 
 describe('Components nested in Minor render', () => {
 
-  it('should render Calendar', () => {
+  it('should render two Calendars', () => {
     const wrapper = shallow(<App />);
-    const calLeft = wrapper.find("div.cal-left").find(Calendar);
-    const calRight = wrapper.find("div.cal-right").find(Calendar);
+    const twoCal = wrapper.find(CalContainer);
 
-    expect(calLeft.exists()).toBe(true);
-    expect(calRight.exists()).toBe(true);
+    expect(twoCal.exists()).toBe(true);
   })
 
   it('should render clear button', () => {

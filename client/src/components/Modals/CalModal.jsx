@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Calendar from './Calendar';
+import CalContainer from '../CalContainer';
 import DateBoxes from '../DateBoxes';
 
 // Calendar modal (conditional pop up logic)
-function CalModal({ show, setCalModal }) {
+function CalModal({ show, setCalModal, availability }) {
   if (!show) {
     return null;
   }
@@ -21,12 +21,13 @@ function CalModal({ show, setCalModal }) {
         </div>
       </div>
       <div className="cal-dbl-container">
-        <div className="cal-left">
+        <CalContainer availability={availability} />
+        {/* <div className="cal-left">
           <Calendar />
         </div>
         <div className="cal-right">
           <Calendar />
-        </div>
+        </div> */}
       </div>
       <div className="actions">
         <div className="taxesWarning">

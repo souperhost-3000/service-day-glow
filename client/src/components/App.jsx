@@ -7,7 +7,8 @@ import DatePicker from './DatePicker';
 import CA from './CA';
 import Guests from './Guests';
 import exampleData from '../tests/exampleData';
-import Calendar from './Modals/Calendar';
+// import Calendar from './Modals/Calendar';
+import CalContainer from './CalContainer';
 
 /* App -> contains:
 price (upper left) - if calendar pricing differs (can add logic to add 5% for weekends)
@@ -86,12 +87,17 @@ function App() {
               </div>
             </div>
             <div className="cal-dbl-container">
-              <div className="cal-left">
+              <div className="dbl-all">
+                <CalContainer
+                  availability={listingData.availability}
+                />
+              </div>
+              {/* <div className="cal-left">
                 <Calendar />
               </div>
               <div className="cal-right">
                 <Calendar />
-              </div>
+              </div> */}
             </div>
             <div className="actions">
               <div className="taxesWarning">
