@@ -1,16 +1,28 @@
 import React, { useState, useEffect } from 'react';
 
-// function styleChanger(dateSelected) {
-//   { 'background-color': 'black' }
-
-//   return style;
-// }
-
-
 // Calendar (reuseable) - formats one individual month
 function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
   const nums = Array(42).fill(null);
 
+  // selected dates
+  const [checkIn, setCheckIn] = useState('');
+  const [checkOut, setCheckOut] = useState('');
+  console.log('checkin set to :', checkIn);
+  console.log('checkout set to :', checkOut);
+  function handleClick(e) {
+    if (checkIn === '' && checkOut === '' || checkIn !== '' && checkOut !== '') {
+      setCheckOut('');
+      setCheckIn(e);
+    } else if (checkIn !== '' && checkOut === '') {
+      setCheckOut(e);
+    }
+  }
+  useEffect(() => {
+    if (checkIn !== '') { document.getElementById(checkIn).style['background-color'] = 'purple'; }
+    if (checkOut !== '') { document.getElementById(checkOut).style['background-color'] = 'green'; }
+  }, [checkIn, checkOut]);
+
+  // calendar creation (loop creates buttons for cal month)
   let startOfMonthIdx = 0;
   let monthNum = 0;
   for (let i = 0; i < nums.length; i += 1) {
@@ -37,7 +49,7 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
           color: 'blue',
           textDecoration: 'line-through',
           cursor: 'not-allowed',
-          'pointer-events': 'none',
+          pointerEvents: 'none',
         };
       }
     }
@@ -50,7 +62,7 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
 
     // key will be the identifier of the button itself (position)
     nums[i] = (
-      <button className="day dayEffect" style={style} type="button" key={i} id={`${monthNum}/${dayNum}/20`} onClick={(e) => console.log(e.target.id)}>
+      <button className="day dayEffect" style={style} type="button" key={i} id={`${monthNum}/${dayNum}/20`} onClick={(e) => handleClick(e.target.id)}>
         {dayNum}
       </button>
     );

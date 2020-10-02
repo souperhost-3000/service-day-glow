@@ -449,6 +449,19 @@ Calendar - Day Buttons
   margin: 0 3px 0 2px;
 }
 
+#check-in {
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 3px double white;
+  color: white;
+  border-radius: 100%;
+}
+
+#check-out {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  border-radius: 100%;
+}
+
 .day:hover {
   border: 1px solid rgba(0, 0, 0, 0.9);
   border-radius: 100%;
@@ -460,7 +473,6 @@ Calendar - Day Buttons
   color: white;
   border-radius: 100%;
 }
-
 
 
 /*

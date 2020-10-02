@@ -26,7 +26,6 @@ function CalContainer({ availability }) {
                 monthDays={monthObj.days}
                 side={index === leftCalIdx ? 'cal-left' : 'cal-right'}
                 setLeftCal={setLeftCal}
-                // setRightCal={setRightCal}
               />
             </div>
           );
