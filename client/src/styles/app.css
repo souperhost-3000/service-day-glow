@@ -453,6 +453,13 @@ Calendar - Day Buttons
   border-radius: 100%;
 }
 
+.day:active,
+.day:focus {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  border-radius: 100%;
+}
+
 
 
 /*

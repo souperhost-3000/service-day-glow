@@ -1,4 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
+// function styleChanger(dateSelected) {
+//   { 'background-color': 'black' }
+
+//   return style;
+// }
+
 
 // Calendar (reuseable) - formats one individual month
 function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
@@ -46,6 +53,11 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
       </button>
     );
   }
+
+  // function isSelected(date) {
+  //   console.log('date in isSelected: ', date);
+  //   date.style = { 'background-color': 'black' };
+  // }
 
   return (
     <div className="cal-container">
