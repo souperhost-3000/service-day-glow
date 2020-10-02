@@ -57,6 +57,9 @@ function GuestModal({ showGMod, setGuestModal, updateGuestTotal }) {
           <div className="children group-header">
             Children
           </div>
+          <div className="children sub-header">
+            Ages 2-12
+          </div>
           <div className="groups-btns">
             {createBtn('children', 'minus')}
             <span className="children_count">{children}</span>
@@ -67,6 +70,9 @@ function GuestModal({ showGMod, setGuestModal, updateGuestTotal }) {
           <div className="infants group-header">
             Infants
           </div>
+          <div className="infants sub-header">
+            Under 2
+          </div>
           <div className="groups-btns">
             {createBtn('infants', 'minus')}
             <span className="infants_count">{infants}</span>
@@ -74,7 +80,6 @@ function GuestModal({ showGMod, setGuestModal, updateGuestTotal }) {
           </div>
         </div>
       </div>
-
       <div className="actions">
         <div className="guestWarning">
           DYNAMIC 4 guests maximum. Infants don’t count toward the number of guests.
