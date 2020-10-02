@@ -188,11 +188,19 @@ Middle/Upper - Major Container
 }
 
 .date-input {
+  outline: none;
   border: none;
   border-color: transparent;
+  background-color: transparent;
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
+}
+
+.date-input:-webkit-autofill {
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.9);
+  -webkit-box-shawdow: #f2f2f2 inset !important;
+  -webkit-transition: background-color 9999s ease-out;
 }
 
 /*
