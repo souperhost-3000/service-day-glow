@@ -5,12 +5,13 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
   const nums = Array(42).fill(null);
 
   let startOfMonthIdx = 0;
+  let monthNum = 0;
   for (let i = 0; i < nums.length; i += 1) {
     // month starts at which index (accounts for not starting on Sunday)
-    if (monthName === 'October') { startOfMonthIdx = 4; }
-    if (monthName === 'November') { startOfMonthIdx = 0; }
-    if (monthName === 'December') { startOfMonthIdx = 2; }
-    if (monthName === 'January') { startOfMonthIdx = 5; }
+    if (monthName === 'October') { startOfMonthIdx = 4; monthNum = 10; }
+    if (monthName === 'November') { startOfMonthIdx = 0; monthNum = 11; }
+    if (monthName === 'December') { startOfMonthIdx = 2; monthNum = 12; }
+    if (monthName === 'January') { startOfMonthIdx = 5; monthNum = 1; }
 
     // dayNum will be displayed on the button days (date)
     let dayNum;
@@ -40,7 +41,7 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
 
     // key will be the identifier of the button itself (position)
     nums[i] = (
-      <button className="day" style={style} type="button" key={i}>
+      <button className="day" style={style} type="button" key={i} id={`${monthNum}/${dayNum}/20`} onClick={(e) => console.log(e.target.id)}>
         {dayNum}
       </button>
     );
