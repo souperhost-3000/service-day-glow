@@ -29,3 +29,15 @@ function GuestModal({ showGMod, setGuestModal }) {
 }
 
 export default GuestModal;
+
+/*
+(3) div with guest group - each has own state
+(2 buttons/group) + and -; takes in group_id and increments count displayed
+(count changes guest total count) - total state
+
+receives listing data (free guest count) - displays dynamic message "guestWarning"
+close button - change css to match "clear button"
+ensure guest total count displays after modal closes (app major - guestPicker)
+
+state/total guests pass back to app level for (dynamic pricing change and cost est)
+*/
