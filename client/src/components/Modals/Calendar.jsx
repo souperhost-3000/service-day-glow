@@ -1,16 +1,60 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Calendar (reuseable) - formats one individual month
 function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
   const nums = Array(42).fill(null);
 
+  // selected dates
+  const [checkIn, setCheckIn] = useState('');
+  const [prevCI, setCI] = useState('');
+  const [checkOut, setCheckOut] = useState('');
+  const [prevCO, setCO] = useState('');
+  console.log('checkin set to :', checkIn);
+  console.log('checkout set to :', checkOut);
+  function handleClick(e) {
+    if (checkIn === '' && checkOut === '' || checkIn !== '' && checkOut !== '') {
+      setCheckOut('');
+      setCheckIn(e);
+    } else if (checkIn !== '' && checkOut === '') {
+      setCheckOut(e);
+    }
+  }
+  // transform selected checkIn and Out dates css
+  useEffect(() => {
+    if (checkIn !== '') {
+      if (prevCI !== '') {
+        document.getElementById(prevCI).style['background-color'] = 'transparent';
+        document.getElementById(prevCI).style.color = 'black';
+      }
+      const ci = document.getElementById(checkIn).style;
+      ci['background-color'] = 'black';
+      ci['border-radius'] = '100%';
+      ci.border = '3px double white';
+      ci.color = 'white';
+      setCI(checkIn);
+    }
+    if (checkOut !== '') {
+      if (prevCO !== '') {
+        document.getElementById(prevCO).style['background-color'] = 'transparent';
+        document.getElementById(prevCO).style.color = 'black';
+      }
+      const ci = document.getElementById(checkOut).style;
+      ci['background-color'] = 'black';
+      ci['border-radius'] = '100%';
+      ci.color = 'white';
+      setCO(checkOut);
+    }
+  }, [checkIn, checkOut]);
+
+  // calendar creation (loop creates buttons for cal month)
   let startOfMonthIdx = 0;
+  let monthNum = 0;
   for (let i = 0; i < nums.length; i += 1) {
     // month starts at which index (accounts for not starting on Sunday)
-    if (monthName === 'October') { startOfMonthIdx = 4; }
-    if (monthName === 'November') { startOfMonthIdx = 0; }
-    if (monthName === 'December') { startOfMonthIdx = 2; }
-    if (monthName === 'January') { startOfMonthIdx = 5; }
+    if (monthName === 'October') { startOfMonthIdx = 4; monthNum = 10; }
+    if (monthName === 'November') { startOfMonthIdx = 0; monthNum = 11; }
+    if (monthName === 'December') { startOfMonthIdx = 2; monthNum = 12; }
+    if (monthName === 'January') { startOfMonthIdx = 5; monthNum = 1; }
 
     // dayNum will be displayed on the button days (date)
     let dayNum;
@@ -26,8 +70,10 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
       // style of date number displayed will change if unavailable
       if (monthDays[dayNum - 1] === 0) {
         style = {
-          color: 'blue',
+          color: '#cacccdcb',
           textDecoration: 'line-through',
+          cursor: 'not-allowed',
+          pointerEvents: 'none',
         };
       }
     }
@@ -40,11 +86,16 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
 
     // key will be the identifier of the button itself (position)
     nums[i] = (
-      <button className="day" style={style} type="button" key={i}>
+      <button className="day" style={style} type="button" key={i} id={`${monthNum}/${dayNum}/20`} onClick={(e) => handleClick(e.target.id)}>
         {dayNum}
       </button>
     );
   }
+
+  // function isSelected(date) {
+  //   console.log('date in isSelected: ', date);
+  //   date.style = { 'background-color': 'black' };
+  // }
 
   return (
     <div className="cal-container">

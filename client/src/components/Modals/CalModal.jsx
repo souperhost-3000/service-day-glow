@@ -22,12 +22,6 @@ function CalModal({ show, setCalModal, availability }) {
       </div>
       <div className="cal-dbl-container">
         <CalContainer availability={availability} />
-        {/* <div className="cal-left">
-          <Calendar />
-        </div>
-        <div className="cal-right">
-          <Calendar />
-        </div> */}
       </div>
       <div className="actions">
         <div className="taxesWarning">

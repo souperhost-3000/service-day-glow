@@ -92,18 +92,14 @@ function App() {
                   availability={listingData.availability}
                 />
               </div>
-              {/* <div className="cal-left">
-                <Calendar />
-              </div>
-              <div className="cal-right">
-                <Calendar />
-              </div> */}
             </div>
             <div className="actions">
               <div className="taxesWarning">
                 Prices on calendar do not include taxes and fees
               </div>
-              <button className="clear-btn" type="button">Clear date</button>
+              <button className="clear-btn" type="button">
+                Clear date
+              </button>
             </div>
           </div>
         </section>

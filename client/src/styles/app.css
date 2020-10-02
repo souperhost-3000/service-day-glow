@@ -188,11 +188,19 @@ Middle/Upper - Major Container
 }
 
 .date-input {
+  outline: none;
   border: none;
   border-color: transparent;
+  background-color: transparent;
   font-size: 14px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
+}
+
+.date-input:-webkit-autofill {
+  -webkit-text-fill-color: rgba(0, 0, 0, 0.9);
+  -webkit-box-shawdow: #f2f2f2 inset !important;
+  -webkit-transition: background-color 9999s ease-out;
 }
 
 /*
@@ -222,6 +230,7 @@ Middle/Lower - Major Container
   border: transparent;
   font-weight: bold;
   margin-right: 10px;
+  outline: none;
 }
 
 /*
@@ -248,8 +257,8 @@ darker Airbnb color: #b91432
   background: linear-gradient(90deg, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
 
   background: radial-gradient(circle at 70%, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100% );
-
   background-color: #FF385C;
+  outline: none;
 }
 
 /*
@@ -332,6 +341,7 @@ Cal Modal - pop up
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     margin: 3px;
+    outline: none;
   }
 
   .clear-btn:hover {
@@ -353,6 +363,7 @@ Cal Modal - pop up
     font-weight: 300;
     border-radius: 7px;
     margin: 3px;
+    outline: none;
   }
 
 /*
@@ -437,7 +448,21 @@ Calendar - Day Buttons
   font-size: 12px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
+
   margin: 0 3px 0 2px;
+}
+
+.check-in {
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 3px double white;
+  color: white;
+  border-radius: 100%;
+}
+
+.check-out {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  border-radius: 100%;
 }
 
 .day:hover {
@@ -445,6 +470,12 @@ Calendar - Day Buttons
   border-radius: 100%;
 }
 
+.day:active,
+.day:focus {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  border-radius: 100%;
+}
 
 
 /*
