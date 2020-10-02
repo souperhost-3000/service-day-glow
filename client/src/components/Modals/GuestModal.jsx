@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 // Guest modal (conditional pop up logic)
 function GuestModal({ showGMod, setGuestModal, updateGuestTotal }) {
   const [adults, setAdults] = useState(1);
+  const [children, setChildren] = useState(0);
+  const [infants, setInfants] = useState(0);
 
   if (!showGMod) {
     return null;
@@ -10,9 +12,17 @@ function GuestModal({ showGMod, setGuestModal, updateGuestTotal }) {
 
   function handleClick(group, change) {
     if (group === 'adults') {
-      setAdults(adults + change);
-      console.log('change: ', change);
-      updateGuestTotal(change);
+      if (adults + change >= 1) {
+        setAdults(adults + change);
+        updateGuestTotal(change);
+      }
+    } else if (group === 'children') {
+      if (children + change >= 0) {
+        setChildren(children + change);
+        updateGuestTotal(change);
+      }
+    } else if (group === 'infants') {
+      (infants + change >= 0) ? setInfants(infants + change) : null;
     }
   }
 
@@ -41,6 +51,26 @@ function GuestModal({ showGMod, setGuestModal, updateGuestTotal }) {
             {createBtn('adults', 'minus')}
             <span className="adult_count">{adults}</span>
             {createBtn('adults', 'plus')}
+          </div>
+        </div>
+        <div className="g-children">
+          <div className="children group-header">
+            Children
+          </div>
+          <div className="groups-btns">
+            {createBtn('children', 'minus')}
+            <span className="children_count">{children}</span>
+            {createBtn('children', 'plus')}
+          </div>
+        </div>
+        <div className="g-infants">
+          <div className="infants group-header">
+            Infants
+          </div>
+          <div className="groups-btns">
+            {createBtn('infants', 'minus')}
+            <span className="infants_count">{infants}</span>
+            {createBtn('infants', 'plus')}
           </div>
         </div>
       </div>
