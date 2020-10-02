@@ -16,6 +16,20 @@ function GuestModal({ showGMod, setGuestModal, updateGuestTotal }) {
     }
   }
 
+  function createBtn(group, btn) {
+    return (
+      <button
+        className={group}
+        type="button"
+        onClick={(e) => {
+          handleClick(e.target.className, (btn === 'plus' ? 1 : -1));
+        }}
+      >
+        {btn === 'plus' ? '+' : '-'}
+      </button>
+    );
+  }
+
   return (
     <div className="guest-modal">
       <div className="g-mod-groups">
@@ -23,26 +37,10 @@ function GuestModal({ showGMod, setGuestModal, updateGuestTotal }) {
           <div className="adults group-header">
             Adults
           </div>
-          <div className="groups-right">
-            <button
-              className="adults"
-              type="button"
-              onClick={(e) => {
-                handleClick(e.target.className, -1);
-              }}
-            >
-              -
-            </button>
+          <div className="groups-btns">
+            {createBtn('adults', 'minus')}
             <span className="adult_count">{adults}</span>
-            <button
-              className="adults"
-              type="button"
-              onClick={(e) => {
-                handleClick(e.target.className, 1);
-              }}
-            >
-              +
-            </button>
+            {createBtn('adults', 'plus')}
           </div>
         </div>
       </div>
