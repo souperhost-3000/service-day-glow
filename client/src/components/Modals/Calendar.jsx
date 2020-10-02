@@ -36,6 +36,8 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
         style = {
           color: 'blue',
           textDecoration: 'line-through',
+          cursor: 'not-allowed',
+          'pointer-events': 'none',
         };
       }
     }
@@ -48,7 +50,7 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
 
     // key will be the identifier of the button itself (position)
     nums[i] = (
-      <button className="day" style={style} type="button" key={i} id={`${monthNum}/${dayNum}/20`} onClick={(e) => console.log(e.target.id)}>
+      <button className="day dayEffect" style={style} type="button" key={i} id={`${monthNum}/${dayNum}/20`} onClick={(e) => console.log(e.target.id)}>
         {dayNum}
       </button>
     );
