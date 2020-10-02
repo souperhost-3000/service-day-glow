@@ -1,18 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Guest modal (conditional pop up logic)
-function GuestModal({ showGMod, setGuestModal }) {
+function GuestModal({ showGMod, setGuestModal, updateGuestTotal }) {
+  const [adults, setAdults] = useState(1);
+
   if (!showGMod) {
     return null;
   }
   return (
     <div className="guest-modal">
       <div className="g-mod-groups">
-        <div className="g-mod-adults">
-          <div className="adults">
+        <div className="g-adults">
+          <div className="adults group-header">
             Adults
           </div>
-          <span className="adult_count">count</span>
+          <div className="groups-right">
+            <button
+              className="minus"
+              type="button"
+              onClick={() => {
+                setAdults(adults - 1);
+                updateGuestTotal(-1);
+              }}
+            >
+              -
+            </button>
+            <span className="adult_count">{adults}</span>
+            <button
+              className="plus"
+              type="button"
+              onClick={() => {
+                setAdults(adults + 1);
+                updateGuestTotal(1);
+              }}
+            >
+              +
+            </button>
+          </div>
         </div>
       </div>
 
