@@ -1,10 +1,13 @@
 import React from 'react';
 
 // Cost Estimate modal (conditional app major expansion logic)
-function CostEstModal({ showCostEst }) {
+function CostEstModal({ listingData, showCostEst, adjPrice, numNights=1 }) {
   if (!showCostEst) {
     return null;
   }
+
+  adjPrice = adjPrice || listingData.price;
+  numNights = numNights || 1;
 
   return (
     <div className="cost-estimator">
@@ -14,7 +17,7 @@ function CostEstModal({ showCostEst }) {
       <div className="cost-left">
         <div className="cost-items">
           <button className="price-nights cost-btn" type="button">
-            DYNAMIC PRICE x DYNAMIC nights
+            {`$${adjPrice} x ${numNights} nights`}
           </button>
           <button className="cleaning-fee cost-btn" type="button">
             Cleaning fee
@@ -30,19 +33,19 @@ function CostEstModal({ showCostEst }) {
       </div>
       <div className="cost-right">
         <div className="sub sub-price">
-          $XXX
+          {`$${adjPrice * numNights}`}
         </div>
         <div className="sub sub-cleaning">
-          $XXX
+          {`$${listingData.cleaning_fee}`}
         </div>
         <div className="sub sub-service">
-          $XXX
+          {`$${listingData.service_fee * numNights}`}
         </div>
         <div className="sub sub-taxes">
-          $XXX
+          {`$${listingData.taxes * numNights}`}
         </div>
         <span className="sub-total">
-          $XXX
+          {`$${((adjPrice + listingData.service_fee + listingData.taxes) * numNights) + listingData.cleaning_fee}`}
         </span>
       </div>
       <span className="line" />

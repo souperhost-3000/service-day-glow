@@ -84,7 +84,10 @@ function App() {
               </div>
               <div className="lower-app">
                 <CA setCostEst={setCostEst} />
-                <CostEstModal showCostEst={showCostEst} />
+                <CostEstModal
+                  listingData={listingData}
+                  showCostEst={showCostEst}
+                />
               </div>
             </div>
           </div>
