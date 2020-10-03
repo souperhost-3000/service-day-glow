@@ -686,7 +686,7 @@ Guest Modal - pop up
   /* justify-content: space-between; */
   /* visibility: visible; */
   width: 328px;
-  height: 350px;
+  height: 320px;
   /* max-width: 100%; */
   /* max-height: 100%; */
   position: sticky;
@@ -695,18 +695,18 @@ Guest Modal - pop up
   /* top: 50%; */
 
   /* Use this for centering if unknown width/height */
-  transform: translate(-3%);
+  transform: translate(-3%, 3%);
   background: white;
-  box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
-  border-width: 2;
+  /* box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.9); */
+  border-width: .5px;
   border-radius: 10px;
   filter: blur();
-  border-color: #cacccdd8;
-  box-shadow: 3px 2px 25px 5px #cacccdcb;
+
+  box-shadow: 0 0 10px 5px #e8eaebd5;
 }
 
 .guest-col-left {
-  padding-top: 20px;
+  padding-top: 0px;
   margin: 12px;
   display: block;
   /* margin-top: 20px; */
@@ -755,7 +755,7 @@ Guest Modal - pop up
 
 
 .guest-col-right {
-  padding-top: 20px;
+  padding-top: 0px;
   margin: 12px 0 12px 10px;
   display: block;
   align-content: right;
@@ -782,7 +782,7 @@ button.infants {
 
 .guestWarning {
   font-size: 14px;
-  margin: 12px 12px 12px 12px;
+  margin: 5px 12px 12px 12px;
   display: inline-block;
   align-items: baseline;
 }
