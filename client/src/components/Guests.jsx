@@ -8,6 +8,12 @@ function Guests({ guestLimit }) {
 
   useEffect(() => {
     console.log('showGuestModal is: ', showGMod);
+    if (showGMod) {
+      document.getElementById('guest-expand-mod').style.transform = 'rotate(-180deg)';
+    }
+    if (!showGMod) {
+      document.getElementById('guest-expand-mod').style.transform = 'rotate(0deg)';
+    }
   }, [showGMod]);
 
   function updateGuestTotal(e) {
@@ -22,8 +28,8 @@ function Guests({ guestLimit }) {
         <span id="guestCount">
           {`${guestTotal} guest${guestTotal > 1 ? 's' : ''}`}
         </span>
-        <button id="guest-expand-mod" type="button" onClick={() => setGuestModal(true)}>
-          ╲╱
+        <button id="guest-expand-mod" type="button" onClick={() => setGuestModal(!showGMod)}>
+          {/* ╲╱ */}
         </button>
       </div>
       {/* <button id="guest-collapse-mod"> ╱╲</button> */}

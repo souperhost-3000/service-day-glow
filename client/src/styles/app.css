@@ -235,6 +235,29 @@ Middle/Lower - Major Container
   outline: none;
 }
 
+#guest-expand-mod {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border: rgba(0, 0, 0, 0.9);
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 70%;
+  margin-top: -5px;
+  background-color: transparent;
+  outline: none;
+}
+#guest-expand-mod:after {
+  content: '';
+  display: inline-block;
+  width: .75em;
+  height: .75em;
+  border-top: 0.15em solid rgba(0, 0, 0, 0.9);
+  border-right: 0.15em solid rgba(0, 0, 0, 0.9);
+  transform: rotate(135deg);
+  border-radius: 15% 10% 15% 0;
+}
+
 /*
 ===============================
 Lower - Major Container
@@ -491,7 +514,7 @@ margin-bottom: 10px;
 }
 
 .month {
-
+  font-weight: 500;
   margin-left: 37%;
 }
 
@@ -595,8 +618,9 @@ Calendar - Arrow Buttons
   display: inline-block;
   width: .5em;
   height: .5em;
-  border-top: 0.1em solid rgba(0, 0, 0, 0.9);
-  border-right: 0.1em solid rgba(0, 0, 0, 0.9);
+  border-top: 0.15em solid rgba(0, 0, 0, 0.9);
+  border-right: 0.15em solid rgba(0, 0, 0, 0.9);
+  border-radius: 15% 10% 15% 0;
   transform: rotate(-135deg);
 }
 .leftButton:hover {
@@ -621,8 +645,9 @@ Calendar - Arrow Buttons
   margin-left: -0.3em; */
   width: .5em;
   height: .5em;
-  border-top: 0.1em solid rgba(0, 0, 0, 0.9);
-  border-right: 0.1em solid rgba(0, 0, 0, 0.9);
+  border-top: 0.15em solid rgba(0, 0, 0, 0.9);
+  border-right: 0.15em solid rgba(0, 0, 0, 0.9);
+  border-radius: 15% 10% 15% 0;
   transform: rotate(45deg);
 }
 .rightButton:hover {
@@ -679,12 +704,8 @@ Guest Modal - pop up
 ===============================
 */
 
-
 .guest-modal {
   display: block;
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
-  /* visibility: visible; */
   width: 328px;
   height: 320px;
   /* max-width: 100%; */
@@ -694,14 +715,11 @@ Guest Modal - pop up
   /* left: 50%; */
   /* top: 50%; */
 
-  /* Use this for centering if unknown width/height */
   transform: translate(-3%, 3%);
   background: white;
-  /* box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.9); */
   border-width: .5px;
   border-radius: 10px;
   filter: blur();
-
   box-shadow: 0 0 10px 5px #e8eaebd5;
 }
 
@@ -709,11 +727,8 @@ Guest Modal - pop up
   padding-top: 0px;
   margin: 12px;
   display: block;
-  /* margin-top: 20px; */
   float: left;
   width: 42%;
-  /* display: block; */
-
   font-size: 16px;
   font-weight: 500;
 }
@@ -721,38 +736,17 @@ Guest Modal - pop up
   margin-bottom: 10px;
 }
 .group-header {
-  /* display: block; */
   width: 25%;
-
   margin: 25px 0 5px 10px;
   font-size: 16px;
   font-weight: 500;
 }
 
 .sub-header {
-  /* width: 50%; */
   font-size: 14px;
   font-weight: 300;
   margin: 0 0 15px 10px;
 }
-
-
-/* .leftButton:after {
-  content: '';
-  display: inline-block;
-  width: .5em;
-  height: .5em;
-  border-top: 0.1em solid rgba(0, 0, 0, 0.9);
-  border-right: 0.1em solid rgba(0, 0, 0, 0.9);
-  transform: rotate(-135deg);
-}
-.leftButton:hover {
-  background-color: #ebedeea4;
-} */
-
-
-
-
 
 .guest-col-right {
   padding-top: 0px;
@@ -767,7 +761,6 @@ Guest Modal - pop up
 button.adults,
 button.children,
 button.infants {
-  /* width: 50%; */
   font-size: 24px;
   font-weight: 500;
   color: #cacccdcb;
