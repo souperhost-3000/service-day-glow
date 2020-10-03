@@ -700,3 +700,56 @@ Guest Modal - pop up
   border-color: #cacccdd8;
   box-shadow: 3px 2px 25px 5px #cacccdcb;
 }
+
+.g-mod-groups {
+  margin-top: 20px;
+
+}
+
+.group-header {
+
+  padding-top: 10px;
+  margin: 20px 0 5px 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sub-header {
+  font-size: 14px;
+  margin: 0 0 10px 20px;
+}
+
+.groups-btns-column {
+
+  float: right;
+  justify-content: right;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+button.adults,
+button.children,
+button.infants {
+  font-size: 24px;
+  font-weight: 500;
+  color: #cacccdcb;
+  border: 1px solid #cacccdcb;
+  border-radius: 100%;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 10px;
+  background-color: transparent;
+  outline: none;
+}
+/* .leftButton:after {
+  content: '';
+  display: inline-block;
+  width: .5em;
+  height: .5em;
+  border-top: 0.1em solid rgba(0, 0, 0, 0.9);
+  border-right: 0.1em solid rgba(0, 0, 0, 0.9);
+  transform: rotate(-135deg);
+}
+.leftButton:hover {
+  background-color: #ebedeea4;
+} */

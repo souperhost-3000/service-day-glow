@@ -49,11 +49,6 @@ function GuestModal({ showGMod, setGuestModal, updateGuestTotal, guestLimit }) {
           <div className="adults group-header">
             Adults
           </div>
-          <div className="groups-btns">
-            {createBtn('adults', 'minus')}
-            <span className="adult_count">{adults}</span>
-            {createBtn('adults', 'plus')}
-          </div>
         </div>
         <div className="g-children">
           <div className="children group-header">
@@ -61,11 +56,6 @@ function GuestModal({ showGMod, setGuestModal, updateGuestTotal, guestLimit }) {
           </div>
           <div className="children sub-header">
             Ages 2-12
-          </div>
-          <div className="groups-btns">
-            {createBtn('children', 'minus')}
-            <span className="children_count">{children}</span>
-            {createBtn('children', 'plus')}
           </div>
         </div>
         <div className="g-infants">
@@ -75,11 +65,23 @@ function GuestModal({ showGMod, setGuestModal, updateGuestTotal, guestLimit }) {
           <div className="infants sub-header">
             Under 2
           </div>
-          <div className="groups-btns">
-            {createBtn('infants', 'minus')}
-            <span className="infants_count">{infants}</span>
-            {createBtn('infants', 'plus')}
-          </div>
+        </div>
+      </div>
+      <div className="group-bts-column">
+        <div className="groups-btns">
+          {createBtn('adults', 'minus')}
+          <span className="adult_count">{adults}</span>
+          {createBtn('adults', 'plus')}
+        </div>
+        <div className="groups-btns">
+          {createBtn('children', 'minus')}
+          <span className="children_count">{children}</span>
+          {createBtn('children', 'plus')}
+        </div>
+        <div className="groups-btns">
+          {createBtn('infants', 'minus')}
+          <span className="infants_count">{infants}</span>
+          {createBtn('infants', 'plus')}
         </div>
       </div>
       <div className="actions">
