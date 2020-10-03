@@ -23,6 +23,8 @@ body {
   height: 1500px;
 }
 
+
+
 /*
 ===============================
 App Header
@@ -441,6 +443,7 @@ Cal Modal - pop up
     margin: 3px;
   }
 
+
   .close-btn {
     align-items: baseline;
     float: right;
@@ -676,10 +679,11 @@ Guest Modal - pop up
 ===============================
 */
 
+
 .guest-modal {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: block;
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
   /* visibility: visible; */
   width: 328px;
   height: 350px;
@@ -701,46 +705,38 @@ Guest Modal - pop up
   box-shadow: 3px 2px 25px 5px #cacccdcb;
 }
 
-.g-mod-groups {
-  margin-top: 20px;
+.guest-col-left {
+  padding-top: 20px;
+  margin: 12px;
+  display: block;
+  /* margin-top: 20px; */
+  float: left;
+  width: 42%;
+  /* display: block; */
 
+  font-size: 16px;
+  font-weight: 500;
 }
-
+.adults {
+  margin-bottom: 10px;
+}
 .group-header {
+  /* display: block; */
+  width: 25%;
 
-  padding-top: 10px;
-  margin: 20px 0 5px 20px;
+  margin: 25px 0 5px 10px;
   font-size: 16px;
   font-weight: 500;
 }
 
 .sub-header {
+  /* width: 50%; */
   font-size: 14px;
-  margin: 0 0 10px 20px;
+  font-weight: 300;
+  margin: 0 0 15px 10px;
 }
 
-.groups-btns-column {
 
-  float: right;
-  justify-content: right;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-button.adults,
-button.children,
-button.infants {
-  font-size: 24px;
-  font-weight: 500;
-  color: #cacccdcb;
-  border: 1px solid #cacccdcb;
-  border-radius: 100%;
-  width: 1.5em;
-  height: 1.5em;
-  margin: 10px;
-  background-color: transparent;
-  outline: none;
-}
 /* .leftButton:after {
   content: '';
   display: inline-block;
@@ -753,3 +749,62 @@ button.infants {
 .leftButton:hover {
   background-color: #ebedeea4;
 } */
+
+
+
+
+
+.guest-col-right {
+  padding-top: 20px;
+  margin: 12px 0 12px 10px;
+  display: block;
+  align-content: right;
+  float: right;
+  width: 42%;
+  font-weight: 400;
+}
+
+button.adults,
+button.children,
+button.infants {
+  /* width: 50%; */
+  font-size: 24px;
+  font-weight: 500;
+  color: #cacccdcb;
+  border: 1px solid #cacccdcb;
+  border-radius: 100%;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 12px;
+  background-color: transparent;
+  outline: none;
+}
+
+.guestWarning {
+  font-size: 14px;
+  margin: 12px 12px 12px 12px;
+  display: inline-block;
+  align-items: baseline;
+}
+
+.g-close-btn {
+  align-items: baseline;
+  float: right;
+  height: 35px;
+  width: 60px;
+  border: none;
+  background-color: transparent;
+  color:  rgba(0, 0, 0, 0.9);
+  font-size: 16px;
+  text-decoration: underline;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin: 3px;
+  outline: none;
+}
+
+.g-close-btn:hover {
+  background-color: #ebedeea4;
+  border-radius: 7px;
+  margin: 3px;
+}

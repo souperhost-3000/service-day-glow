@@ -44,7 +44,7 @@ function GuestModal({ showGMod, setGuestModal, updateGuestTotal, guestLimit }) {
 
   return (
     <div className="guest-modal">
-      <div className="g-mod-groups">
+      <div className="guest-col-left">
         <div className="g-adults">
           <div className="adults group-header">
             Adults
@@ -67,7 +67,8 @@ function GuestModal({ showGMod, setGuestModal, updateGuestTotal, guestLimit }) {
           </div>
         </div>
       </div>
-      <div className="group-bts-column">
+
+      <div className="guest-col-right">
         <div className="groups-btns">
           {createBtn('adults', 'minus')}
           <span className="adult_count">{adults}</span>
@@ -84,13 +85,16 @@ function GuestModal({ showGMod, setGuestModal, updateGuestTotal, guestLimit }) {
           {createBtn('infants', 'plus')}
         </div>
       </div>
-      <div className="actions">
-        <div className="guestWarning">
-          {`${guestLimit} guests maximum. Infants don’t count toward the number of guests.`}
+
+      <div>
+        <div className="actions">
+          <div className="guestWarning">
+            {`${guestLimit} guests maximum. Infants don’t count toward the number of guests.`}
+          </div>
+          <button className="g-close-btn" type="button" onClick={() => setGuestModal(false)}>
+            Close
+          </button>
         </div>
-        <button className="close-btn" type="button" onClick={() => setGuestModal(false)}>
-          Close
-        </button>
       </div>
     </div>
   );

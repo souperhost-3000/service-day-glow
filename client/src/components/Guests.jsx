@@ -27,7 +27,7 @@ function Guests({ guestLimit }) {
         </button>
       </div>
       {/* <button id="guest-collapse-mod"> ╱╲</button> */}
-      <div className="modal">
+      <div className="guestPicker-modal">
         <span>
           <GuestModal
             showGMod={showGMod}
