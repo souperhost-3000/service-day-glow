@@ -8,10 +8,10 @@ function Reviews({ rating, reviews_count }) {
   return (
     <div className="reviews">
       <img id="star-sym" src="https://ghrsea12-fec.s3-us-west-2.amazonaws.com/sample/star.png" alt="" />
-      <span id="stars">
+      <span className="rating-scored" id="stars">
         {`  ${rating}`}
       </span>
-      <span id="numReviews">
+      <span className="reviewsCount" id="numReviews">
         {`  (${reviews_count})`}
       </span>
     </div>
