@@ -47,7 +47,7 @@ function App() {
   useEffect(() => {
     console.log('expand App Major and unhide the cost est break down');
     if (showCostEst) {
-      setStyle({ 'height': '500px' });
+      setStyle({ height: '500px' });
     }
   }, [showCostEst]);
 

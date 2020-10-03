@@ -15,8 +15,13 @@ Unit Testing - Major Inner Components
 
 // overall components called in App return (shallow)
 describe('Testing over page at Main App level', () => {
-  it('page renders App to service without breaking', () => {
-    const wrapper = shallow(<App />);
+  it('page renders Price to service without breaking', () => {
+    const wrapper = shallow(<Price />);
+    const pricePerNight = wrapper.find("div.price-app");
+    const priceIsNotBlank = wrapper.find("div.price-app").text();
+
+    expect(pricePerNight.exists()).toBe(true);
+    expect(priceIsNotBlank).not.toBe(' $ / night');
 
   })
 
