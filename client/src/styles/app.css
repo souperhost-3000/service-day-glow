@@ -269,25 +269,22 @@ Cost Est Modal - App Major expansion
   display: block;
   justify-content: center;
   align-items: center;
-  margin-left: 36%;
+  margin-left: 27%;
   font-size: 12px;
   margin-top: -10px;
   margin-bottom: 10px;
 }
 
 .cost-estimator {
-  font-size: 16px;
   font-family: 'Montserrat';
   font-weight: normal;
-  position: relative;
-  display: inline-block;
-  margin: 10px;
+  position: center;
+  display: block;
+  margin-left: 12px;
 }
 
 .cost-btn {
-
   display: block;
-
   height: 30px;
   padding: 10px;
   border: none;
@@ -307,13 +304,52 @@ Cost Est Modal - App Major expansion
   float: left;
 }
 
-.total {
+.cost-right {
+  margin-top: 10px;
+  text-align: right;
+  justify-content: space-between;
   display: block;
-  border-top: 1px solid #82888a;
-  padding-top: 25px;
-  margin: 10px;
+  float: right;
+  margin-right: 24px;
 }
 
+.sub {
+  display: block;
+  text-align: right;
+  height: 30px;
+  margin-left: 5px;
+  border: none;
+  background-color: transparent;
+  color:  rgba(0, 0, 0, 0.9);
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  outline: none;
+  margin-top: 3px;
+}
+
+.total {
+  display: block;
+  padding-top: 25px;
+  margin: 10px 0 10px 10px;
+  font-weight: 500;
+}
+
+.sub-total {
+  text-align: right;
+  display: block;
+  padding-top: 25px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.line {
+  display: block;
+  margin-top: 160px;
+  width: 90%;
+  margin-left: 10px;
+  border-top: 1px solid #82888a;
+}
 /*
 ===============================
 Cal Modal - pop up
