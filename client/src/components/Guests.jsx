@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import GuestModal from './Modals/GuestModal';
 
 // Guest selector (num adults, children, infants)
-function Guests({ guestIncluded, guestLimit }) {
+function Guests({ guestLimit }) {
   const [showGMod, setGuestModal] = useState(false);
   const [guestTotal, setGuestTotal] = useState(1);
 
@@ -33,7 +33,6 @@ function Guests({ guestIncluded, guestLimit }) {
             showGMod={showGMod}
             setGuestModal={setGuestModal}
             updateGuestTotal={updateGuestTotal}
-            guestIncluded={guestIncluded}
             guestLimit={guestLimit}
           />
         </span>
