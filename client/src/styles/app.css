@@ -280,11 +280,20 @@ darker Airbnb color: #b91432
   background: -webkit-linear-gradient(90deg, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
   background: -moz-linear-gradient(90deg, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
   background: linear-gradient(90deg, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
-
   background: radial-gradient(circle at 70%, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100% );
   background-color: #FF385C;
   outline: none;
 }
+
+.CA-btn:hover {
+  background: -webkit-linear-gradient(270deg, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+  background: -moz-linear-gradient(270deg, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+  background: linear-gradient(270deg, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+  background: radial-gradient(circle at 40%, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100% );
+  background-color: #FF385C;
+  outline: none;
+}
+
 /*
 =====================================
 Cost Est Modal - App Major expansion
@@ -697,6 +706,14 @@ Minor Container
   filter: blur();
   margin-left: 50px;
   position: sticky;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 /*

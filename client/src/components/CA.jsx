@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 // check availability button
 function CA({ setCostEst, callToAction }) {

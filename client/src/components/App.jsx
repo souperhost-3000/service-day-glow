@@ -15,13 +15,22 @@ function App() {
   const [showCostEst, setCostEst] = useState(false);
   const [style, setStyle] = useState({ height: '260px' });
   const [callToAction, setCallToAction] = useState('Check availability');
+  const [subHeader, setSubHeader] = useState('');
   const [adjPrice, setAdjPrice] = useState(0);
   const [listingData, setListingData] = useState(exampleData);
-  const listingID = 1;
+  const listingID = 42;
 
-  // const [checkOut, setCheckOut] = useState(1);
-  // const [checkIn, setCheckIn] = useState(1);
-  // const [numNights, setNumNights] = useState(1);
+  // GET request for Listing Data
+  useEffect(() => {
+    axios.get(`/availability/${listingID}`)
+      .then((response) => setListingData(response.data))
+      // eslint-disable-next-line no-console
+      .catch((err) => console.log(err));
+  }, [listingID]);
+
+  const [checkOut, setCheckOut] = useState('');
+  const [checkIn, setCheckIn] = useState('');
+  const [numNights, setNumNights] = useState(1);
 
   // function updateDate(e, check) {
   //   console.log('reached app level: ', e, check);
@@ -33,20 +42,23 @@ function App() {
   //   }
   // }
 
+  // changes subHeader details based on user's interaction (&#8226;)
+  useEffect(() => {
+    if (checkIn && checkOut) {
+      setSubHeader(`${checkIn} - ${checkOut}`);
+    } else if (checkIn) {
+      setSubHeader('Minimum stay: 2 nights');
+    }
+    setSubHeader(`${listingData.listing_type} . ${listingData.beds} bds . ${listingData.baths} bath`);
+  }, [listingData, checkIn, checkOut]);
+
   // const [guestDetails, setGuestDetails] = useState(1);
   const [guestTotal, setGuestTotal] = useState(1);
   function updateGuestTotal(e) {
     setGuestTotal(guestTotal + e);
   }
 
-  // GET request for Listing Data
-  useEffect(() => {
-    axios.get(`/availability/${listingID}`)
-      .then((response) => setListingData(response.data))
-      // eslint-disable-next-line no-console
-      .catch((err) => console.log(err));
-  }, [listingID]);
-
+  // when CA button is clicked, expands app major & changes text on CA button
   useEffect(() => {
     if (showCostEst) {
       setStyle({ height: '500px' });
@@ -89,6 +101,7 @@ function App() {
               <div className="middle-app">
                 <DatePicker
                   availability={listingData.availability}
+                  subHeader={subHeader}
                 />
                 <Guests
                   guestLimit={listingData.guest_limit}
@@ -117,13 +130,14 @@ function App() {
                 <div className="selectDates">
                   Select Dates
                 </div>
-                <span className="listing_rooms">Entire house . 2 bds . 1 bath</span>
+                <span className="listing_rooms">{subHeader}</span>
               </div>
             </div>
             <div className="cal-dbl-container">
               <div className="dbl-all">
                 <CalContainer
                   availability={listingData.availability}
+                  subHeader={subHeader}
                 />
               </div>
             </div>

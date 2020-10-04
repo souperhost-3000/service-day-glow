@@ -6,7 +6,6 @@ import Calendar from './Modals/Calendar';
 function CalContainer({ availability }) {
   const [leftCalIdx, setLeftCal] = useState(0);
   const [rightCalIdx, setRightCal] = useState(leftCalIdx + 1);
-  // leftCalIdx, rightCalIdx
 
   useEffect(() => {
     setRightCal(leftCalIdx + 1);
