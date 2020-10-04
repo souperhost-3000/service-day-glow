@@ -6,16 +6,16 @@ function DateBoxes() {
 
   const [date, setDate] = useState('');
 
-  function handleChange(e) {
-    console.log(e);
-    if (e.length === 10) {
-      setDate(e);
-    }
-  }
-
   useEffect(() => {
     console.log('date in useEffect func: ', date);
   }, [date]);
+
+  // function onChange(e, check) {
+  //   console.log('you made a change to your input: ', e);
+  //   if (e.length > 9) {
+  //     handleInput(e, check);
+  //   }
+  // }
 
   return (
     <div>
@@ -23,13 +23,13 @@ function DateBoxes() {
         <span className="check-in-app">
           Check-in
           <form className="date-form">
-            <input className="date-input" id="check-in-input" type="text" placeholder={text} onClick={() => setPlaceholder('MM/DD/YYYY')} onChange={(e) => handleChange(e.target.value)} />
+            <input className="date-input" id="check-in-input" type="text" placeholder={text} onClick={() => setPlaceholder('MM/DD/YYYY')} onChange={(e) => setDate(e.target.value, 'in')} />
           </form>
         </span>
         <span className="check-out-app">
           Checkout
           <form className="date-form">
-            <input className="date-input" id="check-out-input" type="text" placeholder={text} onClick={() => setPlaceholder('MM/DD/YYYY')} onChange={(e) => handleChange(e.target.value)} />
+            <input className="date-input" id="check-out-input" type="text" placeholder={text} onClick={() => setPlaceholder('MM/DD/YYYY')} onChange={(e) => setDate(e.target.value, 'out')} />
           </form>
         </span>
       </div>

@@ -10,31 +10,28 @@ import exampleData from '../tests/exampleData';
 import CalContainer from './CalContainer';
 import CostEstModal from './Modals/CostEstModal';
 
-/* App -> contains:
-price (upper left) - if calendar pricing differs (can add logic to add 5% for weekends)
-rating (upper right)
-date picker (mid-upper)
-guestsDetails(mid-lower)
-Check Avail button (lower)
-(hidden) - cost estimate & reserve button
-
-modals (calendar pop up, guest picker drop down, check avail (expands app container))
-
-state:
-  manage property details in props
-
-render each nested functional component (use hooks if needed)
-
-// Axios GET req
-// add price and reviews to app level
-*/
-
 // top level service component (displayed before user interacts with anything)
 function App() {
   const [showCostEst, setCostEst] = useState(false);
   const [style, setStyle] = useState({ height: '260px' });
+  const [callToAction, setCallToAction] = useState('Check availability');
+  const [adjPrice, setAdjPrice] = useState(0);
   const [listingData, setListingData] = useState(exampleData);
   const listingID = 1;
+
+  // const [checkOut, setCheckOut] = useState(1);
+  // const [checkIn, setCheckIn] = useState(1);
+  // const [numNights, setNumNights] = useState(1);
+
+  // function updateDate(e, check) {
+  //   console.log('reached app level: ', e, check);
+  //   if (check === 'in') {
+  //     setCheckIn(e);
+  //   }
+  //   if (check === 'out') {
+  //     setCheckOut(e);
+  //   }
+  // }
 
   // const [guestDetails, setGuestDetails] = useState(1);
   const [guestTotal, setGuestTotal] = useState(1);
@@ -42,9 +39,7 @@ function App() {
     setGuestTotal(guestTotal + e);
   }
 
-  const [adjPrice, setAdjPrice] = useState(0);
-
-  // const getListingData =
+  // GET request for Listing Data
   useEffect(() => {
     axios.get(`/availability/${listingID}`)
       .then((response) => setListingData(response.data))
@@ -55,6 +50,7 @@ function App() {
   useEffect(() => {
     if (showCostEst) {
       setStyle({ height: '500px' });
+      setCallToAction('Reserve now');
     }
   }, [showCostEst]);
 
@@ -101,7 +97,10 @@ function App() {
                 />
               </div>
               <div className="lower-app">
-                <CA setCostEst={setCostEst} />
+                <CA
+                  setCostEst={setCostEst}
+                  callToAction={callToAction}
+                />
                 <CostEstModal
                   listingData={listingData}
                   showCostEst={showCostEst}
@@ -144,3 +143,22 @@ function App() {
 }
 
 export default App;
+
+/* App -> contains:
+price (upper left) - if calendar pricing differs (can add logic to add 5% for weekends)
+rating (upper right)
+date picker (mid-upper)
+guestsDetails(mid-lower)
+Check Avail button (lower)
+(hidden) - cost estimate & reserve button
+
+modals (calendar pop up, guest picker drop down, check avail (expands app container))
+
+state:
+  manage property details in props
+
+render each nested functional component (use hooks if needed)
+
+// Axios GET req
+// add price and reviews to app level
+*/
