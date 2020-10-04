@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react';
 import GuestModal from './Modals/GuestModal';
 
 // Guest selector (num adults, children, infants)
-function Guests({ guestLimit }) {
+function Guests({ guestLimit, updateGuestTotal, guestTotal }) {
   const [showGMod, setGuestModal] = useState(false);
-  const [guestTotal, setGuestTotal] = useState(1);
+  // const [guestTotal, setGuestTotal] = useState(1);
 
   useEffect(() => {
-    console.log('showGuestModal is: ', showGMod);
     if (showGMod) {
       document.getElementById('guest-expand-mod').style.transform = 'rotate(-180deg)';
     }
@@ -16,9 +15,9 @@ function Guests({ guestLimit }) {
     }
   }, [showGMod]);
 
-  function updateGuestTotal(e) {
-    setGuestTotal(guestTotal + e);
-  }
+  // function updateGuestTotal(e) {
+  //   setGuestTotal(guestTotal + e);
+  // }
 
   return (
     <div className="guestPicker">

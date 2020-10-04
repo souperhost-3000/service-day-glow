@@ -550,6 +550,7 @@ Calendar - Day Buttons
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   margin: 0 3px 0 2px;
+  outline: none;
 }
 
 .days-container {

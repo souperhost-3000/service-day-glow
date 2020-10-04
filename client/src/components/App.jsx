@@ -34,7 +34,15 @@ function App() {
   const [showCostEst, setCostEst] = useState(false);
   const [style, setStyle] = useState({ height: '260px' });
   const [listingData, setListingData] = useState(exampleData);
-  const listingID = 20;
+  const listingID = 1;
+
+  // const [guestDetails, setGuestDetails] = useState(1);
+  const [guestTotal, setGuestTotal] = useState(1);
+  function updateGuestTotal(e) {
+    setGuestTotal(guestTotal + e);
+  }
+
+  const [adjPrice, setAdjPrice] = useState(listingData.price);
 
   // const getListingData =
   useEffect(() => {
@@ -45,11 +53,19 @@ function App() {
   }, [listingID]);
 
   useEffect(() => {
-    console.log('expand App Major and unhide the cost est break down');
     if (showCostEst) {
       setStyle({ height: '500px' });
     }
   }, [showCostEst]);
+
+  useEffect(() => {
+    if (guestTotal > listingData.guest_included) {
+      // const extraGuestCount = (guestTotal - listingData.guest_included);
+      // setAdjPrice((listingData.guest_extra_charge * extraGuestCount) + listingData.price);
+      // console.log("set adj price: ", ((listingData.guest_extra_charge * extraGuestCount) + listingData.price));
+    }
+    setAdjPrice(listingData.price);
+  }, [guestTotal, listingData]);
 
   return (
     <div className="entire-App">
@@ -67,7 +83,7 @@ function App() {
           <div className="major-container">
             <div className="app-container" style={style}>
               <div className="upper-app">
-                <Price price={listingData.price} />
+                <Price price={adjPrice} />
                 <Reviews
                   rating={listingData.rating}
                   reviews_count={listingData.reviews_count}
@@ -78,8 +94,9 @@ function App() {
                   availability={listingData.availability}
                 />
                 <Guests
-                  guestIncluded={listingData.guest_included}
                   guestLimit={listingData.guest_limit}
+                  updateGuestTotal={updateGuestTotal}
+                  guestTotal={guestTotal}
                 />
               </div>
               <div className="lower-app">
