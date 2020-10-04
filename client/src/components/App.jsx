@@ -42,7 +42,7 @@ function App() {
     setGuestTotal(guestTotal + e);
   }
 
-  const [adjPrice, setAdjPrice] = useState(listingData.price);
+  const [adjPrice, setAdjPrice] = useState(0);
 
   // const getListingData =
   useEffect(() => {
@@ -58,13 +58,14 @@ function App() {
     }
   }, [showCostEst]);
 
+  // as guest total changes, adjust nightly rate
   useEffect(() => {
     if (guestTotal > listingData.guest_included) {
-      // const extraGuestCount = (guestTotal - listingData.guest_included);
-      // setAdjPrice((listingData.guest_extra_charge * extraGuestCount) + listingData.price);
-      // console.log("set adj price: ", ((listingData.guest_extra_charge * extraGuestCount) + listingData.price));
+      const extraGuestCount = (guestTotal - listingData.guest_included);
+      setAdjPrice((listingData.guest_extra_charge * extraGuestCount) + listingData.price);
+    } else {
+      setAdjPrice(listingData.price);
     }
-    setAdjPrice(listingData.price);
   }, [guestTotal, listingData]);
 
   return (
@@ -83,7 +84,7 @@ function App() {
           <div className="major-container">
             <div className="app-container" style={style}>
               <div className="upper-app">
-                <Price price={adjPrice} />
+                <Price adjPrice={adjPrice} />
                 <Reviews
                   rating={listingData.rating}
                   reviews_count={listingData.reviews_count}
@@ -104,6 +105,7 @@ function App() {
                 <CostEstModal
                   listingData={listingData}
                   showCostEst={showCostEst}
+                  adjPrice={adjPrice}
                 />
               </div>
             </div>
