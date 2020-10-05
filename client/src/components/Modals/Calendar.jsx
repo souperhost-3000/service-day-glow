@@ -90,7 +90,7 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal, pricePerNight
     nums[i] = (
       <button className="day" style={style} type="button" key={i} id={`${monthNum}/${dayNum}/20`} onClick={(e) => handleClick(e.target.id)}>
         <span className="line-day" style={style}>{`${dayNum}`}</span>
-        <span className="line-price">{(monthDays[dayNum - 1] === 0 || dayNum === ' ') ? ' ' : `$${pricePerNight}`}</span>
+        <span className="line-price">{(monthDays[dayNum - 1] === 0 || dayNum === ' ') ? ' ' : `$${pricePerNight === undefined ? '' : pricePerNight}`}</span>
       </button>
     );
   }

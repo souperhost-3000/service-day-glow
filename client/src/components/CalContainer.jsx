@@ -31,6 +31,7 @@ function CalContainer({ availability, adjPrice }) {
                 side={index === leftCalIdx ? 'cal-left' : 'cal-right'}
                 setLeftCal={setLeftCal}
                 pricePerNight={pricePerNight}
+                adjPrice={adjPrice}
               />
             </div>
           );

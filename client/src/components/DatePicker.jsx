@@ -3,12 +3,11 @@ import CalModal from './Modals/CalModal';
 import DateBoxes from './DateBoxes';
 
 // date selectors (check-in, check-out)
-function DatePicker({ availability, updateDate, subHeader }) {
+function DatePicker({ availability, updateDate, subHeader, adjPrice }) {
   const [showCalModal, setCalModal] = useState(false);
 
-  useEffect(() => {
-    console.log('showCalModal is: ', showCalModal);
-  }, [showCalModal]);
+  // useEffect(() => {
+  // }, [showCalModal]);
 
   return (
     <div>
@@ -22,6 +21,7 @@ function DatePicker({ availability, updateDate, subHeader }) {
             setCalModal={setCalModal}
             availability={availability}
             subHeader={subHeader}
+            adjPrice={adjPrice}
           />
         </span>
       </div>

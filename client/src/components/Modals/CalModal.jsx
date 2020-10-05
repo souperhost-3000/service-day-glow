@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import CalContainer from '../CalContainer';
 import DateBoxes from '../DateBoxes';
 
 // Calendar modal (conditional pop up logic)
-function CalModal({ show, setCalModal, availability, subHeader }) {
+function CalModal({ show, setCalModal, availability, subHeader, adjPrice }) {
   if (!show) {
     return null;
   }
+
   return (
     <div className="bob">
       <div className="modal-header">
@@ -21,7 +22,10 @@ function CalModal({ show, setCalModal, availability, subHeader }) {
         </div>
       </div>
       <div className="cal-dbl-container">
-        <CalContainer availability={availability} />
+        <CalContainer
+          availability={availability}
+          adjPrice={adjPrice}
+        />
       </div>
       <div className="actions">
         <div className="taxesWarning">

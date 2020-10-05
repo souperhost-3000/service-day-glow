@@ -102,6 +102,7 @@ function App() {
                 <DatePicker
                   availability={listingData.availability}
                   subHeader={subHeader}
+                  adjPrice={adjPrice}
                 />
                 <Guests
                   guestLimit={listingData.guest_limit}
