@@ -5,8 +5,9 @@ Body
 */
 
 html, body {
-  height: 100%;
+  height: 200%;
 }
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: lighter;
@@ -23,8 +24,6 @@ body {
   height: 1500px;
 }
 
-
-
 /*
 ===============================
 App Header
@@ -38,11 +37,16 @@ h2 {
 }
 
 .header {
+  display: flex;
   border: 1px solid #bb0d2c;
   border-radius: 5px;
   width: 400px;
   padding: 10px;
   margin: 100px;
+  position: relative;
+  position: -webkit-sticky;
+  top: 10%;
+  bottom: 30%;
 }
 
 /*
@@ -50,10 +54,6 @@ h2 {
 App Major Container
 ===============================
 
-This container adjusts with page size, height & width currently set at max
-372x300 (container)
-322x249 (text + buttons + margins)
-price margin-top:
 */
 
 .app-container {
@@ -66,12 +66,8 @@ price margin-top:
   border-color: #cacccdd8;
   box-shadow: 3px 2px 25px 5px #cacccdcb;
   opacity: 1;
-  position: sticky;
-  position: -webkit-sticky;
-
   margin: 30px;
   padding: 2px;
-
 }
 
 .upper-app {
@@ -397,12 +393,11 @@ Cal Modal - pop up
     flex-direction: column;
     justify-content: space-between;
     /* visibility: visible; */
-
+    position: relative;
     width: 600px;
     /* max-width: 100%; */
     height: 400px;
     /* max-height: 100%; */
-    position: sticky;
     z-index: 100;
     /* left: 50%; */
     /* top: 50%; */
@@ -499,6 +494,7 @@ Calendar
 */
 
 .cal-dbl-container {
+  position: relative;
   width: 550px;
   margin: 25px 5px 5px 12px;
   background-color: white;
@@ -545,10 +541,6 @@ Calendar - Day Buttons
 ===============================
 */
 
-
-.weekdays {
-}
-
 .cal-day {
   height: 30px;
   vertical-align: middle;
@@ -560,9 +552,6 @@ Calendar - Day Buttons
   font-weight: 300;
   margin: 0 3px 0 2px;
   outline: none;
-}
-
-.days-container {
 }
 
 .day {
@@ -684,13 +673,16 @@ Major Container
 ===============================
 */
 .major {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 10%;
+  bottom: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   float: right;
   align-items: center;
   margin: 50px;
-  position: sticky;
 }
 
 /*
@@ -706,7 +698,7 @@ Minor Container
   float: left;
   width: 600px;
   height: 400px;
-  position: sticky;
+  position: relative;
 }
 
 .minor {
@@ -719,7 +711,9 @@ Minor Container
   border-bottom: 1px solid #cacccdcb;
   filter: blur();
   margin-left: 50px;
-  position: sticky;
+  position: relative;
+  top: 50%;
+  bottom: 60%;
 }
 
 .dot {
