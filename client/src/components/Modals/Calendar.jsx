@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 // Calendar (reuseable) - formats one individual month
-function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
+function Calendar({ monthName, index, monthDays, side, setLeftCal, pricePerNight }) {
   const nums = Array(42).fill(null);
 
   // selected dates
@@ -31,6 +31,8 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
       ci['border-radius'] = '100%';
       ci.border = '3px double white';
       ci.color = 'white';
+      ci.height = '35px';
+      ci.width = '35px';
       setCI(checkIn);
     }
     if (checkOut !== '') {
@@ -38,10 +40,10 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
         document.getElementById(prevCO).style['background-color'] = 'transparent';
         document.getElementById(prevCO).style.color = 'black';
       }
-      const ci = document.getElementById(checkOut).style;
-      ci['background-color'] = 'black';
-      ci['border-radius'] = '100%';
-      ci.color = 'white';
+      const co = document.getElementById(checkOut).style;
+      co['background-color'] = 'black';
+      co['border-radius'] = '100%';
+      co.color = 'white';
       setCO(checkOut);
     }
   }, [checkIn, checkOut]);
@@ -63,6 +65,8 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
       dayNum = ' ';
       style = {
         border: 'none',
+        cursor: 'not-allowed',
+        pointerEvents: 'none',
       };
     }
     if (i >= startOfMonthIdx) {
@@ -81,13 +85,16 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal }) {
       dayNum = ' ';
       style = {
         border: 'none',
+        cursor: 'not-allowed',
+        pointerEvents: 'none',
       };
     }
 
     // key will be the identifier of the button itself (position)
     nums[i] = (
       <button className="day" style={style} type="button" key={i} id={`${monthNum}/${dayNum}/20`} onClick={(e) => handleClick(e.target.id)}>
-        {dayNum}
+        <span className="line-day" style={style}>{`${dayNum}`}</span>
+        <span className="line-price">{(monthDays[dayNum - 1] === 0 || dayNum === ' ') ? ' ' : `$${pricePerNight === undefined ? '' : pricePerNight}`}</span>
       </button>
     );
   }

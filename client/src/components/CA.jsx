@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 // check availability button
-function CA({ setCostEst }) {
+function CA({ setCostEst, callToAction }) {
   return (
     <div className="CA-app">
-      <button className="CA-btn" type="button" onClick={() => setCostEst(true)}>Check availability</button>
+      <button className="CA-btn" type="button" onClick={() => setCostEst(true)}>{callToAction}</button>
     </div>
   );
 }

@@ -3,14 +3,18 @@ import React, { useState, useEffect } from 'react';
 import Calendar from './Modals/Calendar';
 
 // Calendar Container (reuseable) - formats each month of availability for listing
-function CalContainer({ availability }) {
+function CalContainer({ availability, adjPrice }) {
   const [leftCalIdx, setLeftCal] = useState(0);
   const [rightCalIdx, setRightCal] = useState(leftCalIdx + 1);
-  // leftCalIdx, rightCalIdx
+  const [pricePerNight, setPricePerNight] = useState(0);
 
   useEffect(() => {
     setRightCal(leftCalIdx + 1);
   }, [leftCalIdx]);
+
+  useEffect(() => {
+    setPricePerNight(adjPrice);
+  }, [adjPrice]);
 
   return (
     <div className="months-container">
@@ -26,6 +30,8 @@ function CalContainer({ availability }) {
                 monthDays={monthObj.days}
                 side={index === leftCalIdx ? 'cal-left' : 'cal-right'}
                 setLeftCal={setLeftCal}
+                pricePerNight={pricePerNight}
+                adjPrice={adjPrice}
               />
             </div>
           );

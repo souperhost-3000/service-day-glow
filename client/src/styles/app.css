@@ -23,6 +23,8 @@ body {
   height: 1500px;
 }
 
+
+
 /*
 ===============================
 App Header
@@ -233,6 +235,29 @@ Middle/Lower - Major Container
   outline: none;
 }
 
+#guest-expand-mod {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  border: rgba(0, 0, 0, 0.9);
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 70%;
+  margin-top: -5px;
+  background-color: transparent;
+  outline: none;
+}
+#guest-expand-mod:after {
+  content: '';
+  display: inline-block;
+  width: .75em;
+  height: .75em;
+  border-top: 0.15em solid rgba(0, 0, 0, 0.9);
+  border-right: 0.15em solid rgba(0, 0, 0, 0.9);
+  transform: rotate(135deg);
+  border-radius: 15% 10% 15% 0;
+}
+
 /*
 ===============================
 Lower - Major Container
@@ -255,11 +280,20 @@ darker Airbnb color: #b91432
   background: -webkit-linear-gradient(90deg, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
   background: -moz-linear-gradient(90deg, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
   background: linear-gradient(90deg, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
-
   background: radial-gradient(circle at 70%, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100% );
   background-color: #FF385C;
   outline: none;
 }
+
+.CA-btn:hover {
+  background: -webkit-linear-gradient(270deg, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+  background: -moz-linear-gradient(270deg, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+  background: linear-gradient(270deg, #E61E4D 0%, #E31C5F 50%, #D70466 100%);
+  background: radial-gradient(circle at 40%, #FF385C 0%, #E61E4D 27.5%, #E31C5F 40%, #D70466 57.5%, #BD1E59 75%, #BD1E59 100% );
+  background-color: #FF385C;
+  outline: none;
+}
+
 /*
 =====================================
 Cost Est Modal - App Major expansion
@@ -441,6 +475,7 @@ Cal Modal - pop up
     margin: 3px;
   }
 
+
   .close-btn {
     align-items: baseline;
     float: right;
@@ -465,7 +500,7 @@ Calendar
 
 .cal-dbl-container {
   width: 550px;
-  margin: 5px 5px 5px 12px;
+  margin: 25px 5px 5px 12px;
   background-color: white;
 }
 
@@ -488,7 +523,7 @@ margin-bottom: 10px;
 }
 
 .month {
-
+  font-weight: 500;
   margin-left: 37%;
 }
 
@@ -524,6 +559,7 @@ Calendar - Day Buttons
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   margin: 0 3px 0 2px;
+  outline: none;
 }
 
 .days-container {
@@ -536,7 +572,7 @@ Calendar - Day Buttons
   width: 30px;
   background-color: transparent;
   border: none;
-  font-size: 12px;
+  font-size: 7px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
 
@@ -568,6 +604,20 @@ Calendar - Day Buttons
   border-radius: 100%;
 }
 
+.line-day {
+  display: inline-block;
+  font-size: 12px;
+  padding-bottom: -20px;
+  margin-bottom: -20px;
+}
+
+.line-price {
+  display: inline-block;
+
+  font-size: 7px;
+  padding-top: -10px;
+  margin-top: -10px;
+}
 
 /*
 ===============================
@@ -592,8 +642,9 @@ Calendar - Arrow Buttons
   display: inline-block;
   width: .5em;
   height: .5em;
-  border-top: 0.1em solid rgba(0, 0, 0, 0.9);
-  border-right: 0.1em solid rgba(0, 0, 0, 0.9);
+  border-top: 0.15em solid rgba(0, 0, 0, 0.9);
+  border-right: 0.15em solid rgba(0, 0, 0, 0.9);
+  border-radius: 15% 10% 15% 0;
   transform: rotate(-135deg);
 }
 .leftButton:hover {
@@ -618,8 +669,9 @@ Calendar - Arrow Buttons
   margin-left: -0.3em; */
   width: .5em;
   height: .5em;
-  border-top: 0.1em solid rgba(0, 0, 0, 0.9);
-  border-right: 0.1em solid rgba(0, 0, 0, 0.9);
+  border-top: 0.15em solid rgba(0, 0, 0, 0.9);
+  border-right: 0.15em solid rgba(0, 0, 0, 0.9);
+  border-radius: 15% 10% 15% 0;
   transform: rotate(45deg);
 }
 .rightButton:hover {
@@ -670,6 +722,14 @@ Minor Container
   position: sticky;
 }
 
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 /*
 ===============================
 Guest Modal - pop up
@@ -677,12 +737,9 @@ Guest Modal - pop up
 */
 
 .guest-modal {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /* visibility: visible; */
+  display: block;
   width: 328px;
-  height: 350px;
+  height: 320px;
   /* max-width: 100%; */
   /* max-height: 100%; */
   position: sticky;
@@ -690,13 +747,89 @@ Guest Modal - pop up
   /* left: 50%; */
   /* top: 50%; */
 
-  /* Use this for centering if unknown width/height */
-  transform: translate(-3%);
+  transform: translate(-3%, 3%);
   background: white;
-  box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
-  border-width: 2;
+  border-width: .5px;
   border-radius: 10px;
   filter: blur();
-  border-color: #cacccdd8;
-  box-shadow: 3px 2px 25px 5px #cacccdcb;
+  box-shadow: 0 0 10px 5px #e8eaebd5;
+}
+
+.guest-col-left {
+  padding-top: 0px;
+  margin: 12px;
+  display: block;
+  float: left;
+  width: 42%;
+  font-size: 16px;
+  font-weight: 500;
+}
+.adults {
+  margin-bottom: 10px;
+}
+.group-header {
+  width: 25%;
+  margin: 25px 0 5px 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sub-header {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0 0 15px 10px;
+}
+
+.guest-col-right {
+  padding-top: 0px;
+  margin: 12px 0 12px 10px;
+  display: block;
+  align-content: right;
+  float: right;
+  width: 42%;
+  font-weight: 400;
+}
+
+button.adults,
+button.children,
+button.infants {
+  font-size: 24px;
+  font-weight: 500;
+  color: #cacccdcb;
+  border: 1px solid #cacccdcb;
+  border-radius: 100%;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 12px;
+  background-color: transparent;
+  outline: none;
+}
+
+.guestWarning {
+  font-size: 14px;
+  margin: 5px 12px 12px 12px;
+  display: inline-block;
+  align-items: baseline;
+}
+
+.g-close-btn {
+  align-items: baseline;
+  float: right;
+  height: 35px;
+  width: 60px;
+  border: none;
+  background-color: transparent;
+  color:  rgba(0, 0, 0, 0.9);
+  font-size: 16px;
+  text-decoration: underline;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin: 3px;
+  outline: none;
+}
+
+.g-close-btn:hover {
+  background-color: #ebedeea4;
+  border-radius: 7px;
+  margin: 3px;
 }
