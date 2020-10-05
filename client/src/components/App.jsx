@@ -138,6 +138,7 @@ function App() {
                 <CalContainer
                   availability={listingData.availability}
                   subHeader={subHeader}
+                  adjPrice={adjPrice}
                 />
               </div>
             </div>

@@ -572,7 +572,7 @@ Calendar - Day Buttons
   width: 30px;
   background-color: transparent;
   border: none;
-  font-size: 12px;
+  font-size: 7px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
 
@@ -604,6 +604,20 @@ Calendar - Day Buttons
   border-radius: 100%;
 }
 
+.line-day {
+  display: inline-block;
+  font-size: 12px;
+  padding-bottom: -20px;
+  margin-bottom: -20px;
+}
+
+.line-price {
+  display: inline-block;
+
+  font-size: 7px;
+  padding-top: -10px;
+  margin-top: -10px;
+}
 
 /*
 ===============================
