@@ -65,6 +65,8 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal, pricePerNight
       dayNum = ' ';
       style = {
         border: 'none',
+        cursor: 'not-allowed',
+        pointerEvents: 'none',
       };
     }
     if (i >= startOfMonthIdx) {
@@ -83,6 +85,8 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal, pricePerNight
       dayNum = ' ';
       style = {
         border: 'none',
+        cursor: 'not-allowed',
+        pointerEvents: 'none',
       };
     }
 

@@ -17,6 +17,7 @@ function App() {
   const [callToAction, setCallToAction] = useState('Check availability');
   const [subHeader, setSubHeader] = useState('');
   const [adjPrice, setAdjPrice] = useState(0);
+  const [showCalModal, setCalModal] = useState(false);
   const [listingData, setListingData] = useState(exampleData);
   const listingID = 42;
 
@@ -40,6 +41,10 @@ function App() {
   //   if (check === 'out') {
   //     setCheckOut(e);
   //   }
+  // }
+
+  // function closeModals() {
+  //   setCalModal(false);
   // }
 
   // changes subHeader details based on user's interaction (&#8226;)
@@ -77,7 +82,7 @@ function App() {
   }, [guestTotal, listingData]);
 
   return (
-    <div className="entire-App">
+    <div className="entire-App" onClick={() => setCalModal(false)}>
       <div className="scroll-wrapper">
         <div className="header optional">
           <h2>
@@ -103,6 +108,7 @@ function App() {
                   availability={listingData.availability}
                   subHeader={subHeader}
                   adjPrice={adjPrice}
+                  showCalModal={showCalModal}
                 />
                 <Guests
                   guestLimit={listingData.guest_limit}
