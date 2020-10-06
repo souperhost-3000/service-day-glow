@@ -54,10 +54,6 @@ function App() {
     }
   }, [checkIn, checkOut]);
 
-  // function closeModals() {
-  //   setCalModal(false);
-  // }
-
   // changes subHeader details based on user's interaction (&#8226;)
   useEffect(() => {
     if (checkIn && checkOut) {
@@ -65,7 +61,7 @@ function App() {
     } else if (checkIn) {
       setSubHeader('Minimum stay: 2 nights');
     } else if (!checkIn && !checkOut) {
-      setSubHeader(`${listingData.listing_type} . ${listingData.beds} bds . ${listingData.baths} bath`);
+      setSubHeader(`${listingData.listing_type} . ${listingData.beds} beds . ${listingData.baths} bath`);
     }
   }, [listingData, checkIn, checkOut]);
 
@@ -96,14 +92,15 @@ function App() {
   return (
     <div className="entire-App" onClick={() => setCalModal(false)}>
       <div className="scroll-wrapper">
-        <div className="header optional">
-          <h2>
-            Airbnb
-            <br />
-            Check Availability
-            <br />
-            Service by Jacki
-          </h2>
+        <div className="header-container">
+          <div className="header optional">
+            <h2>
+              {`${listingData.listing_type} hosted by ${listingData.host}`}
+            </h2>
+            <h3>
+              {`${listingData.guest_limit} guests . ${listingData.bedrooms} bedrooms . ${listingData.beds} beds . ${listingData.baths} bath`}
+            </h3>
+          </div>
         </div>
         <section className="major">
           <div className="major-container">
@@ -175,10 +172,6 @@ function App() {
               <button
                 className="clear-btn"
                 type="button"
-                // onClick={() => {
-                //   updateDate('', 'in');
-                //   updateDate('', 'out');
-                // }}
               >
                 Clear date
               </button>
@@ -191,22 +184,3 @@ function App() {
 }
 
 export default App;
-
-/* App -> contains:
-price (upper left) - if calendar pricing differs (can add logic to add 5% for weekends)
-rating (upper right)
-date picker (mid-upper)
-guestsDetails(mid-lower)
-Check Avail button (lower)
-(hidden) - cost estimate & reserve button
-
-modals (calendar pop up, guest picker drop down, check avail (expands app container))
-
-state:
-  manage property details in props
-
-render each nested functional component (use hooks if needed)
-
-// Axios GET req
-// add price and reviews to app level
-*/

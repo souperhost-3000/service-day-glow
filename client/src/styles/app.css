@@ -32,21 +32,33 @@ App Header
 
 h2 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: lighter;
-  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: -10px;
+  margin-left: 20px;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  margin-left: 20px;
 }
 
 .header {
-  display: flex;
-  border: 1px solid #bb0d2c;
-  border-radius: 5px;
-  width: 400px;
+  display: block;
+  justify-content: space-between;
+  border-bottom: 1px solid #cacccdcb;
+  height: 100px;
+  width: 600px;
   padding: 10px;
   margin: 100px;
+  margin-left: 50px;
   position: relative;
   position: -webkit-sticky;
   top: 10%;
-  bottom: 30%;
+  bottom: 20%;
+  float: left;
 }
 
 /*
@@ -392,17 +404,10 @@ Cal Modal - pop up
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* visibility: visible; */
     position: relative;
     width: 600px;
-    /* max-width: 100%; */
     height: 400px;
-    /* max-height: 100%; */
     z-index: 100;
-    /* left: 50%; */
-    /* top: 50%; */
-
-    /* Use this for centering if unknown width/height */
     transform: translate(-40%, -15%);
     background: white;
     box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
@@ -431,13 +436,13 @@ Cal Modal - pop up
 
   .selectDates {
     font-weight: 500;
-    font-size: 22px;    padding-left: 30px;
+    font-size: 22px;
+    padding-left: 30px;
     padding-top: 20px;
     align-items: flex-start;
   }
 
   .actions {
-    /* align-content: bottom right; */
     padding: 10px;
   }
 
@@ -523,18 +528,6 @@ margin-bottom: 10px;
   margin-left: 37%;
 }
 
-/* #leftArrow {
-  height: 30px;
-  width: 35px;
-  background-color: transparent;
-  border: none;
-  font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 200;
-} */
-
-
-
 /*
 ===============================
 Calendar - Day Buttons
@@ -564,7 +557,6 @@ Calendar - Day Buttons
   font-size: 7px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
-
   margin: 0 3px 0 2px;
 }
 
@@ -602,7 +594,6 @@ Calendar - Day Buttons
 
 .line-price {
   display: inline-block;
-
   font-size: 7px;
   padding-top: -10px;
   margin-top: -10px;
@@ -626,6 +617,7 @@ Calendar - Arrow Buttons
   background-color: transparent;
   outline: none;
 }
+
 .leftButton:after {
   content: '';
   display: inline-block;
@@ -636,6 +628,7 @@ Calendar - Arrow Buttons
   border-radius: 15% 10% 15% 0;
   transform: rotate(-135deg);
 }
+
 .leftButton:hover {
   background-color: #ebedeea4;
 }
@@ -651,11 +644,10 @@ Calendar - Arrow Buttons
   background-color: transparent;
   outline: none;
 }
+
 .rightButton:after {
   content: '';
   display: inline-block;
-  /* margin-top: 0.2em;
-  margin-left: -0.3em; */
   width: .5em;
   height: .5em;
   border-top: 0.15em solid rgba(0, 0, 0, 0.9);
@@ -663,6 +655,7 @@ Calendar - Arrow Buttons
   border-radius: 15% 10% 15% 0;
   transform: rotate(45deg);
 }
+
 .rightButton:hover {
   background-color: #ebedeea4;
 }
@@ -672,6 +665,7 @@ Calendar - Arrow Buttons
 Major Container
 ===============================
 */
+
 .major {
   position: sticky;
   position: -webkit-sticky;
@@ -734,13 +728,8 @@ Guest Modal - pop up
   display: block;
   width: 328px;
   height: 320px;
-  /* max-width: 100%; */
-  /* max-height: 100%; */
   position: sticky;
   z-index: 100;
-  /* left: 50%; */
-  /* top: 50%; */
-
   transform: translate(-3%, 3%);
   background: white;
   border-width: .5px;
@@ -758,9 +747,11 @@ Guest Modal - pop up
   font-size: 16px;
   font-weight: 500;
 }
+
 .adults {
   margin-bottom: 10px;
 }
+
 .group-header {
   width: 25%;
   margin: 25px 0 5px 10px;

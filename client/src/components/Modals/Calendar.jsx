@@ -147,11 +147,3 @@ function Calendar({
 }
 
 export default Calendar;
-
-/* availability = [
-  {days: [0, 1, 0...], name: Oct},
-  {days: [0, 1, 0...], name: Nov},
-  {days: [0, 1, 0...], name: Dec},
-  {days: [0, 1, 0...], name: Jan},
-]
-*/

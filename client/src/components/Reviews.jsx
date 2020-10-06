@@ -1,5 +1,4 @@
 /* eslint-disable camelcase */
-// reviews goes here
 
 import React, { useState } from 'react';
 
