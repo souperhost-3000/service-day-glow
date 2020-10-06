@@ -22,13 +22,13 @@ describe('Page basics at Main App level', () => {
     expect(wrapper.exists()).toBe(true);
   });
 
-  it('App page contains Header to intro the service', () => {
-    const wrapper = shallow(<App />);
-    const header = wrapper.find("h2");
-    const result = header.text();
+  // it('App page contains Header to intro the service', () => {
+  //   const wrapper = shallow(<App />);
+  //   const header = wrapper.find("h2");
+  //   const result = header.text();
 
-    expect(result).toBe("AirbnbCheck AvailabilityService by Jacki");
-  });
+  //   expect(result).toBe("AirbnbCheck AvailabilityService by Jacki");
+  // });
 
   it('Minor - calendar has header', () => {
     const wrapper = shallow(<App />);
