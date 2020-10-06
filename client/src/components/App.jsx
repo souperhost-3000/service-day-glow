@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../styles/app.css';
@@ -34,7 +36,6 @@ function App() {
   const [numNights, setNumNights] = useState(1);
 
   function updateDate(e, check) {
-    console.log('reached app level: ', e, check);
     if (check === 'in') {
       setCheckIn(e);
     }
@@ -48,7 +49,6 @@ function App() {
     if (checkIn && checkOut) {
       if (checkIn.slice(0, 1) === checkOut.slice(0, 1)) {
         const nights = Number(checkOut.slice(3, 5)) - Number(checkIn.slice(3, 5));
-        console.log('nights: ', nights);
         setNumNights(nights);
       }
     }
@@ -163,6 +163,8 @@ function App() {
                   subHeader={subHeader}
                   adjPrice={adjPrice}
                   updateDate={updateDate}
+                  checkIn={checkIn}
+                  checkOut={checkOut}
                 />
               </div>
             </div>
@@ -170,7 +172,14 @@ function App() {
               <div className="taxesWarning">
                 Prices on calendar do not include taxes and fees
               </div>
-              <button className="clear-btn" type="button">
+              <button
+                className="clear-btn"
+                type="button"
+                // onClick={() => {
+                //   updateDate('', 'in');
+                //   updateDate('', 'out');
+                // }}
+              >
                 Clear date
               </button>
             </div>

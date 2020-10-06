@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 function DateBoxes({ updateDate, checkIn, checkOut }) {
   const [text1, setPlaceholder1] = useState('Add date');
   const [text2, setPlaceholder2] = useState('Add date');
-  // const [date, setDate] = useState('');
 
   useEffect(() => {
     if (checkIn !== '') {
@@ -16,7 +15,6 @@ function DateBoxes({ updateDate, checkIn, checkOut }) {
   }, [checkIn, checkOut]);
 
   function handleChange(e, check) {
-    console.log('you made a change to your input: ', e);
     if (e.length > 9) {
       updateDate(e, check);
     }
@@ -28,13 +26,35 @@ function DateBoxes({ updateDate, checkIn, checkOut }) {
         <span className="check-in-app">
           Check-in
           <form className="date-form">
-            <input className="date-input" id="check-in-input" type="text" placeholder={text1} onClick={() => setPlaceholder1('MM/DD/YYYY')} onChange={(e) => handleChange(e.target.value, 'in')} />
+            <input
+              className="date-input"
+              id="check-in-input"
+              type="text"
+              placeholder={text1}
+              onClick={() => {
+                if (text1 === 'Add date') {
+                  setPlaceholder1('MM/DD/YYYY');
+                }
+              }}
+              onChange={(e) => handleChange(e.target.value, 'in')}
+            />
           </form>
         </span>
         <span className="check-out-app">
           Checkout
           <form className="date-form">
-            <input className="date-input" id="check-out-input" type="text" placeholder={text2} onClick={() => setPlaceholder2('MM/DD/YYYY')} onChange={(e) => handleChange(e.target.value, 'out')} />
+            <input
+              className="date-input"
+              id="check-out-input"
+              type="text"
+              placeholder={text2}
+              onClick={() => {
+                if (text2 === 'Add date') {
+                  setPlaceholder2('MM/DD/YYYY');
+                }
+              }}
+              onChange={(e) => handleChange(e.target.value, 'out')}
+            />
           </form>
         </span>
       </div>

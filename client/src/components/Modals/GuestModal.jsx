@@ -1,7 +1,10 @@
+/* eslint-disable no-unused-expressions */
 import React, { useState } from 'react';
 
 // Guest modal (conditional pop up logic)
-function GuestModal({ showGMod, setGuestModal, updateGuestTotal, guestLimit }) {
+function GuestModal({
+  showGMod, setGuestModal, updateGuestTotal, guestLimit,
+}) {
   const [adults, setAdults] = useState(1);
   const [children, setChildren] = useState(0);
   const [infants, setInfants] = useState(0);

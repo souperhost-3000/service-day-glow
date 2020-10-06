@@ -1,9 +1,13 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable consistent-return */
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import Calendar from './Modals/Calendar';
 
 // Calendar Container (reuseable) - formats each month of availability for listing
-function CalContainer({ availability, subHeader, adjPrice, updateDate }) {
+function CalContainer({
+  availability, subHeader, adjPrice, updateDate, checkIn, checkOut,
+}) {
   const [leftCalIdx, setLeftCal] = useState(0);
   const [rightCalIdx, setRightCal] = useState(leftCalIdx + 1);
   const [pricePerNight, setPricePerNight] = useState(0);
@@ -17,7 +21,6 @@ function CalContainer({ availability, subHeader, adjPrice, updateDate }) {
   }, [adjPrice]);
 
   function selectedDates(e, check) {
-    console.log('CalContainer: ', e, check);
     updateDate(e, check);
   }
 
@@ -39,6 +42,8 @@ function CalContainer({ availability, subHeader, adjPrice, updateDate }) {
                 subHeader={subHeader}
                 adjPrice={adjPrice}
                 selectedDates={selectedDates}
+                mainCheckIn={checkIn}
+                mainCheckOut={checkOut}
               />
             </div>
           );

@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 // Calendar (reuseable) - formats one individual month
-function Calendar({ monthName, index, monthDays, side, setLeftCal, pricePerNight, selectedDates }) {
+function Calendar({
+  monthName, index, monthDays, side, setLeftCal, pricePerNight,
+  selectedDates, mainCheckIn, mainCheckOut,
+}) {
   const nums = Array(42).fill(null);
 
   // selected dates
@@ -10,6 +13,7 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal, pricePerNight
   const [checkOut, setCheckOut] = useState('');
   const [prevCO, setCO] = useState('');
 
+  // calendar day is clicked, will set respective checkin and checkout dates
   function handleClick(e) {
     if ((checkIn === '' && checkOut === '') || (checkIn !== '' && checkOut !== '')) {
       selectedDates(e, 'in');
@@ -20,10 +24,13 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal, pricePerNight
       setCheckOut(e);
     }
   }
+  // if datePicker input form is filled, will update calendar dates to show selection
   useEffect(() => {
-    console.log('checkin set to :', checkIn);
-    console.log('checkout set to :', checkOut);
-  }, [checkIn, checkOut]);
+    if ((mainCheckIn !== '' && mainCheckOut !== '') && (mainCheckIn !== undefined && mainCheckOut !== undefined)) {
+      setCheckIn(mainCheckIn);
+      setCheckOut(mainCheckOut);
+    }
+  }, [mainCheckIn, mainCheckOut]);
 
   // transform selected checkIn and Out dates css
   useEffect(() => {
@@ -57,16 +64,17 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal, pricePerNight
   // calendar creation (loop creates buttons for cal month)
   let startOfMonthIdx = 0;
   let monthNum = 0;
+  let yearNum = 2020;
   for (let i = 0; i < nums.length; i += 1) {
     // month starts at which index (accounts for not starting on Sunday)
     if (monthName === 'October') { startOfMonthIdx = 4; monthNum = 10; }
     if (monthName === 'November') { startOfMonthIdx = 0; monthNum = 11; }
     if (monthName === 'December') { startOfMonthIdx = 2; monthNum = 12; }
-    if (monthName === 'January') { startOfMonthIdx = 5; monthNum = '01'; }
+    if (monthName === 'January') { startOfMonthIdx = 5; monthNum = '01'; yearNum = 2021; }
 
     // dayNum will be displayed on the button days (date)
     let dayNum;
-    let style;
+    let style = {};
     if (i < startOfMonthIdx) {
       dayNum = ' ';
       style = {
@@ -98,17 +106,12 @@ function Calendar({ monthName, index, monthDays, side, setLeftCal, pricePerNight
 
     // key will be the identifier of the button itself (position)
     nums[i] = (
-      <button className="day" style={style} type="button" key={i} id={`${monthNum}/${dayNum < 10 ? ('0' + dayNum) : dayNum}/20`} onClick={(e) => handleClick(e.target.id)}>
+      <button className="day" style={style} type="button" key={i} id={`${monthNum}/${dayNum < 10 ? (`0${dayNum}`) : dayNum}/${yearNum}`} onClick={(e) => handleClick(e.target.id)}>
         <span className="line-day" style={style}>{`${dayNum}`}</span>
         <span className="line-price">{(monthDays[dayNum - 1] === 0 || dayNum === ' ') ? ' ' : `$${pricePerNight === undefined ? '' : pricePerNight}`}</span>
       </button>
     );
   }
-
-  // function isSelected(date) {
-  //   console.log('date in isSelected: ', date);
-  //   date.style = { 'background-color': 'black' };
-  // }
 
   return (
     <div className="cal-container">

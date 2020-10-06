@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState, useEffect } from 'react';
 import CalModal from './Modals/CalModal';
 import DateBoxes from './DateBoxes';
@@ -12,10 +14,6 @@ function DatePicker({
     setModal(showCalModal);
   }, [showCalModal]);
 
-  // function newInputDate(e, check) {
-  //   console.log('reached datePicker: ', e, check);
-  //   updateDate(e, check);
-  // }
   return (
     <div>
       <div className="datePicker" onClick={() => setModal(true)}>
@@ -44,13 +42,3 @@ function DatePicker({
 }
 
 export default DatePicker;
-
-// const [modal, setModal] = useState(false);
-// modalOpen() {};
-// const modalClose = () => {
-
-// };
-/* <Modal
-  show={modal}
-  modalClose={modalClose}
-/> */

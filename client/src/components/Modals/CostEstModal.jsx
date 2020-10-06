@@ -1,7 +1,9 @@
 import React from 'react';
 
 // Cost Estimate modal (conditional app major expansion logic)
-function CostEstModal({ listingData, showCostEst, adjPrice, numNights = 1 }) {
+function CostEstModal({
+  listingData, showCostEst, adjPrice, numNights,
+}) {
   if (!showCostEst) {
     return null;
   }
