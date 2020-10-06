@@ -4,16 +4,9 @@ Body
 ===============================
 */
 
-html, body {
-  height: 200%;
-}
-
-body {
+.entire-App {
   font-family: 'Montserrat', sans-serif;
   font-weight: lighter;
-}
-
-.entire-App {
   height: 2000px;
   width: 90%;
   margin-top: 100px;
