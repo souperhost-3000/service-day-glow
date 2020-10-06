@@ -122,6 +122,8 @@ function App() {
                   adjPrice={adjPrice}
                   showCalModal={showCalModal}
                   updateDate={updateDate}
+                  checkIn={checkIn}
+                  checkOut={checkOut}
                 />
                 <Guests
                   guestLimit={listingData.guest_limit}
