@@ -33,15 +33,26 @@ function App() {
   const [checkIn, setCheckIn] = useState('');
   const [numNights, setNumNights] = useState(1);
 
-  // function updateDate(e, check) {
-  //   console.log('reached app level: ', e, check);
-  //   if (check === 'in') {
-  //     setCheckIn(e);
-  //   }
-  //   if (check === 'out') {
-  //     setCheckOut(e);
-  //   }
-  // }
+  function updateDate(e, check) {
+    console.log('reached app level: ', e, check);
+    if (check === 'in') {
+      setCheckIn(e);
+    }
+    if (check === 'out') {
+      setCheckOut(e);
+    }
+  }
+
+  // calculate number of nights for selected dates
+  useEffect(() => {
+    if (checkIn && checkOut) {
+      if (checkIn.slice(0, 1) === checkOut.slice(0, 1)) {
+        const nights = Number(checkOut.slice(3, 5)) - Number(checkIn.slice(3, 5));
+        console.log('nights: ', nights);
+        setNumNights(nights);
+      }
+    }
+  }, [checkIn, checkOut]);
 
   // function closeModals() {
   //   setCalModal(false);
@@ -53,8 +64,9 @@ function App() {
       setSubHeader(`${checkIn} - ${checkOut}`);
     } else if (checkIn) {
       setSubHeader('Minimum stay: 2 nights');
+    } else if (!checkIn && !checkOut) {
+      setSubHeader(`${listingData.listing_type} . ${listingData.beds} bds . ${listingData.baths} bath`);
     }
-    setSubHeader(`${listingData.listing_type} . ${listingData.beds} bds . ${listingData.baths} bath`);
   }, [listingData, checkIn, checkOut]);
 
   // const [guestDetails, setGuestDetails] = useState(1);
@@ -109,6 +121,7 @@ function App() {
                   subHeader={subHeader}
                   adjPrice={adjPrice}
                   showCalModal={showCalModal}
+                  updateDate={updateDate}
                 />
                 <Guests
                   guestLimit={listingData.guest_limit}
@@ -125,6 +138,7 @@ function App() {
                   listingData={listingData}
                   showCostEst={showCostEst}
                   adjPrice={adjPrice}
+                  numNights={numNights}
                 />
               </div>
             </div>
@@ -146,6 +160,7 @@ function App() {
                   availability={listingData.availability}
                   subHeader={subHeader}
                   adjPrice={adjPrice}
+                  updateDate={updateDate}
                 />
               </div>
             </div>

@@ -23,6 +23,7 @@ function DatePicker({ availability, updateDate, subHeader, adjPrice, showCalModa
             availability={availability}
             subHeader={subHeader}
             adjPrice={adjPrice}
+            updateDate={updateDate}
           />
         </span>
       </div>

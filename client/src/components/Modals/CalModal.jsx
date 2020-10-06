@@ -3,7 +3,7 @@ import CalContainer from '../CalContainer';
 import DateBoxes from '../DateBoxes';
 
 // Calendar modal (conditional pop up logic)
-function CalModal({ show, setCalModal, availability, subHeader, adjPrice }) {
+function CalModal({ show, setCalModal, availability, subHeader, adjPrice, updateDate }) {
   if (!show) {
     return null;
   }
@@ -24,7 +24,9 @@ function CalModal({ show, setCalModal, availability, subHeader, adjPrice }) {
       <div className="cal-dbl-container">
         <CalContainer
           availability={availability}
+          subHeader={subHeader}
           adjPrice={adjPrice}
+          updateDate={updateDate}
         />
       </div>
       <div className="actions">
