@@ -54,8 +54,3 @@ function CalContainer({
 }
 
 export default CalContainer;
-
-// input availabilty array
-// pipes to calendar (create one each)
-// this is an array holding container the app can flip through 1-4
-// modal and app adds logic to toggle view via index

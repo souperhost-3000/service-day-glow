@@ -15,10 +15,6 @@ function Guests({ guestLimit, updateGuestTotal, guestTotal }) {
     }
   }, [showGMod]);
 
-  // function updateGuestTotal(e) {
-  //   setGuestTotal(guestTotal + e);
-  // }
-
   return (
     <div className="guestPicker">
       <div>

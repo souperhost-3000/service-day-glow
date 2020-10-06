@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 
 // dynamic price goes here
 function Price({ adjPrice }) {
@@ -12,9 +11,5 @@ function Price({ adjPrice }) {
     </div>
   );
 }
-
-const proptypes = {
-  price: PropTypes.any.isRequired,
-};
 
 export default Price;
