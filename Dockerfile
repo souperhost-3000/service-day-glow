@@ -1,14 +1,12 @@
-FROM node:12-alpine
+FROM node:12.18.3
 
 RUN mkdir -p /src/app
 
+COPY . /src/app
+
 WORKDIR /src/app
 
-COPY . /scr/app
-
 RUN npm install
-RUN npm run seed
-RUN npm run build
 
 EXPOSE 3001
 
