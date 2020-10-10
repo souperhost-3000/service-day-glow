@@ -21,7 +21,7 @@ function App() {
   const [adjPrice, setAdjPrice] = useState(0);
   const [showCalModal, setCalModal] = useState(false);
   const [listingData, setListingData] = useState(exampleData);
-  const listingID = 42;
+  const listingID = 11;
 
   // GET request for Listing Data
   useEffect(() => {

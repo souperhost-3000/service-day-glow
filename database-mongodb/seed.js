@@ -4,16 +4,6 @@ const faker = require('faker');
 // eslint-disable-next-line no-unused-vars
 const { db, Listing, Month } = require('./index');
 
-// create seeding logic to create new documents in db collection
-// create math.random func to use for random number selector
-// use schema to fill nums into each key:value pair
-// add logic for subdoc
-// once an individual document has all values, invoke .create
-// use a promise .then, .catch
-// consider logic for validation and save (child and parent)
-// repeat with loop until 100 documents have been created
-// for reviews decimal, use random(25, 50) divide by 10
-
 // leading 4 months, #days in month, scable if needed
 const months = {
   October: 31,
@@ -68,13 +58,11 @@ const seedMonths = () => {
         }
       }
     }
-
     monthsResult.push({
       name: month,
       days: listingIsAvailable,
     });
   });
-
   monthsResult = monthsResult.map((month) => new Month(month));
 };
 

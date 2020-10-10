@@ -10,7 +10,7 @@ const { Listing } = require('../database-mongodb/index');
 const app = express();
 app.use(compression());
 
-const PORT = 3011;
+const PORT = 3001;
 const PUBLIC_DIR = path.resolve(__dirname, '../public');
 
 app.use(bodyParser.json());
