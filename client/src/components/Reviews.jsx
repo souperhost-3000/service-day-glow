@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 
-import React, { useState } from 'react';
+import React from 'react';
 
 // dynamic reviews goes here
 function Reviews({ rating, reviews_count }) {

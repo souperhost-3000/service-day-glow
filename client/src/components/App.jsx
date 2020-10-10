@@ -93,13 +93,21 @@ function App() {
     <div className="entire-App" onClick={() => setCalModal(false)}>
       <div className="scroll-wrapper">
         <div className="header-container">
-          <div className="header optional">
+          <div className="header">
             <h2>
               {`${listingData.listing_type} hosted by ${listingData.host}`}
             </h2>
             <h3>
               {`${listingData.guest_limit} guests . ${listingData.bedrooms} bedrooms . ${listingData.beds} beds . ${listingData.baths} bath`}
             </h3>
+          </div>
+          <div className="listing-static-info">
+            <div>
+              <img id="listing-static-top" src="https://ghrsea12-fec.s3-us-west-2.amazonaws.com/sample/airbnbStatic1.webp" alt="" />
+            </div>
+            <div>
+              <img id="listing-static-bottom" src="https://ghrsea12-fec.s3-us-west-2.amazonaws.com/sample/airbnbStatic2.webp" alt="" />
+            </div>
           </div>
         </div>
         <section className="major">

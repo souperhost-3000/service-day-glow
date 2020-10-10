@@ -7,15 +7,14 @@ Body
 .entire-App {
   font-family: 'Montserrat', sans-serif;
   font-weight: lighter;
-  height: 2000px;
   width: 90%;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.scroll-wrapper {
+/* .scroll-wrapper {
   height: 1500px;
-}
+} */
 
 /*
 ===============================
@@ -38,6 +37,11 @@ h3 {
   margin-left: 20px;
 }
 
+.header-container {
+  display: inline-flex;
+  flex-direction: column;
+}
+
 .header {
   display: block;
   justify-content: space-between;
@@ -45,20 +49,28 @@ h3 {
   height: 100px;
   width: 600px;
   padding: 10px;
-  margin: 100px;
   margin-left: 50px;
   position: relative;
   position: -webkit-sticky;
   top: 10%;
-  bottom: 20%;
+  bottom: 70%;
   float: left;
+}
+
+.listing-static-info {
+  width: 600px;
+}
+
+#listing-static-top,
+#listing-static-bottom {
+  width: 100%;
+  margin-left: 80px;
 }
 
 /*
 ===============================
 App Major Container
 ===============================
-
 */
 
 .app-container {
@@ -663,7 +675,7 @@ Major Container
   position: sticky;
   position: -webkit-sticky;
   top: 10%;
-  bottom: 90%;
+  bottom: 200%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -700,7 +712,7 @@ Minor Container
   margin-left: 50px;
   position: relative;
   top: 50%;
-  bottom: 60%;
+  bottom: 90%;
 }
 
 .dot {

@@ -25,7 +25,7 @@ function CalContainer({
   }
 
   return (
-    <div className="months-container">
+    <div className="months-container" key="leftCalIdx">
       {availability.map((monthObj, index) => {
         // only 2 selected months for the display (not every month in container)
         if (index === leftCalIdx || index === rightCalIdx) {
