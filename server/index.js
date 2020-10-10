@@ -1,13 +1,14 @@
 /* eslint-disable no-console */
 const path = require('path');
 const express = require('express');
+const compression = require('compression');
 const bodyParser = require('body-parser');
 
 require('../database-mongodb/index.js');
 const { Listing } = require('../database-mongodb/index');
 
 const app = express();
-// const db = path
+app.use(compression());
 
 const PORT = 3001;
 const PUBLIC_DIR = path.resolve(__dirname, '../public');

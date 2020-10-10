@@ -1,6 +1,6 @@
-# Readme: Front-End Capstone Project
 [![Souperhost:3000](https://circleci.com/gh/souperhost-3000/service-day-glow.svg?style=shield)](https://github.com/souperhost-3000/service-day-glow/)
 
+# Readme: Front-End Capstone Project
 Build an app that simulates a single page experience in a service oriented style where each service is responsible for delivering the content+data for one module on the page.
 
 # service-day-glow
@@ -33,7 +33,7 @@ images of what if should look like -->
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
-- Node 6.13.0
+- Node >= 6.13.0
 - etc
 
 ## Development
