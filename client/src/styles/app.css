@@ -25,14 +25,14 @@ App Header
   font-weight: 500;
   font-size: 22px;
   margin-bottom: -20px;
-  margin-left: 20px;
+  margin-left: 0;
 }
 
 h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   font-size: 16px;
-  margin-left: 20px;
+  margin-left: 0;
 }
 
 .header-container {
@@ -47,7 +47,7 @@ h3 {
   height: 100px;
   width: 600px;
   padding: 10px;
-  margin-left: 0;
+  margin-left: 0px;
   position: relative;
   position: -webkit-sticky;
   top: 10%;
@@ -62,7 +62,7 @@ h3 {
 #listing-static-top,
 #listing-static-bottom {
   width: 100%;
-  margin-left: 0;
+  margin-left: 30px;
 }
 
 /*
@@ -81,7 +81,7 @@ App Major Container
   border-color: #cacccdd8;
   box-shadow: 3px 2px 25px 5px #cacccdcb;
   opacity: 1;
-  margin: 20px;
+  margin: 30px;
   padding: 2px;
 }
 
@@ -89,7 +89,7 @@ App Major Container
   vertical-align: middle;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  margin: 20px;
 }
 
 .price-app {
@@ -128,7 +128,7 @@ Upper - Major Container
   display: block;
   justify-content: center;
   align-items: center;
-  margin: 20px 0 0 0;
+  margin: 30px 20px 0px 20px;
 }
 
 .price-app {
@@ -165,7 +165,7 @@ Middle/Upper - Major Container
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  margin: 20px 0 0 0;
+  margin: 20px 0 0 20px;
   border: .5px solid #82888a;
   border-radius: 5px;
   width: 326px;
@@ -679,7 +679,7 @@ Major Container
   justify-content: center;
   float: right;
   align-items: center;
-  margin: 0px;
+  margin: 50px;
 }
 
 /*
@@ -707,7 +707,7 @@ Minor Container
   border-top: 1px solid #cacccdcb;
   border-bottom: 1px solid #cacccdcb;
   filter: blur();
-  margin-left: 0px;
+  margin-left: 0;
   position: relative;
   top: 50%;
   bottom: 90%;
