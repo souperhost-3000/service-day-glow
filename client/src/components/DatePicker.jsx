@@ -23,7 +23,7 @@ function DatePicker({
           checkOut={checkOut}
         />
       </div>
-      <div className="modal">
+      <div className="modal-middle">
         <span>
           <CalModal
             show={showModal}

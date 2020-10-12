@@ -94,9 +94,9 @@ function App() {
       <div className="scroll-wrapper">
         <div className="header-container">
           <div className="header">
-            <h2>
+            <div className="description-title">
               {`${listingData.listing_type} hosted by ${listingData.host}`}
-            </h2>
+            </div>
             <h3>
               {`${listingData.guest_limit} guests . ${listingData.bedrooms} bedrooms . ${listingData.beds} beds . ${listingData.baths} bath`}
             </h3>

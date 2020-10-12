@@ -7,14 +7,12 @@ Body
 .entire-App {
   font-family: 'Montserrat', sans-serif;
   font-weight: lighter;
-  width: 90%;
+  width: 1120px;
   margin-top: 20px;
   margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-/* .scroll-wrapper {
-  height: 1500px;
-} */
 
 /*
 ===============================
@@ -22,11 +20,11 @@ App Header
 ===============================
 */
 
-h2 {
+.description-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 22px;
-  margin-bottom: -10px;
+  margin-bottom: -20px;
   margin-left: 20px;
 }
 
@@ -49,7 +47,7 @@ h3 {
   height: 100px;
   width: 600px;
   padding: 10px;
-  margin-left: 50px;
+  margin-left: 0;
   position: relative;
   position: -webkit-sticky;
   top: 10%;
@@ -64,7 +62,7 @@ h3 {
 #listing-static-top,
 #listing-static-bottom {
   width: 100%;
-  margin-left: 80px;
+  margin-left: 0;
 }
 
 /*
@@ -83,7 +81,7 @@ App Major Container
   border-color: #cacccdd8;
   box-shadow: 3px 2px 25px 5px #cacccdcb;
   opacity: 1;
-  margin: 30px;
+  margin: 20px;
   padding: 2px;
 }
 
@@ -91,7 +89,7 @@ App Major Container
   vertical-align: middle;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 10px;
 }
 
 .price-app {
@@ -130,7 +128,7 @@ Upper - Major Container
   display: block;
   justify-content: center;
   align-items: center;
-  margin: 30px 20px 0px 20px;
+  margin: 20px 0 0 0;
 }
 
 .price-app {
@@ -167,7 +165,7 @@ Middle/Upper - Major Container
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  margin: 20px 0 0 20px;
+  margin: 20px 0 0 0;
   border: .5px solid #82888a;
   border-radius: 5px;
   width: 326px;
@@ -405,97 +403,97 @@ Cal Modal - pop up
 ===============================
 */
 
-  .bob {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    width: 600px;
-    height: 400px;
-    z-index: 100;
-    transform: translate(-40%, -15%);
-    background: white;
-    box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
-    border-width: 2;
-    border-radius: 10px;
-    filter: blur();
-    border-color: #cacccdd8;
-    box-shadow: 3px 2px 25px 5px #cacccdcb;
-  }
+.bob {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 600px;
+  height: 400px;
+  z-index: 100;
+  transform: translate(-40%, -15%);
+  background: white;
+  box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
+  border-width: 2;
+  border-radius: 10px;
+  filter: blur();
+  border-color: #cacccdd8;
+  box-shadow: 3px 2px 25px 5px #cacccdcb;
+}
 
-  .modal-dateBoxes {
-    float: right;
-    align-items: top;
-    padding: 20px 20px 0 10px;
-  }
+.modal-dateBoxes {
+  float: right;
+  align-items: top;
+  padding: 20px 20px 0 10px;
+}
 
-  .modal-header-left {
-    float: left;
-  }
-  .listing_rooms {
-    font-size: 12px;
-    font-weight: 300;
-    padding-left: 30px;
-    align-items: flex-start;
-  }
+.modal-header-left {
+  float: left;
+}
+.listing_rooms {
+  font-size: 12px;
+  font-weight: 300;
+  padding-left: 30px;
+  align-items: flex-start;
+}
 
-  .selectDates {
-    font-weight: 500;
-    font-size: 22px;
-    padding-left: 30px;
-    padding-top: 20px;
-    align-items: flex-start;
-  }
+.selectDates {
+  font-weight: 500;
+  font-size: 22px;
+  padding-left: 30px;
+  padding-top: 20px;
+  align-items: flex-start;
+}
 
-  .actions {
-    padding: 10px;
-  }
+.actions {
+  padding: 10px;
+}
 
-  .taxesWarning {
-    float: left;
-    font-size: 8px;
-    color: #82888a;
-    margin: 10px 10px 10px 30px;
-  }
+.taxesWarning {
+  float: left;
+  font-size: 8px;
+  color: #82888a;
+  margin: 10px 10px 10px 30px;
+}
 
-  .clear-btn {
-    align-items: baseline;
-    float: right;
-    height: 30px;
-    width: 80px;
-    border: none;
-    background-color: transparent;
-    color:  rgba(0, 0, 0, 0.9);
-    font-size: 12px;
-    text-decoration: underline;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    margin: 3px;
-    outline: none;
-  }
+.clear-btn {
+  align-items: baseline;
+  float: right;
+  height: 30px;
+  width: 80px;
+  border: none;
+  background-color: transparent;
+  color:  rgba(0, 0, 0, 0.9);
+  font-size: 12px;
+  text-decoration: underline;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  margin: 3px;
+  outline: none;
+}
 
-  .clear-btn:hover {
-    background-color: #ebedeea4;
-    border-radius: 7px;
-    margin: 3px;
-  }
+.clear-btn:hover {
+  background-color: #ebedeea4;
+  border-radius: 7px;
+  margin: 3px;
+}
 
 
-  .close-btn {
-    align-items: baseline;
-    float: right;
-    height: 30px;
-    width: 70px;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #f2f2f2;
-    font-size: 12px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    border-radius: 7px;
-    margin: 3px;
-    outline: none;
-  }
+.close-btn {
+  align-items: baseline;
+  float: right;
+  height: 30px;
+  width: 70px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #f2f2f2;
+  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  border-radius: 7px;
+  margin: 3px;
+  outline: none;
+}
 
 /*
 ===============================
@@ -681,7 +679,7 @@ Major Container
   justify-content: center;
   float: right;
   align-items: center;
-  margin: 50px;
+  margin: 0px;
 }
 
 /*
@@ -709,7 +707,7 @@ Minor Container
   border-top: 1px solid #cacccdcb;
   border-bottom: 1px solid #cacccdcb;
   filter: blur();
-  margin-left: 50px;
+  margin-left: 0px;
   position: relative;
   top: 50%;
   bottom: 90%;
