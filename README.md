@@ -1,15 +1,11 @@
 [![Souperhost:3000](https://circleci.com/gh/souperhost-3000/service-day-glow.svg?style=shield)](https://github.com/souperhost-3000/service-day-glow/)
 
 # Hi, I'm Jacki
-
 <img align='right' src='https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif' width='200"'>
 I love coding, spreading positivity and hearing feedback! Feel free to connect, send feedback or submit a PR with really cool ideas :)
 
-# Readme: Front-End Capstone Project
-Build an app that simulates a single page experience in a service oriented style where each service is responsible for delivering the content+data for one module on the page.
-
 ## service-day-glow
-This service focuses on the "Check Availability Calendar". It operates with it's own server and database that powers the module's UI.
+This service focuses on the "Check Availability Calendar" of a producting listing page for a home rental site. It operates with it's own server and database that powers the module's UI.  It is one service of a larger service oriented architecture.
 
 ## Getting Started
 
