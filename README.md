@@ -1,14 +1,31 @@
 [![Souperhost:3000](https://circleci.com/gh/souperhost-3000/service-day-glow.svg?style=shield)](https://github.com/souperhost-3000/service-day-glow/)
 
+# Hi, I'm Jacki
+
+<img align='right' src='https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif' width='200"'>
+I love coding, spreading positivity and hearing feedback! Feel free to connect, send feedback or submit a PR with really cool ideas :)
+
 # Readme: Front-End Capstone Project
 Build an app that simulates a single page experience in a service oriented style where each service is responsible for delivering the content+data for one module on the page.
 
-# service-day-glow
+## service-day-glow
 This service focuses on the "Check Availability Calendar". It operates with it's own server and database that powers the module's UI.
 
 ## Getting Started
 
 <!-- Graphic? GIF -->
+
+Clone the Github repository:
+* `$ git clone https://github.com/souperhost-3000/service-day-glow.git`
+
+Navigate inside of the directory `./service-day-glow` and run the following commands:
+1. `$ npm install`
+2. `$ npm run build`
+3. `$ npm start`
+
+Open a new browser tab to see the app:
+* `http://localhost:3001`
+
 
 ## Related Projects
 
@@ -22,12 +39,11 @@ This service focuses on the "Check Availability Calendar". It operates with it's
 1. [Requirements](#requirements)
 1. [Development](#development)
 
-## Usage
+## Using the check availability calendar service
+Enjoy this single page app that is part of a larger service oriented architecture. If you want to play with the front end UI, navigate to the localhost:3001 and click around.  It is very intuitive and you may even find it quite similar to Airbnb's reservation flow.
 
-> Some usage instructions
-<!-- all the code required to get started
-nothing flashy, just basics
-images of what if should look like -->
+If you'd like to dive more in depth with reservation and different dummy data for lisitings, run the command to seed a MongoDB and connect to the service:
+1. `$ npm run seed`
 
 ## Requirements
 
@@ -35,8 +51,6 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 
 - Node >= 6.13.0
 - etc
-
-## Development
 
 ### Installing Dependencies
 
@@ -46,3 +60,13 @@ From within the root directory:
 npm install -g webpack
 npm install
 ```
+
+## Built With
+* React
+* Node.js
+* Express
+* MongoDB
+* Mongoose
+* Wepack
+* Docker
+* AWS EC2 (currently not live)
