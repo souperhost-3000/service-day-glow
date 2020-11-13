@@ -7,7 +7,8 @@ I love coding, spreading positivity and hearing feedback! Feel free to connect, 
 ## Check Availability Calendar aka service-day-glow
 This service focuses on the "Check Availability Calendar" of a producting listing page for a home rental site. It operates with it's own server and database that powers the module's UI.  It is one service of a larger service oriented architecture.
 
-![calendar](/img/availabilityCalendar.gif)
+![](/img/availabilityCalendar.gif)
+<img align='right' src='/img/availabilityCalendar.gif' width='200"'>
 
 ## Getting Started
 
