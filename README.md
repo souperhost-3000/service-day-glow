@@ -7,9 +7,9 @@ I love coding, spreading positivity and hearing feedback! Feel free to connect, 
 ## Check Availability Calendar aka service-day-glow
 This service focuses on the "Check Availability Calendar" of a producting listing page for a home rental site. It operates with it's own server and database that powers the module's UI.  It is one service of a larger service oriented architecture.
 
-## Getting Started
+![calendar](/Users/jacki/Downloads/git_tutorial/work/service-day-glow/availabilityCalendar.gif)
 
-<!-- Graphic? GIF -->
+## Getting Started
 
 Clone the Github repository:
 * `$ git clone https://github.com/souperhost-3000/service-day-glow.git`
