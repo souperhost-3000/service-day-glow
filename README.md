@@ -45,9 +45,10 @@ If you'd like to dive more in depth with reservation and different dummy data fo
 ## Requirements
 
 An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
+Find MongoDB installation documentation here [MongoDB](https://docs.mongodb.com/manual/installation/).
 
 - Node >= 6.13.0
-- etc
+- MongoDB 4.4.0
 
 ### Installing Dependencies
 
