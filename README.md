@@ -15,13 +15,7 @@ This service focuses on the "Check Availability Calendar" of a producting listin
 
 ## Documentation
 * [Getting Started](./documentation/getting-started.md)
-
-
-## Related Projects
-
-  - https://github.com/souperhost-3000/service-eric
-  - https://github.com/souperhost-3000/service-chris
-  - https://github.com/souperhost-3000/service-dannyhannyford
+* [Related Projects](./documentation/related-projects.md)
 
 ## Table of Contents
 
