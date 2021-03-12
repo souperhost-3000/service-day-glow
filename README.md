@@ -16,18 +16,10 @@ This service focuses on the "Check Availability Calendar" of a producting listin
 ## Documentation
 1. [Getting Started](./documentation/getting-started.md)
 1. [Related Projects](./documentation/related-projects.md)
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
-```
+1. [Usage](./documentation/getting-started.md)
+1. [Requirements](./documentation/requirements.md)
+1. [Development](./documentation/development.md)
+1. [Technologies](#Technologies)
 
 ## Technologies
 * React
