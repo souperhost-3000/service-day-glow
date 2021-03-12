@@ -5,7 +5,7 @@
 
 * I love coding, spreading positivity and hearing feedback!
 * Let's connect on LinkedIn: [Jacki Yanamura](https://www.linkedin.com/in/jacki-yanamura/)
-* Follow me on Github: [Jacki Yanamura](https://github.com/day-glow)
+* Follow me on Github: [Jacki Yanamura aka Day-Glow](https://github.com/day-glow)
 * Send feedback or submit a PR with really cool ideas :)
 
 ## Check Availability Calendar
