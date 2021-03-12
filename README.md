@@ -2,7 +2,9 @@
 
 # Hi, I'm Jacki
 <img align='right' src='https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif' width='200"'>
-I love coding, spreading positivity and hearing feedback! Feel free to connect, send feedback or submit a PR with really cool ideas :)
+-I love coding, spreading positivity and hearing feedback! -Let's connect on LinkedIn: [Jacki Yanamura](https://www.linkedin.com/in/jacki-yanamura/)
+-Follow me on Github: [Jacki Yanamura](https://github.com/day-glow)
+-Send feedback or submit a PR with really cool ideas :)
 
 ## Check Availability Calendar aka service-day-glow
 This service focuses on the "Check Availability Calendar" of a producting listing page for a home rental site. It operates with it's own server and database that powers the module's UI.  It is one service of a larger service oriented architecture.
