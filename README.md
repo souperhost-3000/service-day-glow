@@ -1,6 +1,6 @@
 [![Souperhost:3000](https://circleci.com/gh/souperhost-3000/service-day-glow.svg?style=shield)](https://github.com/souperhost-3000/service-day-glow/)
 
-# Hi, I'm Jacki
+# Built by Jacki
 <img align='right' src='https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif' width='200"'>
 
 * I love coding, spreading positivity and hearing feedback!
@@ -8,10 +8,13 @@
 * Follow me on Github: [Jacki Yanamura](https://github.com/day-glow)
 * Send feedback or submit a PR with really cool ideas :)
 
-## Check Availability Calendar aka service-day-glow
-This service focuses on the "Check Availability Calendar" of a producting listing page for a home rental site. It operates with it's own server and database that powers the module's UI.  It is one service of a larger service oriented architecture.
+## Check Availability Calendar
+This service focuses on the "Check Availability Calendar" of a producting listing page for an open source home rental site. It operates with it's own server and database that powers the module's UI.  It is one service of a larger service oriented architecture.
 
 ![](./img/availabilityCalendar.gif)
+
+## Documentation
+* [Getting Started]()
 
 
 ## Getting Started
