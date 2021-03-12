@@ -18,7 +18,7 @@ This service focuses on the "Check Availability Calendar" of a producting listin
 1. [Related Projects](./documentation/related-projects.md)
 1. [Usage](./documentation/getting-started.md)
 1. [Requirements](./documentation/requirements.md)
-1. [Development](./documentation/development.md)
+1. [Development](./documentation/dependencies.md)
 1. [Technologies](#Technologies)
 
 ## Technologies
