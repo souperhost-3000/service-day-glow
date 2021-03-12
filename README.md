@@ -59,7 +59,7 @@ npm install -g webpack
 npm install
 ```
 
-## Built With
+## Technologies
 * React
 * Node.js
 * Express
