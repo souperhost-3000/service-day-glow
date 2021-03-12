@@ -20,14 +20,6 @@ This service focuses on the "Check Availability Calendar" of a producting listin
 1. [Requirements](#requirements)
 1. [Development](#development)
 
-## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-Find MongoDB installation documentation here [MongoDB](https://docs.mongodb.com/manual/installation/).
-
-- Node >= 6.13.0
-- MongoDB 4.4.0
-
 ### Installing Dependencies
 
 From within the root directory:
