@@ -5,7 +5,7 @@
 
 * I love coding, spreading positivity and hearing feedback!
 * Let's connect on LinkedIn: [Jacki Yanamura](https://www.linkedin.com/in/jacki-yanamura/)
-* Follow me on Github: [Jacki Yanamura](https://github.com/day-glow)
+* Follow me on Github: [Jacki Yanamura aka Day-Glow](https://github.com/day-glow)
 * Send feedback or submit a PR with really cool ideas :)
 
 ## Check Availability Calendar
@@ -16,6 +16,7 @@ This service focuses on the "Check Availability Calendar" of a producting listin
 ## Documentation
 1. [Getting Started](./documentation/getting-started.md)
 1. [Related Projects](./documentation/related-projects.md)
+1. [Design](./documentation/system-design.md)
 1. [Usage](./documentation/getting-started.md)
 1. [Requirements](./documentation/requirements.md)
 1. [Development](./documentation/dependencies.md)
