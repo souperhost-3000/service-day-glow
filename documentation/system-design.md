@@ -10,7 +10,7 @@
 
 # Led Project Management & Team
 1) Timeline
-2) Mock up
+2) Mockup
 
 ## Documentation
 1. [Related Projects](./documentation/related-projects.md)
