@@ -1,2 +1,2 @@
 ## Timeline & Deliverables Tracker
-![](./img/project-deliverables.png)
+![](./../img/project-deliverables.png)
