@@ -5,7 +5,7 @@
 ![](../../img/estimate.png)
 
 ## Whiteboarding UI to database
-![](../../img/calendar_whiteboarding.png)
+![](../../img/calendar_whiteboarding.jpg)
 
 ## MongoDB shape of data
 Document schema sample:
