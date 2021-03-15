@@ -58,8 +58,8 @@ Open a new browser tab to see the app:
 2) Accessing data effeciently
 
 ### Led Project Management & Team
-1) [Timeline](./doctumentation/design/timeline.md)
-2) [Mockup](./doctumentation/design/mockup.md)
+1) [Timeline](./documentation/design/timeline.md)
+2) [Mockup](./documentation/design/mockup.md)
 
 ## Requirements
 
