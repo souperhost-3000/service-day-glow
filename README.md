@@ -61,6 +61,9 @@ Open a new browser tab to see the app:
 1) [Timeline](./documentation/design/timeline.md)
 2) [Mockup](./documentation/design/mockup.md)
 
+## Timeline & Deliverables Tracker
+![](./img/project-deliverables.png)
+
 ## Planning via mock ups
 ![](./img/front.png)
 ![](./img/calendar.png)
