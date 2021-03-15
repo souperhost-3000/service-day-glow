@@ -38,11 +38,11 @@ Open a new browser tab to see the app:
 
 ## Related Projects
 
-![](../img/reviews2.png)
+![](./img/reviews2.png)
 
-![](../img/reviews1.png)
+![](./img/reviews1.png)
 
-![](../img/morePlaces.png)
+![](./img/morePlaces.png)
 
   - [Photo Carousel](https://github.com/souperhost-3000/service-eric)
   - [Reviews](https://github.com/souperhost-3000/service-chris)
@@ -58,8 +58,8 @@ Open a new browser tab to see the app:
 2) Accessing data effeciently
 
 ### Led Project Management & Team
-1) [Timeline](./design/timeline.md)
-2) [Mockup](./design/mockup.md)
+1) [Timeline](./doctumentation/design/timeline.md)
+2) [Mockup](./doctumentation/design/mockup.md)
 
 ## Requirements
 
