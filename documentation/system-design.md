@@ -10,13 +10,3 @@
 # Led Project Management & Team
 1) [Timeline](./design/timeline.md)
 2) [Mockup](./design/mockup.md)
-
-## Documentation
-1. [Project ReadMe](../README.md)
-1. [Getting Started](./getting-started.md)
-1. [Related Projects](./related-projects.md)
-1. [Design](./system-design.md)
-1. [Usage](./getting-started.md)
-1. [Requirements](./requirements.md)
-1. [Development](./dependencies.md)
-1. [Technologies](../README.md)
