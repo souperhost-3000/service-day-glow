@@ -3,9 +3,9 @@
 # Built by Jacki
 <img align='right' src='https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif' width='200"'>
 
-* I love coding, spreading positivity and hearing feedback!
-* Let's connect on [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white")](https://www.linkedin.com/in/jacki-yanamura/): [Jacki Yanamura](https://www.linkedin.com/in/jacki-yanamura/)
+* [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white")](https://www.linkedin.com/in/jacki-yanamura/)
 * Follow me on Github: [Jacki Yanamura aka Day-Glow](https://github.com/day-glow)
+* I love coding, spreading positivity and hearing feedback!
 
 ## Check Availability Calendar
 This service focuses on the "Check Availability Calendar" of a producting listing page for an open source home rental site. It operates with it's own server and database that powers the module's UI.  It is one service of a larger service oriented architecture.
