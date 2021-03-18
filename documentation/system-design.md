@@ -1,5 +1,5 @@
 ## Front-End Challenges
-1) Building an interactive [calendar](./documentation/design/mockup.md) from scratch with multiple responsive changes
+1) Building an interactive [calendar](./design/mockup.md) from scratch with multiple responsive changes
 2) Dependent values for price estimation
 3) Reducing UI lag
 
