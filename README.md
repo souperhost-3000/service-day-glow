@@ -132,6 +132,6 @@ npm install
 * Express
 * MongoDB
 * Mongoose
-* Wepack
+* Webpack
 * Docker
 * AWS EC2 (currently not live)
