@@ -5,8 +5,6 @@ function Calendar({
   monthName, index, monthDays, side, setLeftCal, pricePerNight,
   selectedDates, mainCheckIn, mainCheckOut,
 }) {
-  const nums = Array(42).fill(null);
-
   // selected dates
   const [checkIn, setCheckIn] = useState('');
   const [prevCI, setCI] = useState('');
@@ -60,6 +58,8 @@ function Calendar({
       setCO(checkOut);
     }
   }, [checkIn, prevCI, checkOut, prevCO]);
+
+  const nums = Array(42).fill(null);
 
   // calendar creation (loop creates buttons for cal month)
   let startOfMonthIdx = 0;

@@ -9,9 +9,7 @@ function GuestModal({
   const [children, setChildren] = useState(0);
   const [infants, setInfants] = useState(0);
 
-  if (!showGMod) {
-    return null;
-  }
+  if (!showGMod) return null;
 
   function handleClick(group, change) {
     if (adults + children + change <= guestLimit && group !== 'infants') {

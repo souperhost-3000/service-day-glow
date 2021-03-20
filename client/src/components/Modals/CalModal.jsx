@@ -6,9 +6,7 @@ import DateBoxes from '../DateBoxes';
 function CalModal({
   show, setCalModal, availability, subHeader, adjPrice, updateDate, checkIn, checkOut,
 }) {
-  if (!show) {
-    return null;
-  }
+  if (!show) return null;
 
   return (
     <div className="bob">
@@ -47,10 +45,6 @@ function CalModal({
         <button
           className="clear-btn"
           type="button"
-          // onClick={() => {
-          //   updateDate('', 'in');
-          //   updateDate('', 'out');
-          // }}
         >
           Clear date
         </button>

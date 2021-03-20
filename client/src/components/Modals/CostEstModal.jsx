@@ -4,9 +4,7 @@ import React from 'react';
 function CostEstModal({
   listingData, showCostEst, adjPrice, numNights,
 }) {
-  if (!showCostEst) {
-    return null;
-  }
+  if (!showCostEst) return null;
 
   return (
     <div className="cost-estimator">
