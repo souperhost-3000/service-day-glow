@@ -7,12 +7,8 @@ function Guests({ guestLimit, updateGuestTotal, guestTotal }) {
   // const [guestTotal, setGuestTotal] = useState(1);
 
   useEffect(() => {
-    if (showGMod) {
-      document.getElementById('guest-expand-mod').style.transform = 'rotate(-180deg)';
-    }
-    if (!showGMod) {
-      document.getElementById('guest-expand-mod').style.transform = 'rotate(0deg)';
-    }
+    if (showGMod) document.getElementById('guest-expand-mod').style.transform = 'rotate(-180deg)';
+    if (!showGMod) document.getElementById('guest-expand-mod').style.transform = 'rotate(0deg)';
   }, [showGMod]);
 
   return (

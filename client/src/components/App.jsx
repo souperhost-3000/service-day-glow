@@ -22,6 +22,10 @@ function App() {
   const [showCalModal, setCalModal] = useState(false);
   const [listingData, setListingData] = useState(exampleData);
   const listingID = 11;
+  const [checkOut, setCheckOut] = useState('');
+  const [checkIn, setCheckIn] = useState('');
+  const [numNights, setNumNights] = useState(1);
+  const [guestTotal, setGuestTotal] = useState(1);
 
   // GET request for Listing Data
   useEffect(() => {
@@ -30,10 +34,6 @@ function App() {
       // eslint-disable-next-line no-console
       .catch((err) => console.log(err));
   }, [listingID]);
-
-  const [checkOut, setCheckOut] = useState('');
-  const [checkIn, setCheckIn] = useState('');
-  const [numNights, setNumNights] = useState(1);
 
   function updateDate(e, check) {
     if (check === 'in') {
@@ -54,7 +54,7 @@ function App() {
     }
   }, [checkIn, checkOut]);
 
-  // changes subHeader details based on user's interaction (&#8226;)
+  // changes subHeader details based on user's interaction
   useEffect(() => {
     if (checkIn && checkOut) {
       setSubHeader(`${checkIn} - ${checkOut}`);
@@ -65,8 +65,7 @@ function App() {
     }
   }, [listingData, checkIn, checkOut]);
 
-  // const [guestDetails, setGuestDetails] = useState(1);
-  const [guestTotal, setGuestTotal] = useState(1);
+  // increases/decreases guest total
   function updateGuestTotal(e) {
     setGuestTotal(guestTotal + e);
   }

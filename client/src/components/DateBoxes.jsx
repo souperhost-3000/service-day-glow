@@ -6,18 +6,12 @@ function DateBoxes({ updateDate, checkIn, checkOut }) {
   const [text2, setPlaceholder2] = useState('Add date');
 
   useEffect(() => {
-    if (checkIn !== '') {
-      setPlaceholder1(checkIn);
-    }
-    if (checkOut !== '') {
-      setPlaceholder2(checkOut);
-    }
+    if (checkIn !== '') setPlaceholder1(checkIn);
+    if (checkOut !== '') setPlaceholder2(checkOut);
   }, [checkIn, checkOut]);
 
   function handleChange(e, check) {
-    if (e.length > 9) {
-      updateDate(e, check);
-    }
+    if (e.length > 9) updateDate(e, check);
   }
 
   return (
