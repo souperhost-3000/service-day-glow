@@ -1,9 +1,10 @@
 [![Souperhost:3000](https://circleci.com/gh/souperhost-3000/service-day-glow.svg?style=shield)](https://github.com/souperhost-3000/service-day-glow/)
 
-# Built by Jacki
 <a href="https://www.github.com/day-glow" target="_blank">
   <img align='right' src="https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif" width='200"'/>
 </a>
+
+# Built by Jacki
 I love coding, spreading positivity and hearing feedback! Let's connect.
 
 <!-- LinkedIn -->
