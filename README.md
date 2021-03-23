@@ -4,6 +4,7 @@
 <a href="https://www.github.com/day-glow" target="_blank">
   <img align='right' src="https://media.giphy.com/media/bcKmIWkUMCjVm/giphy.gif" width='200"'/>
 </a>
+
 I love coding, spreading positivity and hearing feedback! Let's connect.
 
 <!-- LinkedIn -->
